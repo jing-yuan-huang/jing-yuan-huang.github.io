@@ -1,0 +1,1279 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+body {
+  background-color: rgb(253, 244, 227);
+}
+body .bg-svg {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -1;
+  margin-bottom: 0;
+}
+body header {
+  display: flex;
+  background-color: rgb(43, 42, 42);
+  align-items: center;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  padding: 1.5rem 3.5rem 1rem 1rem;
+  justify-content: space-between;
+}
+body header .logo {
+  display: flex;
+  align-items: center;
+  padding-left: 2rem;
+  gap: 1rem;
+  text-decoration: none;
+}
+body header .logo h1 {
+  font-size: 1rem;
+  font-weight: 800;
+  color: white;
+}
+body header .logo img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+}
+body header .logo:hover h1 {
+  color: rgb(254, 192, 5);
+}
+body header .menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+body header nav .close-menu {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+body header nav ul {
+  display: flex;
+  list-style-type: none;
+}
+body header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  padding-bottom: 0.3rem;
+  padding-left: 3rem;
+}
+body header nav ul li a:hover {
+  color: rgb(254, 192, 5);
+}
+body header nav ul li a.active {
+  color: rgb(254, 192, 5);
+}
+body main section.main-area {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+body main section.main-area div.info {
+  max-width: 850px;
+  width: 100%;
+  z-index: 2;
+  position: relative;
+  padding: 2rem;
+  padding-bottom: 40vh;
+}
+body main section.main-area div.info h1 {
+  font-size: 5rem;
+  color: rgb(239, 218, 180);
+  padding: 1rem;
+  opacity: 0;
+}
+body main section.main-area div.info h2 {
+  font-size: 1.5rem;
+  color: rgb(239, 218, 180);
+  opacity: 0;
+}
+body main section.main-area div.info .fadeInUp {
+  opacity: 0;
+}
+body main section.main-area div.info .animated {
+  animation: fadeInUp 1s ease-out forwards;
+}
+body main section.work-area {
+  background-color: rgb(253, 244, 227);
+  margin: 1rem 5rem 10rem 5rem;
+}
+body main section.work-area .topic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+body main section.work-area .topic img {
+  width: 30px;
+  height: 30px;
+  padding-bottom: 0.2rem;
+}
+body main section.work-area .topic h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: rgb(17, 17, 17);
+  font-weight: 600;
+  padding: 0.5rem;
+}
+body main section.work-area div.cards-container1 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 2rem;
+  top: 2rem;
+  transition: transform 0.3s ease;
+}
+body main section.work-area div.cards-container1 div.card {
+  position: relative;
+  width: 400px;
+  height: auto;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+body main section.work-area div.cards-container1 div.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+body main section.work-area div.cards-container1 div.card img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+body main section.work-area div.cards-container1 div.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+body main section.work-area div.cards-container1 div.card:hover::before {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+body main section.work-area div.cards-container1 div.card .card-content {
+  position: absolute;
+  padding: 1rem;
+  top: 0.2rem;
+  left: 0.2rem;
+  z-index: 2;
+}
+body main section.work-area div.cards-container1 div.card .card-content h3 {
+  margin: 0 0 0.2rem;
+  font-size: 1.5rem;
+  color: #fefcfc;
+  font-weight: 500;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+body main section.work-area div.cards-container1 div.card .card-content h4 {
+  padding-left: 0.2rem;
+  padding-bottom: 0.2rem;
+  font-size: 1rem;
+  color: #fefcfc;
+  font-weight: 500;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+body main section.work-area div.cards-container1 div.card .card-content p {
+  margin-left: 0.2rem;
+  margin-top: 0.3rem;
+  font-size: 1rem;
+  color: #fefcfc;
+  font-weight: 400;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.2s ease, transform 0.1s ease;
+  z-index: 3;
+}
+body main section.work-area div.cards-container1 div.card .card-content p:hover {
+  opacity: 1;
+  transform: translateY(0);
+}
+body main section.work-area div.cards-container2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body main section.work-area div.cards-container2 a {
+  text-decoration: none;
+}
+body main section.work-area div.cards-container2 a div.card {
+  display: flex;
+  width: 50vw;
+  height: auto;
+  margin: 1rem 1.5rem 3rem 1.5rem;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+body main section.work-area div.cards-container2 a div.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+body main section.work-area div.cards-container2 a div.card img {
+  width: 100%;
+  height: 100%;
+}
+body main section.work-area div.cards-container2 a div.card .card-content {
+  display: flex;
+  padding: 1.5rem 2rem;
+  gap: 5%;
+}
+body main section.work-area div.cards-container2 a div.card .card-content h3 {
+  flex: 1 1 100px;
+  font-size: 1.5rem;
+  color: #0b0b0b;
+  font-weight: 500;
+}
+body main section.work-area div.cards-container2 a div.card .card-content .describe {
+  flex: 1 1 200px;
+  display: flex;
+  flex-direction: column;
+}
+body main section.work-area div.cards-container2 a div.card .card-content .describe h4 {
+  font-size: 1rem;
+  color: #040404;
+  font-weight: 600;
+}
+body main section.work-area div.cards-container2 a div.card .card-content .describe p {
+  font-size: 1rem;
+  color: #494747;
+  font-weight: 400;
+}
+body main section.normal-area {
+  background-color: rgb(253, 244, 227);
+  margin: 1rem 5rem 10rem 5rem;
+}
+body main section.normal-area .topic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 4rem 1rem 0rem 1rem;
+}
+body main section.normal-area .topic img {
+  width: 30px;
+  height: 30px;
+  padding-bottom: 0.2rem;
+}
+body main section.normal-area .topic h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: rgb(17, 17, 17);
+  font-weight: 600;
+  padding: 0.5rem;
+}
+body main section.normal-area .publications {
+  display: flex;
+  flex-direction: column;
+}
+body main section.normal-area .publications .publication {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 3rem;
+}
+body main section.normal-area .publications .publication img {
+  flex: 0 0 300px;
+  width: 300px;
+  padding: 1rem;
+  padding-right: 3rem;
+}
+body main section.normal-area .publications .publication .describe {
+  flex: 1 1 500px;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+body main section.normal-area .publications .publication .describe h1 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+body main section.normal-area .publications .publication .describe p {
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+  color: #555454;
+}
+body main section.normal-area .publications .publication .describe p .underline {
+  display: inline-block;
+  border-bottom: 2px solid #696767;
+}
+body main section.normal-area .publications .publication .describe h3 {
+  font-size: 1rem;
+}
+body main section.normal-area .publications .publication .describe h3 .award {
+  font-size: 0.9em;
+  font-weight: bold;
+  color: rgb(183, 82, 82); /* 你可以换成 gold 让它更显眼 */
+  margin-left: 8px;
+}
+body main section.normal-area .publications .publication .describe .link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+body main section.normal-area .publications .publication .describe .link a img {
+  padding: 0;
+  width: 1.5rem;
+}
+body main section.workintro-area {
+  background-color: rgb(253, 244, 227);
+  padding: 4rem 10%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+body main section.workintro-area .tag {
+  position: fixed;
+  left: -8vw;
+  top: 55%;
+  transform: translateY(-50%) rotate(90deg);
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+body main section.workintro-area .tag li {
+  list-style: none !important;
+}
+body main section.workintro-area .tag li a {
+  font-size: 16px;
+  color: rgb(12, 12, 12) !important;
+  text-decoration: none !important;
+  transition: all 0.3s ease-in-out !important;
+}
+body main section.workintro-area .tag li a:hover {
+  color: rgb(224, 170, 9) !important;
+  text-decoration: underline !important;
+}
+body main section.workintro-area section.contect {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+body main section.workintro-area section.contect .intro {
+  margin-bottom: 3rem;
+}
+body main section.workintro-area section.contect .intro h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+body main section.workintro-area section.contect .intro h2 {
+  font-size: 1.4rem;
+  padding-top: 0.5rem;
+  font-weight: 500;
+}
+body main section.workintro-area section.contect .intro video {
+  width: 100%;
+  max-width: 700px;
+  padding: 1rem;
+  border-radius: 30px;
+}
+body main section.workintro-area section.contect .intro img {
+  width: 100%;
+  max-width: 1000px;
+  padding: 1rem;
+  border-radius: 30px;
+}
+body main section.workintro-area section.contect .intro h4 {
+  padding-top: 1rem;
+  max-width: 800px;
+  font-size: 1.2rem;
+}
+body main section.workintro-area section.contect .bkground {
+  width: 100%;
+  max-width: 1000px;
+  text-align: center;
+  margin: 2rem auto;
+  margin-bottom: 8%;
+}
+body main section.workintro-area section.contect .bkground h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+body main section.workintro-area section.contect .bkground .overview {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 1rem;
+}
+body main section.workintro-area section.contect .bkground .overview .overviewbox {
+  flex: 1;
+  min-width: 300px;
+  max-width: 800px;
+  text-align: left;
+}
+body main section.workintro-area section.contect .bkground .overview .overviewbox .chall-role {
+  margin-bottom: 2rem;
+}
+body main section.workintro-area section.contect .bkground .overview .overviewbox .chall-role h5 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding-bottom: 0.5rem;
+}
+body main section.workintro-area section.contect .bkground .overview .overviewbox .chall-role p {
+  text-align: left;
+  font-size: 1rem;
+}
+body main section.workintro-area section.contect .bkground .overview .overviewbox .chall-role ul {
+  text-align: left;
+  padding-left: 20px;
+}
+body main section.workintro-area section.contect .bkground .overview .overviewbox .role-tool {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+body main section.workintro-area section.contect .bkground .overview .overviewbox .role-tool .role {
+  min-width: 150px;
+}
+body main section.workintro-area section.contect .bkground .overview .overviewbox .role-tool .role h5 {
+  text-align: left;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+body main section.workintro-area section.contect .bkground .overview .overviewbox .role-tool .role ul {
+  padding-left: 20px;
+  list-style-type: disc;
+  text-align: left;
+}
+body main section.workintro-area section.contect .bkground .overview img {
+  max-width: 250px;
+  height: auto;
+  margin-left: 2%;
+}
+body main section.workintro-area section.contect .bkground button {
+  background-color: black;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+body main section.workintro-area section.contect .bkground button:hover {
+  color: rgb(254, 192, 5);
+}
+body main section.workintro-area section.contect .research {
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+}
+body main section.workintro-area section.contect .research h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  padding-bottom: 1rem;
+}
+body main section.workintro-area section.contect .research .content {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+body main section.workintro-area section.contect .research .content h5 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding-bottom: 0.5rem;
+}
+body main section.workintro-area section.contect .research .content p {
+  text-align: left;
+}
+body main section.workintro-area section.contect .pic {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 4rem;
+  gap: 10%;
+}
+body main section.workintro-area section.contect .pic .stage {
+  flex: 1;
+  min-width: 300px;
+  max-width: 450px;
+  text-align: center;
+}
+body main section.workintro-area section.contect .pic .stage img {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  margin: 0.6rem;
+}
+body main section.workintro-area section.contect .research2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4rem;
+  margin-bottom: 2rem;
+}
+body main section.workintro-area section.contect .research2 .researchcontainer {
+  flex: 1;
+  min-width: 300px;
+  max-width: 400px;
+  padding: 1rem;
+}
+body main section.workintro-area section.contect .research2 .researchcontainer h5 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding-bottom: 0.5rem;
+}
+body main section.workintro-area section.contect .research2 .researchcontainer li {
+  text-align: left;
+  padding-bottom: 0.5rem;
+}
+body main section.workintro-area section.contect .empathymap {
+  width: 100%;
+  max-width: 800px;
+  text-align: left;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+body main section.workintro-area section.contect .empathymap h5 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+body main section.workintro-area section.contect .empathymap p {
+  font-size: 1.2rem;
+}
+body main section.workintro-area section.contect .empathymap ol li {
+  padding-bottom: 0.5rem;
+  padding-right: 2rem;
+}
+body main section.workintro-area section.contect .definition {
+  width: 100%;
+  max-width: 800px;
+  margin: 3rem 0rem;
+}
+body main section.workintro-area section.contect .definition h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  padding-bottom: 1rem;
+}
+body main section.workintro-area section.contect .definition h4 {
+  font-size: 1.2rem;
+  text-align: left;
+  font-weight: 600;
+}
+body main section.workintro-area section.contect .definition h5 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+body main section.workintro-area section.contect .definition .pov {
+  padding-top: 1rem;
+  text-align: left;
+}
+body main section.workintro-area section.contect .definition .pov h6 {
+  font-size: 1rem;
+  font-weight: 400;
+  padding-bottom: 1rem;
+  text-align: left;
+  color: #c04e4e;
+}
+body main section.workintro-area section.contect .definition .pov h4 {
+  font-size: 1.2rem;
+  text-align: left;
+}
+body main section.workintro-area section.contect .definition .pov p {
+  font-size: 1rem;
+}
+body main section.workintro-area section.contect .definition .pov ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+body main section.workintro-area section.contect .definition .summary {
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+body main section.workintro-area section.contect .definition .summary h4 {
+  text-align: left;
+  font-size: 1.5rem;
+}
+body main section.workintro-area section.contect .definition .summary p {
+  text-align: left;
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+body main section.workintro-area section.contect .definition .summary ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  font-size: 1rem;
+}
+body main section.workintro-area section.contect .definition hr {
+  border: none;
+  border-top: 2px solid #313030;
+  margin: 2rem;
+}
+body main section.workintro-area section.contect .definition .table {
+  width: 100%;
+  max-width: 900px;
+  border-collapse: collapse;
+  margin: 0 auto;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+body main section.workintro-area section.contect .definition .table h5 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding-bottom: 1rem;
+  text-align: left;
+}
+body main section.workintro-area section.contect .definition .table th, body main section.workintro-area section.contect .definition .table td {
+  border: 1px solid #0b0b0b;
+  padding: 10px;
+  text-align: left;
+}
+body main section.workintro-area section.contect .definition .table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+body main section.workintro-area section.contect .design, body main section.workintro-area section.contect .testing, body main section.workintro-area section.contect .reflection {
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+}
+body main section.workintro-area section.contect .design h3, body main section.workintro-area section.contect .testing h3, body main section.workintro-area section.contect .reflection h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 0rem;
+}
+body main section.workintro-area section.contect .design h5, body main section.workintro-area section.contect .testing h5, body main section.workintro-area section.contect .reflection h5 {
+  text-align: left;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+body main section.workintro-area section.contect .design h6, body main section.workintro-area section.contect .testing h6, body main section.workintro-area section.contect .reflection h6 {
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+body main section.workintro-area section.contect .design ul, body main section.workintro-area section.contect .testing ul, body main section.workintro-area section.contect .reflection ul {
+  text-align: left;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+body main section.workintro-area section.contect .design p, body main section.workintro-area section.contect .testing p, body main section.workintro-area section.contect .reflection p {
+  text-align: left;
+  font-size: 1rem;
+}
+body main section.workintro-area section.contect .design img, body main section.workintro-area section.contect .testing img, body main section.workintro-area section.contect .reflection img {
+  display: block;
+  margin: 1rem auto;
+  width: auto;
+  max-width: 90vw;
+  height: 50vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body main section.workintro-area section.contect .design .bigpic, body main section.workintro-area section.contect .testing .bigpic, body main section.workintro-area section.contect .reflection .bigpic {
+  align-items: center;
+}
+body main section.workintro-area section.contect .design .bigpic img, body main section.workintro-area section.contect .testing .bigpic img, body main section.workintro-area section.contect .reflection .bigpic img {
+  margin: 1rem auto;
+  width: auto;
+  max-width: 90vw;
+  height: 35vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body main section.workintro-area section.contect .design .designcontainer, body main section.workintro-area section.contect .testing .designcontainer, body main section.workintro-area section.contect .reflection .designcontainer {
+  max-width: 800px;
+  text-align: left;
+  margin: 3rem 2rem 4rem 2rem;
+}
+body main section.workintro-area section.contect .design .designcontainer h5, body main section.workintro-area section.contect .testing .designcontainer h5, body main section.workintro-area section.contect .reflection .designcontainer h5 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+body main section.workintro-area section.contect .design .designcontainer ul, body main section.workintro-area section.contect .testing .designcontainer ul, body main section.workintro-area section.contect .reflection .designcontainer ul {
+  font-size: 1rem;
+}
+body main section.workintro-area section.contect .buttonin {
+  display: flex;
+  justify-content: center;
+}
+body main section.workintro-area section.contect .buttonin button {
+  background-color: black;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  margin-bottom: 3rem;
+}
+body main section.workintro-area section.contect .buttonin button:hover {
+  color: rgb(254, 192, 5);
+}
+body main section.workintro-area section.contect .hifi {
+  margin: 5rem 2rem;
+  background-color: #e0dddd;
+}
+body main section.workintro-area section.contect .hifi h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-top: 2.5rem;
+}
+body main section.workintro-area section.contect .function {
+  width: 100%;
+  max-width: 800px;
+  text-align: left;
+}
+body main section.workintro-area section.contect .function h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+body main section.workintro-area section.contect .function h5 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: rgb(4, 122, 219);
+  margin: 1rem auto;
+}
+body main section.workintro-area section.contect .function ol li strong {
+  color: rgb(4, 122, 219);
+}
+body main section.workintro-area section.contect .function ol li span {
+  color: #c04e4e;
+  font-weight: 500;
+}
+body main section.workintro-area section.contect .function ol li::marker {
+  color: rgb(4, 122, 219);
+  font-weight: bold;
+}
+body main section.workintro-area section.contect .function2 {
+  width: 100%;
+  max-width: 800px;
+  text-align: left;
+}
+body main section.workintro-area section.contect .function2 h5 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #6aa84f;
+  margin: 1rem auto;
+}
+body main section.workintro-area section.contect .function2 ol li strong {
+  color: #6aa84f;
+}
+body main section.workintro-area section.contect .function2 ol li span {
+  color: #c04e4e;
+  font-weight: 500;
+}
+body main section.workintro-area section.contect .function2 ol li::marker {
+  color: #6aa84f;
+  font-weight: bold;
+}
+body main section.workintro-area section.contect .picsingle {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 4rem;
+  gap: 10%;
+}
+body main section.workintro-area section.contect .picsingle .stage {
+  flex: 1;
+  max-width: 800px;
+  text-align: center;
+}
+body main section.workintro-area section.contect .picsingle .stage img {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  margin: 0.6rem;
+}
+body main section.workintro-area section.contect .interact {
+  width: 100%;
+  max-width: 800px;
+  text-align: left;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+body main section.workintro-area section.contect .interact h5 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 2rem 0.5rem;
+}
+body main section.workintro-area section.contect .interact .pic {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 4rem;
+  gap: 10%;
+}
+body main section.workintro-area section.contect .interact .pic .stage {
+  flex: 1;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+body main section.workintro-area section.contect .interact .pic .stage h6 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+body main section.workintro-area section.contect .interact .pic .stage video {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  margin: 0.6rem;
+  border-radius: 10px;
+}
+body main section.workintro-area section.contect .interact2 {
+  max-width: 1200px;
+  margin: 2rem auto;
+}
+body main section.workintro-area section.contect .interact2 h5 {
+  text-align: left;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 2rem 0.5rem;
+}
+body main section.workintro-area section.contect .interact2 .interpic {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+body main section.workintro-area section.contect .interact2 .interpic .stage {
+  width: 100%;
+  text-align: center;
+}
+body main section.workintro-area section.contect .interact2 .interpic .stage h6 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+body main section.workintro-area section.contect .interact2 .interpic .stage video {
+  width: 100%;
+  height: auto;
+  margin: 0.6rem auto;
+  border-radius: 10px;
+}
+body main section.about-area {
+  background-color: rgb(253, 244, 227);
+  margin: 2rem auto;
+  max-width: 1000px;
+  padding: 2rem;
+}
+body main section.about-area .aboutcontainer {
+  margin: 2rem 0rem 5rem 0rem;
+}
+body main section.about-area .aboutcontainer .topic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body main section.about-area .aboutcontainer .topic img {
+  width: 30px;
+  height: 30px;
+  padding-bottom: 0.2rem;
+}
+body main section.about-area .aboutcontainer .topic h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: rgb(17, 17, 17);
+  font-weight: 600;
+  padding: 0.5rem;
+}
+body main section.about-area .aboutcontainer .aboutme {
+  display: flex;
+  gap: 8%;
+  align-items: center;
+}
+body main section.about-area .aboutcontainer .aboutme img {
+  width: 250px;
+  border-radius: 120px;
+}
+body main section.about-area .timelinecontainer {
+  margin: 2rem 4rem;
+  margin-bottom: 6rem;
+}
+body main section.about-area .timelinecontainer .topic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body main section.about-area .timelinecontainer .topic img {
+  width: 30px;
+  height: 30px;
+  padding-bottom: 0.2rem;
+}
+body main section.about-area .timelinecontainer .topic h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: rgb(17, 17, 17);
+  font-weight: 600;
+  padding: 0.5rem;
+}
+body main section.about-area .timelinecontainer .timeline {
+  position: relative;
+  margin: 2rem 2rem;
+  align-items: center;
+  text-align: center;
+}
+body main section.about-area .timelinecontainer .timeline::before {
+  content: "";
+  position: absolute;
+  left: 45%;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background-color: #096404;
+}
+body main section.about-area .timelinecontainer .timeline .timeline-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 10rem;
+}
+body main section.about-area .timelinecontainer .timeline .timeline-item::before {
+  content: "";
+  position: absolute;
+  left: 44.3%;
+  top: 50%;
+  width: 12px;
+  height: 12px;
+  border: 3px solid #096404;
+  background-color: white;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+body main section.about-area .timelinecontainer .timeline .timeline-item .timeline-date {
+  width: 60%;
+  text-align: right;
+  font-weight: bold;
+  color: #333;
+}
+body main section.about-area .timelinecontainer .timeline .timeline-item .timeline-content {
+  text-align: left;
+  width: 80%;
+}
+body main section.about-area .timelinecontainer .timeline .timeline-item .timeline-content .timeline-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+body main section.about-area .timelinecontainer .timeline .timeline-item .timeline-content .timeline-subtitle {
+  font-size: 14px;
+  color: #666;
+}
+body main section.about-area .timelinecontainer .timeline .timeline-item .timeline-content .see-more {
+  color: #096404;
+  font-weight: 500;
+  font-size: 14px;
+  display: inline-block;
+  margin-top: 5px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+body main section.about-area .timelinecontainer2 {
+  margin: 1rem 4rem;
+  margin-bottom: 6rem;
+}
+body main section.about-area .timelinecontainer2 .topic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body main section.about-area .timelinecontainer2 .topic img {
+  width: 30px;
+  height: 30px;
+  padding-bottom: 0.2rem;
+}
+body main section.about-area .timelinecontainer2 .topic h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: rgb(17, 17, 17);
+  font-weight: 600;
+  padding: 0.5rem;
+}
+body main section.about-area .timelinecontainer2 .timeline {
+  position: relative;
+  margin: 2rem 2rem;
+  align-items: center;
+  text-align: center;
+}
+body main section.about-area .timelinecontainer2 .timeline::before {
+  content: "";
+  position: absolute;
+  left: 45%;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background-color: #077bbe;
+}
+body main section.about-area .timelinecontainer2 .timeline .timeline-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 10rem;
+}
+body main section.about-area .timelinecontainer2 .timeline .timeline-item::before {
+  content: "";
+  position: absolute;
+  left: 44.3%;
+  top: 50%;
+  width: 12px;
+  height: 12px;
+  border: 3px solid #077bbe;
+  background-color: white;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+body main section.about-area .timelinecontainer2 .timeline .timeline-item .timeline-date {
+  width: 500px;
+  text-align: right;
+  font-weight: bold;
+  color: #333;
+}
+body main section.about-area .timelinecontainer2 .timeline .timeline-item .timeline-content {
+  text-align: left;
+  width: 700px;
+}
+body main section.about-area .timelinecontainer2 .timeline .timeline-item .timeline-content .timeline-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+body main section.about-area .timelinecontainer2 .timeline .timeline-item .timeline-content .timeline-subtitle {
+  font-size: 14px;
+  color: #666;
+}
+body main section.about-area .timelinecontainer2 .timeline .timeline-item .timeline-content .see-more {
+  color: #077bbe;
+  font-size: 14px;
+  font-weight: 500;
+  display: inline-block;
+  margin-top: 5px;
+  cursor: pointer;
+}
+body footer {
+  background-color: rgb(43, 42, 42);
+  text-align: center;
+  padding: 40px 0;
+  color: #f9f7f7;
+}
+body footer .footer-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+body footer .footer-container h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #faf7f7;
+}
+body footer .footer-container p {
+  font-size: 16px;
+  margin: 0 0 20px 0;
+  line-height: 1.5;
+}
+body footer .footer-container .footer-links {
+  display: inline-flex;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+body footer .footer-container .footer-links a {
+  color: #faf9f8;
+  text-decoration: none;
+  font-weight: 500;
+}
+body footer .footer-container .footer-links a:hover {
+  color: rgb(254, 192, 5);
+}
+body footer .footer-container .footer-links .footer-separator {
+  margin: 0 auto 25px;
+  width: 80%;
+  max-width: 600px;
+  border: none;
+  border-top: 1px solid #ccc;
+}
+body footer .footer-container .footer-links .copyright {
+  font-size: 14px;
+  color: #f9f8f8;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .interact2 .interpic {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .tag {
+    display: none !important;
+  }
+  section.work-area div.cards-container2 a .card-content {
+    flex-direction: column !important;
+  }
+  section.work-area div.cards-container2 a .card-content h3 {
+    font-size: 2rem;
+    flex: 1 1 20px !important;
+  }
+  section.work-area div.cards-container2 a .card-content .describe {
+    flex: 1 1 50px !important;
+  }
+}
+@media (max-width: 600px) {
+  .interact2 .interpic {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+  section.work-area div.cards-container2 a .card-content h3 {
+    font-size: 1.2rem !important;
+  }
+}
+@media screen and (max-width: 800px) {
+  header {
+    padding: 1.5rem 2.5rem 0.5rem 0.5rem;
+  }
+  header .menu-toggle {
+    display: block !important;
+    margin-right: 0rem;
+  }
+  header nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 60vw;
+    height: 100vh;
+    background: rgba(43, 42, 42, 0.95);
+    transition: right 0.3s ease-in-out;
+  }
+  header nav.active {
+    right: 0;
+  }
+  header nav .close-menu {
+    display: block !important;
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    background: none;
+    border: none;
+    font-size: 2.5rem;
+    color: white;
+    cursor: pointer;
+  }
+  header nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+    padding: 0;
+    margin-top: 5rem;
+  }
+  header nav ul li {
+    list-style: none;
+  }
+  header nav ul li a {
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding: 0.5rem 1rem;
+  }
+  main section.main-area div.info h1 {
+    font-size: 7vw;
+    padding: 0.5rem;
+  }
+  main section.main-area div.info h2 {
+    font-size: 3.5vw;
+  }
+  main section.workintro-area .tag {
+    display: none !important;
+  }
+  main section.workintro-area .intro h1 {
+    font-size: 2.2rem !important;
+  }
+  main section.workintro-area .intro video {
+    width: 90%;
+  }
+  main section.workintro-area .background .overview {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  main section.workintro-area .background .overview .overviewbox {
+    text-align: left;
+  }
+  main section.workintro-area .research2 {
+    flex-direction: column;
+    align-items: center;
+  }
+  main section.workintro-area .research2 .researchcontainer {
+    padding-right: 0;
+  }
+  main section.workintro-area .pic img {
+    width: 90%;
+  }
+  main section.workintro-area .design img {
+    width: 90%;
+  }
+  .publication {
+    flex-direction: column !important;
+    align-items: center;
+    justify-content: center;
+    margin: 0rem !important;
+  }
+  .publication img {
+    flex: 0 0 100px !important;
+    padding: 1rem !important;
+  }
+  .publication .describe {
+    flex: unset;
+    width: 100%;
+    padding: 0;
+  }
+  .publication .describe h1 {
+    font-size: 1.2rem !important;
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}/*# sourceMappingURL=style.css.map */
