@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="zh-Hants">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jing-Yuan Huang</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./styles/style.css" />
+    
+  </head>
+  <body>
+
+   
+    <header>
+      <div class="logo">
+          <img src="./pictures/mypic.jpg" alt="mypic">
+          <h1> Jingyuan Huang</h1>
+      </div>
+      <button class="menu-toggle" ><i class="bi bi-list"></i></button> 
+      <nav> 
+        <button class="close-menu"><i class="bi bi-x"></i></button> 
+          <ul>
+              <li>
+                <a href="index.html">Work</a>
+              </li>
+              <li>
+                <a href="about.html" class="active" > About</a>
+              </li>
+              <li>
+                <a href="publication.html"> Publication</a>
+              </li>
+              <li>
+                <a href="contact.html"> Resume</a>
+              </li>
+            </ul>
+      </nav>
+  </header>
+
+  
+
+    <main>
+
+
+      <section class="workintro-area" >
+
+        <div class="tag" style="left:-5.5vw">
+          <li ><a href="#overview">Overview</a></li>
+          <li><a href="#research">Research</a></li>
+          <li><a href="#design">Design</a></li>
+          <li><a href="#reflection">Reflection</a></li>
+        </div>
+
+        <section class="contect">
+          <div class="intro">
+            <h1>Quick Parking</h1>
+            <h2>A Cloud Native system for smart parking guidance and security management.</h2>
+            <img src="./quickpark/frontpage.webp">
+            <h4>運用 Cloud Native 技術打造輔助停車應用系統，提升員工停車效率，提供即時車位資訊與警勤管理，實現智能化車位分配與優化管理。</h4>
+          </div>
+
+          <div class="bkground">
+
+              <h3 id="overview">Overview</h3>
+              <div class="overview">
+                <div class="overviewbox">
+
+                  <div class="chall-role">
+                    <h5>Challenge : </h5>
+                    <p> 公司員工數量非常多，辦公室也很密集，在停車場繞場找車位是每天可見的景象，如何協助員工快速找到空車位成為一個待解決的問題。</p>
+                    <h5>Goal :</h5>
+                    <ul>
+                      <li>即時車位資訊 : 顯示停車場即時剩餘車位數量與位置，協助車主快速尋找空位。</li>
+                      <li>車輛查詢與管理 : 允許車主輸入車牌號碼查詢愛車停放位置與停放時長，提升找車效率，避免找不到愛車的情況。</li>
+                      <li>促車位使用歷程追蹤 : 為警勤人員提供特定車位的當天使用紀錄，提升管理與監控效能，理解長期使用狀況。</li>
+                      <li>車位利用率分析 : 顯示當日車位空置時間比例，協助優化停車資源分配與管理策略。 </li>
+                    </ul>
+                  </div>
+                  <div class="role-tool">
+
+                    <div class="role">
+                      <h5>Role : </h5>
+                      <ul>
+                        <li>User Experience Research</li>
+                        <li>User Interface Design</li>
+                        <li>Visual Design</li>
+                        <li>Front-end Development</li>
+                      </ul>
+                    </div>
+                    <div class="role">
+                      <h5>Tool : </h5>
+                      <ul>
+                        <li>Figma</li>
+                        <li>Miro</li>
+                        <li>Tyscript</li>
+                        <li>React</li>
+                      </ul>
+                   </div>
+
+                  </div>
+
+                </div>
+                <img src="./quickpark/roll.webp">
+              </div>
+           
+            <a href="https://www.figma.com/proto/x4JOSdaLOhsORLPRrSwNQ6/%E9%9B%B2%E5%8E%9F%E7%94%9F-Quick-Parking?page-id=0%3A1&node-id=214-478&p=f&viewport=-1132%2C109%2C0.16&t=HZHG792DwQpddD3d-1&scaling=scale-down&content-scaling=fixed">
+              <button> View Final Pototype</button>
+            </a>
+
+          </div>
+         
+          <div class="research">
+            <h3 id="research">Research</h3>
+            <div class="content">
+              
+              <h5> Persona Development:</h5>
+              <p>根據我對停車場使用者的行為模式分析，我開發了五個使用者角色，涵蓋不同年齡層與需求的企業員工、訪客，以及警衛。由於該專案的核心目標是提升停車效率與使用者體驗，因此確保不同類型的使用者都能順利找到並使用車位或管理車位。</p>
+            </div>
+          </div>
+
+          <div class="pic" style="gap:1rem;">
+            <div class="stage">
+              <img src="./quickpark/persona1.png">
+              <img src="./quickpark/persona2.png">
+              <img src="./quickpark/persona3.png">
+            </div>
+            <div class="stage">
+              <img src="./quickpark/persona4.png">
+              <img src="./quickpark/persona5.png">
+            </div>
+          </div>
+         
+
+          <div class="empathymap">
+
+            <h5>User Journey : </h5>
+            <p>我建立了一份使用者旅程地圖，詳細描繪受訪者分享的想法、情緒和經驗，以深入理解他們在使用過程中的痛點與需求。</p>
+           
+          </div>
+
+          <div class="pic" style="gap:2rem">
+            <div class="stage">
+              <img src="./quickpark/userjourney.png" style="max-width: 600px;">
+              <p>車主使用旅程</p>
+            </div>
+            <div class="stage">
+              <img src="./quickpark/guardjourney.png" style="max-width: 600px;">
+              <p>警衛使用旅程</p>
+            </div>
+          </div>
+
+          
+            <div class="empathymap">
+
+              <h5>Feature Prioritization : </h5>
+              <p>在規劃功能時，我根據使用者的主要痛點與需求進行優先排序，確保最關鍵的功能能夠優先開發並提供最佳體驗</p>
+            </div>
+
+            <div class="pic" style="gap:2rem">
+              <div class="stage">
+                <img src="./quickpark/userfunction.png" style="max-width: 600px;">
+                <p>車主功能排序</p>
+              </div>
+              <div class="stage">
+                <img src="./quickpark/guardfuction.png" style="max-width: 600px;">
+                <p>警衛功能排序</p>
+              </div>
+            </div>
+
+           
+
+          <div class="definition">
+            <div class="summary">
+              <h5>User Pain Point : </h5>
+              <p style="margin-bottom: 1rem;">透過使用者旅程的分析與功能優先排序，我們系統性地整理了使用者的主要痛點與需求，以確保解決方案能夠精準回應不同使用者群體的挑戰。</p>
+              <p>🚗 <strong>找車位困難</strong></p>
+              <ul>
+                <li>上班尖峰時段車位不足，員工與訪客都難以找到空位</li>
+              </ul>
+
+              <p>📍 <strong>不熟悉停車場，尋找車位與車輛麻煩 : </strong></p>
+              <ul>
+                <li>新員工與訪客容易迷路，浪費時間找車位或忘記停放位置。</li>
+              </ul>
+
+              <p>⌛ <strong>停車管理困難</strong></p>
+              <ul>
+                <li>警衛難以即時監控車位使用狀況，無法快速發現長時間佔位或違規車輛。</li>
+              </ul>
+
+              <p>♿ <strong>需要特殊車位但無法確保可用</strong></p>
+              <ul>
+                <li>身障人士或有特殊需求的使用者無法優先獲得適合的車位。</li>
+              </ul>
+
+              <p>📊 <strong>停車資訊不透明</strong></p>
+              <ul>
+                <li>用戶無法事先知道停車場的擁擠程度，影響停車決策。</li>
+              </ul>
+
+            
+
+            </div>
+
+            <div class="table">
+              <h5>User Needs : </h5>
+
+              <table>
+                <tr>
+                    <th>使用者類型</th>
+                    <th>痛點</th>
+                    <th>需求 / 解決方案</th>
+                </tr>
+                <tr>
+                    <td>企業員工</td>
+                    <td>- 難以快速找到車位，9:00 上班時車位幾乎已滿<br>- 新人對停車場不熟悉，浪費時間尋找車位</td>
+                    <td>- 即時顯示空車位，可快速篩選可用區域<br>- 導航功能，指引至最近的可用車位</td>
+                </tr>
+                <tr>
+                    <td>訪客</td>
+                    <td>- 不熟悉停車場，難以找到車位<br>- 停車時間短暫，進出頻繁</td>
+                    <td>- 提供訪客查詢車位功能，無需帳號也能查看剩餘車位<br>- 顯示電梯 / 出入口位置，方便選擇合適車位</td>
+                </tr>
+                <tr>
+                    <td>警衛 / 管理人員</td>
+                    <td>- 無法即時掌握停車場使用情況<br>- 難以手動監控長時間停車或違規車輛</td>
+                    <td>- 自動記錄車位使用狀況，顯示當前使用率與異常車輛<br>- 標記異常車輛，如佔位超過 48 小時的車輛</td>
+                </tr>
+            </table>
+            </div>
+
+          </div>
+
+          <div class="design">
+            <h3 id="design">Design</h3>
+            <h5>User Flow Design : </h5>
+            <img src="./quickpark/wirefram.png">
+            <div class="designcontainer">
+              <p style="padding-bottom: 1rem;">在這個階段，我們根據使用者研究中歸納的使用者需求繪製使用者流程設計圖，清晰描繪不同使用者類型在應用中的互動過程。透過這份流程圖，我能夠確保企業員工、訪客與警衛 / 管理人員的核心需求皆被妥善考量，並確保功能布局符合他們的操作習慣。</p>
+              
+              <h6>1. 車主功能設計</h6>
+              <ul>
+                <li>登入與個人化設定：提供帳號登入，允許設定車輛資訊與停車偏好（如靠近電梯、地下室或地面）。</li>
+                <li>即時車位查詢與篩選：使用者可依據樓層、區域篩選可用車位，並新增「無障礙車位」篩選選項，確保身障人士能優先找到適合的停車位。</li>
+                <li>找車功能：輸入車牌號碼，快速定位車輛停放位置，避免遺忘車輛停放點。</li>
+              </ul>
+
+              <h6>2. 訪客功能設計</h6>
+              <ul>
+                  <li>無需帳號即可查詢車位：訪客可直接查看即時車位資訊，提升便利性。</li>
+                  <li>電梯 / 出入口標示：標註停車場的電梯與主要出入口，幫助訪客選擇最方便的停車位置。</li>
+              </ul>
+
+              <h6>3. 停車場管理（警衛 / 管理人員）</h6>
+              <ul>
+                  <li>管理後台 Dashboard：提供停車場即時使用率、統計數據，幫助管理員掌握停車狀況。</li>
+                  <li>異常車輛監測：標記長時間停放或違規車輛，提高停車場管理效率。</li>
+                  <li>車輛查詢與詳細資訊：管理員可搜尋車牌號碼，查看車輛停放時長與詳細資料，快速處理異常狀況。</li>
+              </ul>
+
+              <h6>4. 互動與視覺設計優化</h6>
+              <ul>
+                  <li>圖示與標籤設計：使用直觀的圖示（如車位狀態、樓層標示、偏好選擇）提升可讀性。</li>
+                  <li>顏色區分停車狀態：以不同顏色標示「可用車位、已佔用車位、長時間停放車輛」，讓使用者快速辨識車位情況。</li>
+              </ul>
+
+              
+            </div>
+
+            
+          </div>
+
+
+          <div class="hifi"> 
+
+            <h3>Hi-Fi Pototype</h3>
+
+            <div class="bigpic">
+              <img src="./quickpark/hifi-10.webp"></img>
+              <img src="./quickpark/hifi-11.webp"></img>
+              <img src="./quickpark/hifi-12.webp"></img>
+            </div>
+          </div>
+
+          <div class="reflection">
+            <h3 style="margin: 2rem auto;" id="reflection">Reflection</h3>
+
+              <div style="margin-bottom: 3rem;">
+
+                <h5 >What’s Next? </h5>
+                <h6>測試與優化系統</h6>
+                <ul>
+                  <li>多設備與瀏覽器兼容測試：確保應用在不同解析度的手機、平板與瀏覽器（Chrome, Safari, Edge）上運行順暢，避免 UI 變形或交互問題</li>
+                  <li>性能測試與優化：針對 API 響應時間、資料庫查詢速度、前端渲染效能進行壓力測試，確保系統在高流量下依然穩定運行。</li>
+                </ul>
+                <h6> 增加用戶個性化選項</h6>
+                <ul>
+                  <li>允許使用者設定 最愛停車區域，下次可直接推薦附近可用車位。</li>
+                  <li>根據歷史停車行為，透過 AI 建議最佳車位（例如偏好電梯附近、低樓層等）。</li>
+                </ul>
+
+                <h6> 強化無障礙設計（Accessibility, A11y）</h6>
+                <ul>
+                  <li>確保應用符合 WCAG 2.1 AA 標準，包括色彩對比、可調大小字體、語音輔助支援（VoiceOver / TalkBack）。</li>
+                  <li>無障礙車位強化：提供語音輸入或更直覺的篩選方式，確保身障人士能更輕鬆找到車位。</li>
+                </ul>
+
+              </div>
+
+              <div style="margin-bottom: 4rem;">
+
+                <h5>Project Takeaways</h5>
+                <P>本專案最大的挑戰是時程規劃與實際開發的落差。設計階段比預期耗時更久，特別是在使用者流程與互動細節的調整上，導致 Hi-Fi Prototype 進度延後。此外，前後端同步開發的協作難度高，UI 變更時前端需即時調整，後端 API 也需配合修改，增加了開發負擔。</P>
+                <ul>
+                  <li>設計時程需預留更多迭代空間，避免影響開發進度。</li>
+                  <li>前後端開發應更早對齊 API 與 UI，減少後期調整。</li>
+                  <li>技術難度評估需更精準，即時更新與導航等功能應提前 PoC 測試。</li>
+                </ul>
+            
+              </div>
+              
+          </div>
+
+
+        </section>
+
+
+      </section>
+
+
+        
+      <footer>
+
+            <div class="footer-container">
+
+            <h2>Let’s Connect</h2>
+            <p>
+                Interested in working together or looking to chat over coffee? 
+                Shoot me a message and let’s talk!
+            </p>
+        
+
+            <nav class="footer-links">
+                <a href="https://github.com/jing-yuan-huang">
+                <i class="bi bi-github"style="font-size: 1.5rem;"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/huang-jingyuan/" class="active">
+                <i class="bi bi-linkedin" style="font-size: 1.5rem;"></i> 
+                </a>
+                <a href="mailto:niara7765@gmail.com"><i class="bi bi-envelope-fill"style="font-size: 1.5rem;"></i>
+                </a>
+            </nav>
+        
+            <p class="copyright">
+                &copy; 2025 Jingyuan Huang
+            </p>
+
+       </footer>
+
+    </main>
+
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/js/bootstrap.min.js"
+      integrity="sha512-fHY2UiQlipUq0dEabSM4s+phmn+bcxSYzXP4vAXItBvBHU7zAM/mkhCZjtBEIJexhOMzZbgFlPLuErlJF2b+0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./app.js" defer></script>
+  </body>
+</html>

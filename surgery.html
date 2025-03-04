@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="zh-Hants">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jing-Yuan Huang</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./styles/style.css" />
+    
+  </head>
+  <body>
+
+   
+    <header>
+      <a class="logo" href="index.html">
+        <img src="./pictures/mypic.jpg" alt="mypic">
+        <h1> Jingyuan Huang</h1>
+      </a>
+      <button class="menu-toggle" ><i class="bi bi-list"></i></button> 
+      <nav> 
+        <button class="close-menu"><i class="bi bi-x"></i></button> 
+          <ul>
+              <li>
+                <a href="index.html">Work</a>
+              </li>
+              <li>
+                <a href="about.html"> About</a>
+              </li>
+              <li>
+                <a href="publication.html"> Publication</a>
+              </li>
+              <li>
+                <a href="contact.html"> Resume</a>
+              </li>
+            </ul>
+      </nav>
+  </header>
+
+  
+
+    <main>
+
+        <section class="workintro-area" >
+  
+          <section class="contect">
+            <div class="intro">
+              <h1 style="font-size: 2.2rem;">VR Medical Education System</h1>
+              <h2 >Interactive design of a virtual reality learning system based on thoracic surgery anatomy</h2>
+              <video autoplay loop muted playsinline style="max-width: 900px;">
+                <source src="./surgery/front.webm" type="video/webm">
+              </video>
+            </div>
+  
+            <div class="bkground">
+  
+                <h3 id="overview">Overview</h3>
+                <div class="overview">
+                  <div class="overviewbox">
+  
+                    <div class="chall-role">
+                      <h5>Background : </h5>
+                      <p> 本研究探討虛擬實境（VR）在胸腔解剖學習中的應用，透過建構基於真實患者數據的3D解剖模型，並設計互動工具，以提升醫學教育的學習體驗。本系統提供控制器與手勢兩種輸入方式，讓使用者能夠直觀地進行胸腔解剖結構的觀察、操作與測量。透過實驗研究，我們分析這兩種互動方式在可用性與偏好上的差異，為未來VR醫學教育系統的發展提供設計參考。。</p>
+                      <h5>Goal :</h5>
+                      <ul>
+                        <li>提升醫學教育體驗：透過高擬真的3D解剖模型與多元互動方式，增強學習者對胸腔解剖結構的理解與記憶。</li>
+                        <li>提供多模式互動 ：支援控制器與手勢操作，使使用者能夠根據自身需求選擇適合的互動方式，提高學習靈活度與便捷性。</li>
+                        <li>優化解剖模型操作 ：提供平移、旋轉、縮放等功能，並針對精細操作（如測量與標記）優化控制方式，提高操作的精確度與流暢度。</li>
+                        <li>引入輔助學習工具 ：設計 CT Viewer 及測量工具，讓使用者能夠結合影像資料進行解剖分析，增強學習成效。</li>
+                      </ul>
+                    </div>
+                    <div class="role-tool">
+  
+                      <div class="role">
+                        <h5>Role : </h5>
+                        <ul>
+                          <li>User Interface Design</li>
+                          <li>Interaction Design</li>
+                          <li>System Development</li>
+                        </ul>
+                      </div>
+                      <div class="role">
+                        <h5>Tool : </h5>
+                        <ul>
+                          <li>Unity</li>
+                          <li>Illustrator</li>
+                          <li>Meta Interation SDK</li>
+                        </ul>
+                     </div>
+  
+                    </div>
+  
+                  </div>
+                </div>
+  
+            </div>
+           
+            <div class="function">
+                <h3 style="text-align: center;"> Interaction Design</h3>
+                <h5>Controller Button Mapper : </h5>
+    
+                <ol>
+                  <li><strong>Direct Selection : </strong> Move the controllers close to the desired object.</li>
+                  <li><strong> Indirect Selection : </strong>Move the controllers close to the desired object.</li>
+                  <li><strong>Trigger : </strong><span>PrimaryIndexTrigger</span>, or <span>SecondaryIndexTrigger</span>.</li>
+                  <li><strong>Grab : </strong><span>PrimaryHandTrigger</span>, or <span>SecondaryHandTrigge</span>.</li>
+                  <li><strong>Menu : </strong><span>Button.Start</span>.</li>
+                  <li><strong>Measurment :  </strong><span>Button.One</span>.</li>
+                </ol>
+  
+            </div>
+  
+            <div class="picsingle" style="gap:1rem;">
+              <div class="stage">
+                <img src="./surgery/controllerbutton.png">
+              </div>
+            </div>
+
+
+            <div class="function2">
+              <h5>Hand Gestures : </h5>
+  
+              <ol>
+                <li><strong>Direct Selection: : </strong>Move the hand(s) close to the desired object.</li>
+                <li><strong> Indirect Selection : </strong> Move the ray (or other indicator) close to the desired object.  In the illustration, select the form with only points and no lines.</li>
+                <li><strong>Trigger : </strong>After selecting a desired object,<span>pinch and then release</span>.</li>
+                <li><strong>Grab : </strong>After selecting a desired object, <span>pinch and hold </span>.</li>
+                <li><strong>Bring up the Menu  :  </strong>Make a gesture with your left hand by <span>thumb up</span>.</li>
+                <li><strong>Measurment :  </strong><span>Touch the index fingers together</span> to start , Move your index fingers to draw the line segment, which will measure the distance.</li>
+              </ol>
+
+          </div>
+          
+
+          <div class="picsingle" style="gap:1rem;">
+            <div class="stage">
+              <img src="./surgery/gesture.png">
+            </div>
+          </div>
+           
+  
+          <div class="interact">
+              <h5>Interaction Design - Manipulating 3D objects in VR  :</h5>
+              <div class="pic" style="gap:2rem">
+                <div class="stage">
+                  <video autoplay loop muted playsinline>
+                    <source src="./surgery/crotate.webm" type="video/webm">
+                  </video>
+                  <h6 style="color: rgb(4, 122, 219)">Translation and Rotation</h6>
+                  <p>Directly Select and Grab</p>
+                </div>
+                <div class="stage">
+                  <video autoplay loop muted playsinline>
+                    <source src="./surgery/hrotate.webm" type="video/webm">
+                  </video>
+                  <h6 style="color: #6aa84f">Translation and Rotation</h6>
+                  <p>Directly Select and Grab</p>
+                </div>
+                <div class="stage">
+                  <video autoplay loop muted playsinline>
+                    <source src="./surgery/cscale.webm" type="video/webm">
+                  </video>
+                  <h6 style="color: rgb(4, 122, 219)"> Scaling</h6>
+                  <p>Directly Select and Grab with both controllers</p>
+                </div>
+                <div class="stage">
+                  <video autoplay loop muted playsinline>
+                    <source src="./surgery/hscale.webm" type="video/webm">
+                  </video>
+                  <h6 style="color: #6aa84f"> Scaling</h6>
+                  <p>Choose to use  Directly Select and Grab with both hands
+                  </p>
+                </div>
+              </div>
+          </div>
+
+          <div class="interact2">
+            <h5>Interaction Design - Interacting with Menu in VR  :</h5>
+            <div class="interpic">
+              <div class="stage">
+                <video autoplay loop muted playsinline>
+                  <source src="./surgery/cpanel.webm" type="video/webm">
+                </video>
+                <h6 style="color: rgb(4, 122, 219)">Bring Up the Menu</h6>
+                <p>Press the menu button on the left controller to bring up the menu.
+                </p>
+              </div>
+              <div class="stage">
+                <video autoplay loop muted playsinline>
+                  <source src="./surgery/cmovepanel.webm" type="video/webm">
+                </video>
+                <h6 style="color: rgb(4, 122, 219)">Reposition the Menu</h6>
+                <p>Directly or Indirectly select the edge of the panel and grab it.
+                </p>
+              </div>
+              <div class="stage">
+                <video autoplay loop muted playsinline>
+                  <source src="./surgery/cbutton.webm" type="video/webm">
+                </video>
+                <h6 style="color: rgb(4, 122, 219)">Press the 
+                  Menu Buttons </h6>
+                <p>Directly Select or Indirectly Select and Trigger. Both are implemented and can be used in our UI.</p>
+              </div>
+            </div>
+            <div class="interpic">
+              <div class="stage">
+                <video autoplay loop muted playsinline>
+                  <source src="./surgery/hpanel.webm" type="video/webm">
+                </video>
+                <h6 style="color: #6aa84f">Bring Up the Menu</h6>
+                <p>Perform the Bring Up Menu gesture with your left hand to bring up the menu.</p>
+              </div>
+              <div class="stage">
+                <video autoplay loop muted playsinline>
+                  <source src="./surgery/hmovepanel.webm" type="video/webm">
+                </video>
+                <h6 style="color:#6aa84f">Reposition the Menu</h6>
+                <p>Directly or Indirectly select the edge of the panel and grab it.
+                </p>
+              </div>
+              <div class="stage">
+                <video autoplay loop muted playsinline>
+                  <source src="./surgery/hbutton.webm" type="video/webm">
+                </video>
+                <h6 style="color :#6aa84f" >Press the Menu Buttons </h6>
+                <p>Directly Select or Indirectly Select and Trigger. Both are implemented and can be used in our UI.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="interact2">
+            <h5>Interaction Design - Other Interactions in VR :</h5>
+            <div class="interpic">
+              <div class="stage">
+                <video autoplay loop muted playsinline>
+                  <source src="./surgery/cruler.webm" type="video/webm">
+                </video>
+                <h6 style="color: rgb(4, 122, 219)">Measurement tool </h6>
+                <p>Press the measurement button, then move the controller to  draw the line and get the measurement value. Release to complete the measurement.</p>
+              </div>
+              <div class="stage">
+                <video autoplay loop muted playsinline>
+                  <source src="./surgery/cct.webm" type="video/webm">
+                </video>
+                <h6 style="color: rgb(4, 122, 219)">CT Viewer Tool</h6>
+                <p>First, directly select and grab the red panel, and then move the controller vertically to view the corresponding CT image.</p>
+              </div>
+              <div class="stage">
+                <video autoplay loop muted playsinline>
+                  <source src="./surgery/copacity.webm" type="video/webm">
+                </video>
+                <h6 style="color: rgb(4, 122, 219)">Model Material Replacement Tool </h6>
+                <p>Indirectly select and trigger (or directly select) the button to change the model material. </p>
+              </div>
+            </div>
+            <div class="interpic">
+              <div class="stage">
+                <video autoplay loop muted playsinline>
+                  <source src="./surgery/hruler.webm" type="video/webm">
+                </video>
+                <h6 style="color: #6aa84f">Measurement tool</h6>
+                <p>Perform the Measurement Gesture to start measuring the desired object. Trigger with right hand to complete the measurement.</p>
+              </div>
+              <div class="stage">
+                <video autoplay loop muted playsinline>
+                  <source src="./surgery/hct.webm" type="video/webm">
+                </video>
+                <h6 style="color:#6aa84f">CT Viewer Tool</h6>
+                <p>First, directly select and grab the red panel, and then move the hand vertically to view the corresponding CT images.</p>
+              </div>
+              <div class="stage">
+                <video autoplay loop muted playsinline>
+                  <source src="./surgery/hopacity.webm" type="video/webm">
+                </video>
+                <h6 style="color :#6aa84f" >Model Material Replacement Tool </h6>
+                <p>Indirectly select and  trigger  (or directly select) the button to change the model material.</p>
+              </div>
+            </div>
+        </div>
+  
+
+
+  
+          </section>
+  
+  
+        </section>
+
+      
+
+
+
+        <footer>
+
+            <div class="footer-container">
+
+            <h2>Let’s Connect</h2>
+            <p>
+                Interested in working together or looking to chat over coffee? 
+                Shoot me a message and let’s talk!
+            </p>
+        
+
+            <nav class="footer-links">
+                <a href="https://github.com/jing-yuan-huang">
+                <i class="bi bi-github"style="font-size: 1.5rem;"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/huang-jingyuan/" class="active">
+                <i class="bi bi-linkedin" style="font-size: 1.5rem;"></i> 
+                </a>
+                <a href="mailto:niara7765@gmail.com"><i class="bi bi-envelope-fill"style="font-size: 1.5rem;"></i>
+                </a>
+            </nav>
+        
+            <p class="copyright">
+                &copy; 2025 Jingyuan Huang
+            </p>
+
+        </footer>
+
+    </main>
+
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/js/bootstrap.min.js"
+      integrity="sha512-fHY2UiQlipUq0dEabSM4s+phmn+bcxSYzXP4vAXItBvBHU7zAM/mkhCZjtBEIJexhOMzZbgFlPLuErlJF2b+0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./app.js" defer></script>
+  </body>
+</html>

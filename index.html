@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-Hants">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jing-Yuan Huang</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./styles/style.css" />
+    
+  </head>
+  <body>
+
+    <img class="bg-svg" src="./svg/background.svg" alt="bg-svg">
+
+    <header>
+      <a class="logo" href="index.html">
+          <img src="./pictures/mypic.webp" alt="mypic">
+          <h1> Jingyuan Huang</h1>
+      </a>
+      <button class="menu-toggle" ><i class="bi bi-list"></i></button> 
+      <nav> 
+        <button class="close-menu"><i class="bi bi-x"></i></button> 
+          <ul>
+              <li>
+                <a href="javascript:void(0);" class="active" onclick="scrollToWork()">Work</a>
+              </li>
+              <li>
+                <a href="about.html"> About</a>
+              </li>
+              <li>
+                <a href="publication.html"> Publication</a>
+              </li>
+              <li>
+                <a href="https://drive.google.com/file/d/1fxqBLkceHdlpgVt4KG4mLPxXOtx0R_PG/view?usp=sharing" target="_blank"> Resume</a>
+              </li>
+            </ul>
+      </nav>
+  </header>
+
+  
+
+    <main>
+
+      <section class="main-area">
+
+        <div class="info">
+          <h1 class="fadeInUp">Hello! I'm Yuan</h1>
+          <h2 class="fadeInUp"> With a Master’s degree in Computer Science and a Bachelor’s degree in Design, 
+            my work encompasses human-computer interaction, responsive web development, and interaction design.</h2>
+        </div>
+      </section>
+
+
+      <section class="work-area" >
+
+        <div class="topic">
+          <img src="./ICONS/icon-03.svg">
+          <h1 id="worksection">My Recent Works</h1>
+          <img src="./ICONS/icon-03.svg">
+        </div>
+
+
+        <div class="cards-container2">
+
+          <a href="tripteddy.html">
+            <div class="card">
+              <img src="./pictures/tripteddy.webp" alt="mypic" >
+              <div class="card-content">
+                <h3>Trip Teddy App</h3>
+                <div class="describe">
+                    <h4>UX research . UI design</h4>
+                  <p>
+                    TripTeddy is a travel app that streamlines trip planning with categorized attractions, personalized itineraries, and collaborative features.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a href="quickparking.html">
+            <div class="card">
+              <img src="./pictures/quuckparking.webp" alt="mypic">
+              <div class="card-content">
+                <h3>Quick Parking App</h3>
+                <div class="describe">
+                    <h4>UX research . UI design . Front-end dev</h4>
+                  <p>
+                    With a large workforce and limited parking, ensuring employees can quickly find available spots is a pressing issue.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a href="surgery.html">
+            <div class="card">
+              <img src="./pictures/VR surgery.webp" alt="mypic">
+              <div class="card-content">
+                <h3>VR Medical Education System</h3>
+                <div class="describe">
+                  <h4>Interaction design . UI design. System dev</h4>
+                  <p>
+                    This study explores the use of VR in thoracic anatomy learning by creating 3D models from real patient data and designing interactive tools to enhance medical education.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </a>
+
+
+        </div>
+  
+      </section>
+
+
+      <footer>
+
+        <div class="footer-container">
+
+          <h2>Let’s Connect</h2>
+          <p>
+            Interested in working together or looking to chat over coffee? 
+            Shoot me a message and let’s talk!
+          </p>
+      
+
+          <nav class="footer-links">
+            <a href="https://github.com/jing-yuan-huang">
+              <i class="bi bi-github"style="font-size: 1.5rem;"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/huang-jingyuan/" class="active">
+              <i class="bi bi-linkedin" style="font-size: 1.5rem;"></i> 
+            </a>
+            <a href="mailto:niara7765@gmail.com"><i class="bi bi-envelope-fill"style="font-size: 1.5rem;"></i>
+            </a>
+          </nav>
+      
+          <p class="copyright">
+            &copy; 2025 Jingyuan Huang
+          </p>
+
+      </footer>
+
+
+
+    </main>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/js/bootstrap.min.js"
+      integrity="sha512-fHY2UiQlipUq0dEabSM4s+phmn+bcxSYzXP4vAXItBvBHU7zAM/mkhCZjtBEIJexhOMzZbgFlPLuErlJF2b+0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./app.js" defer></script>
+  </body>
+</html>
