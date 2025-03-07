@@ -301,7 +301,7 @@ body {
             display: flex;
             width: 50vw;
             height: auto;
-            margin: 1rem 1.5rem 3rem 1.5rem;
+            margin: 1rem 0rem 3rem 0rem;
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -393,7 +393,6 @@ body {
         .publication{
           display: flex;
           align-items: center;
-          justify-content: center;
           margin: 1rem 3rem;
   
           
@@ -405,7 +404,6 @@ body {
           }
   
           .describe{
-            flex: 1 1 500px;
             display: flex;
             flex-direction: column;
             padding: 1rem;
@@ -430,7 +428,7 @@ body {
                 .award {
                   font-size: 0.9em;
                   font-weight: bold;
-                  color: rgb(183, 82, 82); /* 你可以换成 gold 让它更显眼 */
+                  color: rgb(183, 82, 82); 
                   margin-left: 8px;
                 }
   
@@ -442,7 +440,9 @@ body {
                 a{
                   img{
                     padding: 0;
-                    width:1.5rem;
+                    max-width: 1.5rem;
+                    height: auto;
+                    
                   }
                 }
                 
@@ -1193,10 +1193,14 @@ body {
           display: flex;
           gap: 8%;
           align-items: center;
+          margin: 1.5rem;
   
           img{
             width: 250px;
             border-radius: 120px;
+            padding: 1.5rem;
+
+
           }
   
         }
@@ -1543,11 +1547,18 @@ body {
   }
 
   section.work-area{
+    margin: 1rem 2rem 10rem 2rem !important;
+
+    .topic{
+      h1{
+        font-size: 1.5rem !important;
+      }
+    }
       
-    div.cards-container2 {
+   div.cards-container2 {
 
       a{
-  
+
           .card-content{
             
             h3{
@@ -1633,18 +1644,26 @@ body {
   }
 
   main{
+
     section.main-area{
-      div.info{
+      .info{
+
         h1{
-          font-size: 7vw;
-          padding: 0.5rem;
+          font-size: 8vw !important;
+          padding: 0.5rem !important;
 
         }
-        h2 {
+        h2 {  
           font-size: 3.5vw;
         }
+
       }
+      
+       
+      
     }
+
+    
 
 
     section.workintro-area{
@@ -1699,37 +1718,63 @@ body {
 
 
      }
-      
-  }
 
-  .publication{
-    flex-direction: column !important;
-    align-items: center;
-    justify-content: center;
-    margin: 0rem !important;
+     section.about-area{
+      .aboutme{
+        display: flex;
+        flex-direction: column;
+        p{
+          padding: 1rem 2rem;
+        }
+      }
+     }
 
-    img {
-      flex: 0 0 100px !important;
-      padding: 1rem !important;
-    }
+     section.normal-area{
+      .publication{
+        flex-direction: column !important;
+        align-items: center;
+        justify-content: center;
+        margin: 0rem !important;
+  
+        img {
+          flex: 0 0 100px !important;
+          padding: 1rem !important;
+        }
+  
+        .describe {
+  
+          flex: unset; 
+          width: 100%;
+          padding-bottom: 2rem !important;
+          padding-top: 0rem !important;
+  
+          h1{
+            font-size: 1.2rem !important;
+          }
+  
+        }
 
-    .describe {
+        .link{
+          a{
+            img{
+              //max-width: 1.5rem !important;
+              padding: 0 !important;
+              
+            }
+          }
+          
+        }
 
-      flex: unset; 
-      width: 100%;
-      padding: 0;
-
-      h1{
-        font-size: 1.2rem !important;
+  
+        
       }
 
-    }
+     }
 
-    
-  }
+     
 
 
-      
+     
   }
 
  
@@ -1745,6 +1790,8 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
 }
 
 
