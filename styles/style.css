@@ -117,6 +117,7 @@ body main section.main-area .info h1 {
 body main section.main-area .info h2 {
   font-size: 1.5rem;
   color: rgb(239, 218, 180);
+  opacity: 0;
 }
 body main section.main-area .info .fadeInUp {
   opacity: 0;
@@ -888,7 +889,7 @@ body main section.about-area {
   background-color: rgb(253, 244, 227);
   margin: 2rem auto;
   max-width: 1000px;
-  padding: 2rem;
+  padding: 2rem 0rem;
 }
 body main section.about-area .aboutcontainer {
   margin: 2rem 0rem 5rem 0rem;
@@ -922,7 +923,7 @@ body main section.about-area .aboutcontainer .aboutme img {
   padding: 1.5rem;
 }
 body main section.about-area .timelinecontainer {
-  margin: 2rem 4rem;
+  margin: 2rem 0rem;
   margin-bottom: 6rem;
 }
 body main section.about-area .timelinecontainer .topic {
@@ -951,7 +952,7 @@ body main section.about-area .timelinecontainer .timeline {
 body main section.about-area .timelinecontainer .timeline::before {
   content: "";
   position: absolute;
-  left: 45%;
+  left: 44.7%;
   top: 0;
   width: 4px;
   height: 100%;
@@ -1005,7 +1006,7 @@ body main section.about-area .timelinecontainer .timeline .timeline-item .timeli
   text-decoration: underline;
 }
 body main section.about-area .timelinecontainer2 {
-  margin: 1rem 4rem;
+  margin: 2rem 0rem;
   margin-bottom: 6rem;
 }
 body main section.about-area .timelinecontainer2 .topic {
@@ -1034,7 +1035,7 @@ body main section.about-area .timelinecontainer2 .timeline {
 body main section.about-area .timelinecontainer2 .timeline::before {
   content: "";
   position: absolute;
-  left: 45%;
+  left: 44.7%;
   top: 0;
   width: 4px;
   height: 100%;
@@ -1140,6 +1141,9 @@ body footer .footer-container .footer-links .copyright {
   .tag {
     display: none !important;
   }
+  section.work-area div.cards-container2 a div.card {
+    width: 60vw !important;
+  }
   section.work-area div.cards-container2 a .card-content {
     flex-direction: column !important;
   }
@@ -1151,7 +1155,7 @@ body footer .footer-container .footer-links .copyright {
     flex: 1 1 50px !important;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 480px) {
   .interact2 .interpic {
     grid-template-columns: repeat(1, 1fr) !important;
   }
@@ -1161,11 +1165,29 @@ body footer .footer-container .footer-links .copyright {
   section.work-area .topic h1 {
     font-size: 1.5rem !important;
   }
-  section.work-area div.cards-container2 a .card-content h3 {
-    font-size: 1.2rem !important;
+  section.work-area .cards-container2 a div.card {
+    width: 65vw !important;
+  }
+  section.work-area .cards-container2 a .card-content h3 {
+    font-size: 4vw !important;
+  }
+  section.work-area .cards-container2 a .card-content .describe h4, section.work-area .cards-container2 a .card-content .describe p {
+    font-size: 3vw !important;
+  }
+  section.about-area .timelinecontainer .timeline::before {
+    left: 45.5% !important;
+  }
+  section.about-area .timelinecontainer .timeline .timeline-item {
+    gap: 4rem !important;
+  }
+  section.about-area .timelinecontainer2 .timeline::before {
+    left: 45.5% !important;
+  }
+  section.about-area .timelinecontainer2 .timeline .timeline-item {
+    gap: 4rem !important;
   }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 768px) {
   header {
     padding: 1.5rem 2.5rem 0.5rem 0.5rem;
   }
@@ -1221,7 +1243,7 @@ body footer .footer-container .footer-links .copyright {
     padding: 0.5rem !important;
   }
   main section.main-area .info h2 {
-    font-size: 3.5vw;
+    font-size: 4vw !important;
   }
   main section.workintro-area .tag {
     display: none !important;
@@ -1253,12 +1275,13 @@ body footer .footer-container .footer-links .copyright {
   main section.workintro-area .design img {
     width: 90%;
   }
-  main section.about-area .aboutme {
+  main section.about-area .aboutcontainer .aboutme {
     display: flex;
     flex-direction: column;
   }
-  main section.about-area .aboutme p {
-    padding: 1rem 2rem;
+  main section.about-area .aboutcontainer .aboutme p {
+    padding: 1rem 1rem;
+    font-size: 0.9rem;
   }
   main section.normal-area .publication {
     flex-direction: column !important;
@@ -1277,7 +1300,10 @@ body footer .footer-container .footer-links .copyright {
     padding-top: 0rem !important;
   }
   main section.normal-area .publication .describe h1 {
-    font-size: 1.2rem !important;
+    font-size: 1rem !important;
+  }
+  main section.normal-area .publication .describe p, main section.normal-area .publication .describe h3 {
+    font-size: 0.8rem !important;
   }
   main section.normal-area .publication .link a img {
     padding: 0 !important;

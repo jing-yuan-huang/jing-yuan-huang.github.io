@@ -154,7 +154,7 @@ body {
         h2 {
           font-size: 1.5rem;
           color: rgb(239, 218, 180);;
-          //opacity: 0;
+          opacity: 0;
         }
 
         .fadeInUp {
@@ -1161,7 +1161,7 @@ body {
       background-color: rgb(253,244,227);
       margin: 2rem auto;
       max-width: 1000px;
-      padding: 2rem;
+      padding: 2rem 0rem;
 
       .aboutcontainer{
 
@@ -1210,7 +1210,7 @@ body {
 
       .timelinecontainer{
 
-        margin: 2rem 4rem;
+        margin: 2rem 0rem;
         margin-bottom: 6rem;
 
         .topic{
@@ -1244,7 +1244,7 @@ body {
           &::before{
             content: "";
             position: absolute;
-            left: 45%;
+            left: 44.7%;
             top: 0;
             width: 4px;
             height: 100%;
@@ -1321,7 +1321,7 @@ body {
 
       .timelinecontainer2{
 
-        margin: 1rem 4rem;
+        margin: 2rem 0rem;
         margin-bottom: 6rem;
 
         .topic{
@@ -1355,7 +1355,7 @@ body {
           &::before{
             content: "";
             position: absolute;
-            left: 45%;
+            left:  44.7%;;
             top: 0;
             width: 4px;
             height: 100%;
@@ -1516,6 +1516,10 @@ body {
     div.cards-container2 {
 
       a{
+
+        div.card{
+          width: 60vw !important;
+        }
   
           .card-content{
             flex-direction: column !important;
@@ -1539,13 +1543,13 @@ body {
   
 }
 
-@media (max-width: 600px) {
+@media (max-width: 480px) {
   .interact2{
     .interpic {
       grid-template-columns: repeat(1, 1fr) !important; 
     }
   }
-
+  
   section.work-area{
     margin: 1rem 2rem 10rem 2rem !important;
 
@@ -1555,30 +1559,80 @@ body {
       }
     }
       
-   div.cards-container2 {
-
+    .cards-container2{
       a{
-
-          .card-content{
-            
-            h3{
-              font-size: 1.2rem !important;
-            }
-
+        div.card{
+          width: 65vw !important;
+        }
+        .card-content{
+          h3{
+            font-size: 4vw !important;
           }
-        
+          .describe{
+            h4,p{
+              font-size: 3vw !important;
+            }
+          }
+        }
       }
-
+    }
       
 
+  }
+
+  section.about-area{
+
+    
+
+    .timelinecontainer{
+
+      .timeline {
+  
+        &::before{
+          left: 45.5% !important;
+        }     
+  
+        .timeline-item{
+          gap: 4rem !important;
+        }
+  
+          
+  
+          
+      }
+  
+    }
+    
+    .timelinecontainer2{
+
+      .timeline {
+  
+        &::before{
+          left: 45.5% !important;
+        }     
+  
+        .timeline-item{
+          gap: 4rem !important;
+        }
+  
+          
+  
+          
+      }
+  
     }
   }
-}
+  
+
+  
+  }
 
 
 
 
-@media screen and (max-width: 800px) {
+
+
+@media screen and (max-width: 768px) {
 
 
   header {
@@ -1654,7 +1708,7 @@ body {
 
         }
         h2 {  
-          font-size: 3.5vw;
+          font-size: 4vw !important;
         }
 
       }
@@ -1662,9 +1716,6 @@ body {
        
       
     }
-
-    
-
 
     section.workintro-area{
 
@@ -1720,13 +1771,18 @@ body {
      }
 
      section.about-area{
-      .aboutme{
-        display: flex;
-        flex-direction: column;
-        p{
-          padding: 1rem 2rem;
+      .aboutcontainer{
+        .aboutme{
+          display: flex;
+          flex-direction: column;
+          p{
+            padding: 1rem 1rem;
+            font-size: 0.9rem;
+          }
         }
       }
+      
+     
      }
 
      section.normal-area{
@@ -1749,7 +1805,10 @@ body {
           padding-top: 0rem !important;
   
           h1{
-            font-size: 1.2rem !important;
+            font-size: 1rem !important;
+          }
+          p,h3 {
+            font-size: 0.8rem !important;
           }
   
         }
@@ -1771,11 +1830,13 @@ body {
 
      }
 
+    
      
 
 
      
   }
+
 
 
 }
