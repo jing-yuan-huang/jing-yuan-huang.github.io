@@ -81,3 +81,5 @@ window.addEventListener("scroll",()=>{
   hill_2.style.left = value * 1.5 + "px";
 
 });
+
+

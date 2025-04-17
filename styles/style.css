@@ -15,6 +15,7 @@ h6 {
 
 body {
   background-color: rgb(253, 244, 227);
+  font-family: "GenJyuuGothic", sans-serif;
 }
 body .bg-svg {
   position: absolute;
@@ -106,18 +107,27 @@ body main section.main-area .info {
   z-index: 2;
   position: relative;
   padding: 2rem;
-  padding-bottom: 40vh;
+  padding-bottom: 20vh;
 }
 body main section.main-area .info h1 {
   font-size: 5rem;
-  color: rgb(239, 218, 180);
+  color: rgb(255, 254, 254);
   padding: 1rem;
   opacity: 0;
 }
 body main section.main-area .info h2 {
   font-size: 1.5rem;
-  color: rgb(239, 218, 180);
+  color: rgb(246, 245, 242);
   opacity: 0;
+}
+body main section.main-area .info .svg-button {
+  width: 90px;
+  height: 90px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-top: 3rem;
+  animation: scaleAnimation 1s infinite alternate;
 }
 body main section.main-area .info .fadeInUp {
   opacity: 0;
@@ -1318,4 +1328,21 @@ body footer .footer-container .footer-links .copyright {
     opacity: 1;
     transform: translateY(0);
   }
+}
+@keyframes scaleAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@font-face {
+  font-family: "GenJyuuGothic";
+  src: url("../fonts/GenJyuuGothic-Normal.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }/*# sourceMappingURL=style.css.map */

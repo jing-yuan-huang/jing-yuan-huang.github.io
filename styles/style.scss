@@ -18,14 +18,14 @@ h6 {
 
 body {
 
+
   background-color:rgb(253,244,227) ;
+  font-family: 'GenJyuuGothic', sans-serif;
 
   .bg-svg{
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    pointer-events: none;
+    width: 100vw;
+    height: 100vh;
     object-fit: cover; 
     z-index: -1;
     margin-bottom: 0;
@@ -145,20 +145,30 @@ body {
         z-index: 2;
         position: relative;
         padding: 2rem;
-        padding-bottom: 40vh;
+        padding-bottom: 20vh;
 
         h1 {
           font-size: 5rem;
-          color: rgb(239, 218, 180);
+          color: rgb(255, 254, 254);
           padding: 1rem;
           opacity: 0;
         }
         h2 {
           font-size: 1.5rem;
-          color: rgb(239, 218, 180);;
+          color: rgb(246, 245, 242);;
           opacity: 0;
         }
 
+        .svg-button {
+          width: 90px;
+          height: 90px;
+          background: none;
+          border: none; 
+          cursor: pointer;
+          margin-top: 3rem;
+          animation: scaleAnimation 1s infinite alternate;
+        }
+        
         .fadeInUp {
           opacity: 0;
         }
@@ -1851,6 +1861,27 @@ body {
     transform: translateY(0);
   }
 }
+
+@keyframes scaleAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@font-face {
+  font-family: 'GenJyuuGothic';
+  src: url('../fonts/GenJyuuGothic-Normal.ttf') format('truetype');
+  font-weight: normal; 
+  font-style: normal;
+}
+
+
 
 
 
