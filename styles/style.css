@@ -46,7 +46,7 @@ body header .logo {
 }
 body header .logo h1 {
   font-size: 1rem;
-  font-weight: 800;
+  font-weight: medium;
   color: white;
 }
 body header .logo img {
@@ -81,7 +81,7 @@ body header nav ul li a {
   color: white;
   text-decoration: none;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: medium;
   transition: all 0.2s ease;
   padding-bottom: 0.3rem;
   padding-left: 3rem;
@@ -266,7 +266,7 @@ body main section.work-area div.cards-container2 a div.card .card-content h3 {
   flex: 1 1 100px;
   font-size: 1.5rem;
   color: #0b0b0b;
-  font-weight: 500;
+  font-weight: bold;
 }
 body main section.work-area div.cards-container2 a div.card .card-content .describe {
   flex: 1 1 200px;
@@ -1344,5 +1344,17 @@ body footer .footer-container .footer-links .copyright {
   font-family: "GenJyuuGothic";
   src: url("../fonts/GenJyuuGothic-Normal.ttf") format("truetype");
   font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GenJyuuGothic";
+  src: url("../fonts/GenJyuuGothic-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GenJyuuGothic";
+  src: url("../fonts/GenJyuuGothic-Medium.ttf") format("truetype");
+  font-weight: 400;
   font-style: normal;
 }/*# sourceMappingURL=style.css.map */
