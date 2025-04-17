@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150">
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 150 150">
+  <!-- Generator: Adobe Illustrator 29.3.1, SVG Export Plug-In . SVG Version: 2.1.0 Build 151)  -->
   <defs>
     <style>
-      .cls-1 {
-        fill: #ea9d00;
-      }
-
-      .cls-2 {
+      .st0 {
         fill: none;
         stroke: #f9f8f7;
         stroke-linecap: round;
@@ -15,6 +12,6 @@
       }
     </style>
   </defs>
-  <circle class="cls-1" cx="74.89" cy="74.69" r="39.81"/>
-  <polyline class="cls-2" points="54.72 66.1 74.31 86.79 95.05 66.96"/>
+  <polyline class="st0" points="54.8 52.8 74.4 73.5 95.2 53.7"/>
+  <polyline class="st0" points="54.8 75.6 74.4 96.3 95.2 76.5"/>
 </svg>
