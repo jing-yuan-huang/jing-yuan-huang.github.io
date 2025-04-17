@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+  // 處理動畫效果
   const animatedElements = document.querySelectorAll(".fadeInUp");
-
   if (animatedElements.length > 0) {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
     animatedElements.forEach((element) => observer.observe(element));
   }
 
-
+  // 處理菜單開關
   const menuToggle = document.querySelector(".menu-toggle");
   const closeMenu = document.querySelector(".close-menu");
   const nav = document.querySelector("nav");
@@ -37,36 +37,47 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  // 通用滾動到指定元素的函數
+  const scrollToElement = function (elementId, offset = 130) {
+    const targetElement = document.getElementById(elementId);
+    if (!targetElement) return;
 
-  window.scrollToWork = function () {
-    const section = document.getElementById("worksection");
-    if (!section) return; 
-
-    const offset = 130;
-    const sectionPosition = section.offsetTop - offset;
-
+    const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
     window.scrollTo({
-      top: sectionPosition,
-      behavior: "smooth",
+      top: elementPosition - offset,
+      behavior: "smooth"
     });
   };
+
+  // 使用通用滾動函數
+  window.scrollToWork = function () {
+    scrollToElement("worksection");
+  };
+
+  // 錨點鏈接滾動
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function(event) {
+      event.preventDefault(); 
+      const targetId = this.getAttribute("href").substring(1);
+      scrollToElement(targetId); // 使用通用滾動函數
+    });
+  });
+
 });
 
+// 滾動移動物件
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener("click", function(event) {
-      event.preventDefault(); 
+let cloud_1 = document.getElementById("cloud_1");
+let cloud_2 = document.getElementById("cloud_2");
+let hill_1 = document.getElementById("hill_1");
+let hill_2 = document.getElementById("hill_2");
 
-      const targetId = this.getAttribute("href").substring(1); 
-      const targetElement = document.getElementById(targetId);
-      const offset = 130; 
+window.addEventListener("scroll",()=>{
+  let value = window.scrollY;
 
-      if (targetElement) {
-          const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
-          window.scrollTo({
-              top: elementPosition - offset, 
-              behavior: "smooth"
-          });
-      }
-  });
+  cloud_1.style.left = value * -1.5 + "px";
+  cloud_2.style.left = value * 1.5 + "px";
+  hill_1.style.left = value * -1.5 + "px";
+  hill_2.style.left = value * 1.5 + "px";
+
 });
