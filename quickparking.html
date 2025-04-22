@@ -18,10 +18,10 @@
 
    
     <header>
-      <div class="logo">
-          <img src="./pictures/mypic.webp" alt="mypic">
-          <h1> Jingyuan Huang</h1>
-      </div>
+      <a class="logo" href="index.html">
+        <img src="./pictures/mypic.webp" alt="mypic">
+        <h1> Jingyuan Huang</h1>
+      </a>
       <button class="menu-toggle" ><i class="bi bi-list"></i></button> 
       <nav> 
         <button class="close-menu"><i class="bi bi-x"></i></button> 
@@ -30,14 +30,13 @@
                 <a href="index.html">Work</a>
               </li>
               <li>
-                <a href="about.html" class="active" > About</a>
+                <a href="about.html"> About</a>
               </li>
               <li>
                 <a href="publication.html"> Publication</a>
               </li>
               <li>
-                  <a href="https://drive.google.com/file/d/1fxqBLkceHdlpgVt4KG4mLPxXOtx0R_PG/view?usp=sharing" target="_blank"> Resume</a>
-                </li>> Resume</a>
+                <a href="contact.html"> Resume</a>
               </li>
             </ul>
       </nav>
@@ -47,295 +46,377 @@
 
     <main>
 
+        <section class="workintro-area" >
 
-      <section class="workintro-area" >
-
-        <div class="tag" style="left:-5.5vw">
-          <li ><a href="#overview">Overview</a></li>
-          <li><a href="#research">Research</a></li>
-          <li><a href="#design">Design</a></li>
-          <li><a href="#reflection">Reflection</a></li>
-        </div>
-
-        <section class="contect">
-          <div class="intro">
-            <h1>Quick Parking</h1>
-            <h2>A Cloud Native system for smart parking guidance and security management.</h2>
-            <img src="./quickpark/frontpage.webp">
-            <h4>運用 Cloud Native 技術打造輔助停車應用系統，提升員工停車效率，提供即時車位資訊與警勤管理，實現智能化車位分配與優化管理。</h4>
+          <div class="tag">
+            <li ><a href="#overview">Overview</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#design">Design</a></li>
+           
+            <li><a href="#reflection">Reflection</a></li>
           </div>
 
-          <div class="bkground">
+          <section class="contect">
 
-              <h3 id="overview">Overview</h3>
-              <div class="overview">
-                <div class="overviewbox">
+              <div class="bkground">
 
-                  <div class="chall-role">
-                    <h5>Challenge : </h5>
-                    <p> 公司員工數量非常多，辦公室也很密集，在停車場繞場找車位是每天可見的景象，如何協助員工快速找到空車位成為一個待解決的問題。</p>
-                    <h5>Goal :</h5>
-                    <ul>
-                      <li>即時車位資訊 : 顯示停車場即時剩餘車位數量與位置，協助車主快速尋找空位。</li>
-                      <li>車輛查詢與管理 : 允許車主輸入車牌號碼查詢愛車停放位置與停放時長，提升找車效率，避免找不到愛車的情況。</li>
-                      <li>促車位使用歷程追蹤 : 為警勤人員提供特定車位的當天使用紀錄，提升管理與監控效能，理解長期使用狀況。</li>
-                      <li>車位利用率分析 : 顯示當日車位空置時間比例，協助優化停車資源分配與管理策略。 </li>
-                    </ul>
-                  </div>
-                  <div class="role-tool">
+                <div class="intro" >
 
-                    <div class="role">
-                      <h5>Role : </h5>
+                  <h1 id="overview" >Quick Parking</h1>
+                  <h2>A Cloud Native system for smart parking guidance and security management.</h2>
+    
+                  <img src="./quickpark/frontpage.webp">
+                  <!-- <video autoplay loop muted playsinline>
+                    <source src="./trippic/qxjpp-ab2wg.webm" type="video/webm">
+                    <img src="./quickpark/frontpage.webp">
+                  </video>
+     -->
+                
+                </div>
+
+                <!-- <h3 id="overview">Overview</h3> -->
+                <div class="overview">
+                    <div class="overviewbox">
+
+                      <div class="main-info">
+
+                        <div class="info-row">
+                          <span class="label">Year</span>
+                          <span class="line"></span>
+                          <span class="value">2024</span>
+                        </div>
+
+                        <div class="info-row">
+                          <span class="label">My Role</span>
+                          <span class="line"></span>
+                          <span class="value">UI Design, UX Research</span>
+                        </div>
+
+                        <div class="info-row">
+                          <span class="label">See Live</span>
+                          <span class="line"></span>
+                          <a href="https://www.figma.com/proto/x4JOSdaLOhsORLPRrSwNQ6/%E9%9B%B2%E5%8E%9F%E7%94%9F-Quick-Parking?page-id=0%3A1&node-id=214-478&p=f&viewport=-1132%2C109%2C0.16&t=HZHG792DwQpddD3d-1&scaling=scale-down&content-scaling=fixed">
+                            <span class="value">Final Pototype</span>
+                          </a>
+                        </div>
+
+
+                      </div>
+
+                      <div class="chall-goal">
+                      
+                        <h5>Design Context</h5>
+                        <p> This project was a course extension, based on real-world issues with parking in a crowded office. With many employees and limited parking information, drivers often waste time searching for spaces. We aimed to create a system that helps drivers find parking faster and makes management easier for staff.</p>
+                        <h5>Ｗhat We Did </h5>
+                        <ul>
+                          <li>Built a real-time display showing how many spots are available and where they are. </li>
+                          <li>Designed a tool for security staff to check who used specific spots during the day.</li>
+                          <li> Showed daily parking data to help improve space use and management.</li>
+                        </ul>
+                      </div>
+                      <!--
+                      <div class="role-tool">
+                        <div class="role">
+                          <h5>Role : </h5>
+                          <ul>
+                            <li>User Experience Research</li>
+                            <li>User Interface Design</li>
+                            <li>Visual Design</li>
+                          </ul>
+                        </div>
+                        <div class="role">
+                          <h5>Tool : </h5>
+                          <ul>
+                            <li>Figma</li>
+                            <li>Miro</li>
+                            <li>Google Form</li>
+                          </ul>
+                      </div>
+
+                      </div>
+                      -->
+                    </div>
+                    <!--
+                      <img src="./trippic/roll.webp">
+                    -->
+                </div>
+
+              </div>
+
+              <div class="research">
+
+                  <div class="research-box">
+
+                    <div class="research-overall">
+                      <h3 id="research">Research</h3>
+                      <img src="./svg/research_3.svg">
+                      <p>To better solve parking problems, we used a user-centered design process: Persona → User Journey → Feature Prioritization → Pain Points & Needs. This helped us design features that truly match what users need and how they behave.</p>
+                    </div>
+                    
+                    <div class="research-content">
+                      <h5>Persona Development</h5>
+                      <p>Based on an analysis of user behavior in the parking lot, I developed five user personas representing a range of needs and age groups, including corporate employees, visitors, and security staff. Since the core goal of this project was to improve parking efficiency and user experience, it was essential to ensure that each user type could easily find, use, or manage parking spaces.</p>
+                    </div>
+
+                    <div class="research-pic">
+                      <div class="stage">
+                        <img src="./quickpark/persona1.png">
+                        <img src="./quickpark/persona2.png">
+                        <img src="./quickpark/persona3.png">
+                      </div>
+                      <div class="stage">
+                        <img src="./quickpark/persona4.png">
+                        <img src="./quickpark/persona5.png">
+                      </div>
+                    </div>  
+        
+                    <div class="research-content">
+        
+                      <h5>User Journey Mapping</h5>
+                      <p>Next, we mapped typical user scenarios, from entering the parking lot to finding a spot, parking, and leaving. This revealed moments of friction, such as first-time visitors getting lost, or employees struggling to find spots just before 9:00 AM. By visualizing these journeys, we uncovered key opportunities for design interventions—like integrating navigation and entry-point-based spot suggestions.</p>
+                    </div>
+        
+                    <div class="research-pic-single">
+                      <div class="stage">
+                        <img src="./quickpark/userjourney.png">
+                        <p>Userjourney</p>
+                      </div>
+                    </div>
+
+                    <div class="research-pic-single">
+                      <div class="stage">
+                        <img src="./quickpark/guardjourney.png">
+                        <p>Guardjourney</p>
+                      </div>
+                    </div>
+
+                    <div class="research-content">
+        
+                      <h5> Feature Prioritization</h5>
+                      <p> We translated insights into clear, actionable features based on frequency, urgency, and feasibility.  High-priority features included:</p>
                       <ul>
-                        <li>User Experience Research</li>
-                        <li>User Interface Design</li>
-                        <li>Visual Design</li>
-                        <li>Front-end Development</li>
+                        <li>Real-time parking availability map</li>
+                        <li>License plate-based car locator</li>
+                        <li>Visitor-friendly interface without login</li>
+                        <li>Security dashboard for long-term spot usage</li>
                       </ul>
                     </div>
-                    <div class="role">
-                      <h5>Tool : </h5>
+
+                    <div class="research-pic-single">
+                      <div class="stage">
+                        <img src="./quickpark/userfunction.png">
+                        <p>Userjourney</p>
+                      </div>
+                    </div>
+
+                    <div class="research-pic-single">
+                      <div class="stage">
+                        <img src="./quickpark/guardfuction.png">
+                        <p>Userjourney</p>
+                      </div>
+                    </div>
+
+                    <div class="research-content">
+        
+                      <h5>Pain Points & Needs</h5>
+                      <p>Finally, we consolidated the design direction through a detailed pain point and needs table.</p>
+                      <h6>Key problems include:</h6>
                       <ul>
-                        <li>Figma</li>
-                        <li>Miro</li>
-                        <li>Tyscript</li>
-                        <li>React</li>
+                        <li> <strong>Difficulty finding parking</strong> during peak hours</li>
+                        <li> <strong>Poor orientation</strong> in the parking facility</li>
+                        <li> <strong>Lack of visibility</strong> for parking management staff</li>
+                        <li> <strong>Inaccessibility</strong> of special needs spots</li>
+                        <li>  <strong>Lack of transparent parking information</strong></li>
                       </ul>
-                   </div>
+                    </div>
+
+                    <div class="definition">
+
+                      <div class="table">
+                        <table>
+                          <thead>
+                            <tr>
+                              <th>User Type</th>
+                              <th>Pain Points</th>
+                              <th>Needs / Solutions</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Employees</td>
+                              <td>
+                                <ul>
+                                  <li>Hard to find parking during peak time (e.g., 9:00 AM)</li>
+                                  <li>Newcomers are unfamiliar with the layout, wasting time searching for a spot</li>
+                                </ul>
+                              </td>
+                              <td>
+                                <ul>
+                                  <li>Real-time display of available parking spaces with quick filters</li>
+                                  <li>Navigation feature to guide drivers to the nearest available space</li>
+                                </ul>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>Visitors</td>
+                              <td>
+                                <ul>
+                                  <li>Unfamiliar with the parking lot, difficult to find a space</li>
+                                  <li>Short visits and frequent entries/exits</li>
+                                </ul>
+                              </td>
+                              <td>
+                                <ul>
+                                  <li>Guest parking search function without login</li>
+                                  <li>Display of elevator/entrance locations to help choose suitable spots</li>
+                                </ul>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>Security / Management Staff</td>
+                              <td>
+                                <ul>
+                                  <li>Cannot monitor real-time parking usage</li>
+                                  <li>Difficult to track long-term or rule-breaking vehicles manually</li>
+                                </ul>
+                              </td>
+                              <td>
+                                <ul>
+                                  <li>Automatic recording of space usage, showing current occupancy and unusual activity</li>
+                                  <li>Ability to flag abnormal vehicles, such as those parked for over 48 hours</li>
+                                </ul>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+
+                    </div>
+                  </div>
+
+              </div>
+            
+              <div class="design">
+
+                <div class="design-box">
+
+                  <div class="design-overall">
+                    <h3 id="design">Design</h3>
+                    <p style="text-align: left;">This design phase includes User Flow Design and Hi-Fi Prototype. It is based on key needs found in user research. We use flow diagrams and clear visuals to help different users—like employees, visitors, and security staff—complete tasks easily. The goal is to make the system easy to use and the information easy to understand.</p>
+                  </div>
+
+                  <div class="design-content">
+                    <h5>User Flow Design</h5>
+                    <p>Based on early user research, we created a complete user flow diagram to show how different users—employees, visitors, and security staff—interact with the system. This diagram helped us confirm that key features (such as live parking space search, car locating, and abnormal vehicle alerts) meet the needs of each user type. It also served as a guide for the later interface design.</p>
+                    <h6>1. Employee Features</h6>
+                    <ul>
+                      <li><strong>Login and Settings:</strong> Log in to set car info and parking preferences (e.g., near elevator, basement).</li>
+                      <li><strong>Real-Time Search:</strong> Filter spaces by floor or area, with accessible parking options.</li>
+                      <li><strong>Find My Car:</strong> Enter license plate to locate your car.</li>
+                    </ul>
+
+                    <h6>2. Visitor Features</h6>
+                    <ul>
+                      <li><strong>No Login Needed:</strong> Check parking availability without an account.</li>
+                      <li><strong>Elevator/Exit Info:</strong> See elevator and exit locations for easy access.</li>
+                    </ul>
+
+                    <h6>3. Management Features (Security Staff)</h6>
+                    <ul>
+                      <li><strong>Admin Dashboard:</strong> View real-time usage and stats.</li>
+                      <li><strong>Abnormal Vehicle Alerts:</strong> Flag long-term or rule-breaking cars.</li>
+                      <li><strong>Vehicle Search:</strong> Find car details by license plate.</li>
+                    </ul>
+
+                    <h6>4. Interaction & Visual Design</h6>
+                    <ul>
+                      <li><strong>Icons & Labels:</strong> Clear icons for parking status and preferences.</li>
+                      <li><strong>Color Coding:</strong> Colors show available, occupied, or long-parked spots.</li>
+                    </ul>
+                  </div>
+
+                  <div class="design-pic">
+                    <img src="./quickpark/wirefram.png" style="height: 60vh ">
+                  </div>
+
+                  <div class="design-content">
+                    <h5>Hi-Fi Prototype</h5>
+                    <ul>
+                      <li>Uses <strong>visual elements</strong> and <strong>color cues</strong> to improve information clarity and user navigation.</li>
+                      <li>For <strong>drivers</strong>, the interface offers <strong>custom settings</strong> and <strong>parking filters</strong> (e.g., near elevator, accessible parking) to help them quickly find a spot near Lin Chin's office.</li>
+                      <li>For <strong>security staff</strong>, the interface keeps a <strong>consistent visual style</strong>, with <strong>data charts</strong> and <strong>vehicle info lookup tools</strong> to enhance monitoring and management.</li>
+                      <li>Overall, the design improves <strong>efficiency</strong> and <strong>ease of use</strong> across all user types.</li>
+                    </ul>
+                  </div>
+
+                  <div class="design-pic" >
+                    <img src="./quickpark/hifi-10.webp" style=" max-width: 100vw; height: auto; ">
+                    <img src="./quickpark/hifi-11.webp" style=" max-width: 100vw; height: auto; ">
+                    <img src="./quickpark/hifi-12.webp" style=" max-width: 100vw; height: auto; ">
+                  </div>
+                       
 
                   </div>
 
+              </div>
+
+              <div class="reflection" style="background-color: rgb(237, 233, 229);">
+                <div class="reflection-box">
+                  <div class="reflection-overall">
+                    <h3 >Reflection</h3>
+                    <p>
+                      This project showed us how VR can really enhance medical learning. Features like gesture controls, precise controller tools, CT viewing, and transparency adjustment all helped make the experience more engaging. Overall, users were satisfied with both input methods. Hand gestures felt natural, but there’s still room to improve accuracy, especially when it comes to measurements.
+                    </p>
+                  </div>
+
+                  <div class="reflection-content">
+                    <h5>What’s Next? </h5>
+                    <h6>System Testing and Optimization</h6>
+                    <ul>
+                      <li>Test on different devices and browsers (mobile, tablet, Chrome, Safari, Edge) to make sure the UI works well everywhere.</li>
+                      <li>Improve system performance by testing API speed, database queries, and front-end loading under heavy use.</li>
+                    </ul>
+      
+                    <h6>More Personalization</h6>
+                    <ul>
+                      <li>Let users save favorite parking zones for quick recommendations next time.</li>
+                      <li>Use AI to suggest parking spots based on user habits (e.g., near elevators, lower floors).</li>
+                    </ul>
+
+                    <h6>Better Accessibility</h6>
+                    <ul>
+                      <li>clear color contrast, adjustable text size, and screen reader support.</li>
+                      <li>Improve accessible parking with voice input or easier filters to help users with disabilities.</li>
+                    </ul>
+                  </div>
+
+                  <div class="reflection-content">
+                    <h5>Project Takeaways</h5>
+                    <ul>
+                      <li>Design took longer than expected, especially adjusting user flows and details, which delayed the Hi-Fi prototype.</li>
+                      <li>It was hard to keep front-end and back-end work in sync—changes to UI meant both sides needed quick updates.</li>
+                      <li>We learned to leave more time for design changes, align API and UI earlier, and test complex features (like real-time updates) sooner.</li>
+                    </ul>
+                  </div>
+                    
+                  </div>
+                  
+                  
+    
+                  
                 </div>
-                <img src="./quickpark/roll.webp">
+
               </div>
-           
-            <a href="https://www.figma.com/proto/x4JOSdaLOhsORLPRrSwNQ6/%E9%9B%B2%E5%8E%9F%E7%94%9F-Quick-Parking?page-id=0%3A1&node-id=214-478&p=f&viewport=-1132%2C109%2C0.16&t=HZHG792DwQpddD3d-1&scaling=scale-down&content-scaling=fixed">
-              <button> View Final Pototype</button>
-            </a>
-
-          </div>
-         
-          <div class="research">
-            <h3 id="research">Research</h3>
-            <div class="content">
-              
-              <h5> Persona Development:</h5>
-              <p>根據我對停車場使用者的行為模式分析，我開發了五個使用者角色，涵蓋不同年齡層與需求的企業員工、訪客，以及警衛。由於該專案的核心目標是提升停車效率與使用者體驗，因此確保不同類型的使用者都能順利找到並使用車位或管理車位。</p>
-            </div>
-          </div>
-
-          <div class="pic" style="gap:1rem;">
-            <div class="stage">
-              <img src="./quickpark/persona1.png">
-              <img src="./quickpark/persona2.png">
-              <img src="./quickpark/persona3.png">
-            </div>
-            <div class="stage">
-              <img src="./quickpark/persona4.png">
-              <img src="./quickpark/persona5.png">
-            </div>
-          </div>
-         
-
-          <div class="empathymap">
-
-            <h5>User Journey : </h5>
-            <p>我建立了一份使用者旅程地圖，詳細描繪受訪者分享的想法、情緒和經驗，以深入理解他們在使用過程中的痛點與需求。</p>
-           
-          </div>
-
-          <div class="pic" style="gap:2rem">
-            <div class="stage">
-              <img src="./quickpark/userjourney.png" style="max-width: 600px;">
-              <p>車主使用旅程</p>
-            </div>
-            <div class="stage">
-              <img src="./quickpark/guardjourney.png" style="max-width: 600px;">
-              <p>警衛使用旅程</p>
-            </div>
-          </div>
-
-          
-            <div class="empathymap">
-
-              <h5>Feature Prioritization : </h5>
-              <p>在規劃功能時，我根據使用者的主要痛點與需求進行優先排序，確保最關鍵的功能能夠優先開發並提供最佳體驗</p>
-            </div>
-
-            <div class="pic" style="gap:2rem">
-              <div class="stage">
-                <img src="./quickpark/userfunction.png" style="max-width: 600px;">
-                <p>車主功能排序</p>
-              </div>
-              <div class="stage">
-                <img src="./quickpark/guardfuction.png" style="max-width: 600px;">
-                <p>警衛功能排序</p>
-              </div>
-            </div>
-
+  
            
 
-          <div class="definition">
-            <div class="summary">
-              <h5>User Pain Point : </h5>
-              <p style="margin-bottom: 1rem;">透過使用者旅程的分析與功能優先排序，我們系統性地整理了使用者的主要痛點與需求，以確保解決方案能夠精準回應不同使用者群體的挑戰。</p>
-              <p>🚗 <strong>找車位困難</strong></p>
-              <ul>
-                <li>上班尖峰時段車位不足，員工與訪客都難以找到空位</li>
-              </ul>
-
-              <p>📍 <strong>不熟悉停車場，尋找車位與車輛麻煩 : </strong></p>
-              <ul>
-                <li>新員工與訪客容易迷路，浪費時間找車位或忘記停放位置。</li>
-              </ul>
-
-              <p>⌛ <strong>停車管理困難</strong></p>
-              <ul>
-                <li>警衛難以即時監控車位使用狀況，無法快速發現長時間佔位或違規車輛。</li>
-              </ul>
-
-              <p>♿ <strong>需要特殊車位但無法確保可用</strong></p>
-              <ul>
-                <li>身障人士或有特殊需求的使用者無法優先獲得適合的車位。</li>
-              </ul>
-
-              <p>📊 <strong>停車資訊不透明</strong></p>
-              <ul>
-                <li>用戶無法事先知道停車場的擁擠程度，影響停車決策。</li>
-              </ul>
-
-            
-
-            </div>
-
-            <div class="table">
-              <h5>User Needs : </h5>
-
-              <table>
-                <tr>
-                    <th>使用者類型</th>
-                    <th>痛點</th>
-                    <th>需求 / 解決方案</th>
-                </tr>
-                <tr>
-                    <td>企業員工</td>
-                    <td>- 難以快速找到車位，9:00 上班時車位幾乎已滿<br>- 新人對停車場不熟悉，浪費時間尋找車位</td>
-                    <td>- 即時顯示空車位，可快速篩選可用區域<br>- 導航功能，指引至最近的可用車位</td>
-                </tr>
-                <tr>
-                    <td>訪客</td>
-                    <td>- 不熟悉停車場，難以找到車位<br>- 停車時間短暫，進出頻繁</td>
-                    <td>- 提供訪客查詢車位功能，無需帳號也能查看剩餘車位<br>- 顯示電梯 / 出入口位置，方便選擇合適車位</td>
-                </tr>
-                <tr>
-                    <td>警衛 / 管理人員</td>
-                    <td>- 無法即時掌握停車場使用情況<br>- 難以手動監控長時間停車或違規車輛</td>
-                    <td>- 自動記錄車位使用狀況，顯示當前使用率與異常車輛<br>- 標記異常車輛，如佔位超過 48 小時的車輛</td>
-                </tr>
-            </table>
-            </div>
-
-          </div>
-
-          <div class="design">
-            <h3 id="design">Design</h3>
-            <h5>User Flow Design : </h5>
-            <img src="./quickpark/wirefram.png">
-            <div class="designcontainer">
-              <p style="padding-bottom: 1rem;">在這個階段，我們根據使用者研究中歸納的使用者需求繪製使用者流程設計圖，清晰描繪不同使用者類型在應用中的互動過程。透過這份流程圖，我能夠確保企業員工、訪客與警衛 / 管理人員的核心需求皆被妥善考量，並確保功能布局符合他們的操作習慣。</p>
-              
-              <h6>1. 車主功能設計</h6>
-              <ul>
-                <li>登入與個人化設定：提供帳號登入，允許設定車輛資訊與停車偏好（如靠近電梯、地下室或地面）。</li>
-                <li>即時車位查詢與篩選：使用者可依據樓層、區域篩選可用車位，並新增「無障礙車位」篩選選項，確保身障人士能優先找到適合的停車位。</li>
-                <li>找車功能：輸入車牌號碼，快速定位車輛停放位置，避免遺忘車輛停放點。</li>
-              </ul>
-
-              <h6>2. 訪客功能設計</h6>
-              <ul>
-                  <li>無需帳號即可查詢車位：訪客可直接查看即時車位資訊，提升便利性。</li>
-                  <li>電梯 / 出入口標示：標註停車場的電梯與主要出入口，幫助訪客選擇最方便的停車位置。</li>
-              </ul>
-
-              <h6>3. 停車場管理（警衛 / 管理人員）</h6>
-              <ul>
-                  <li>管理後台 Dashboard：提供停車場即時使用率、統計數據，幫助管理員掌握停車狀況。</li>
-                  <li>異常車輛監測：標記長時間停放或違規車輛，提高停車場管理效率。</li>
-                  <li>車輛查詢與詳細資訊：管理員可搜尋車牌號碼，查看車輛停放時長與詳細資料，快速處理異常狀況。</li>
-              </ul>
-
-              <h6>4. 互動與視覺設計優化</h6>
-              <ul>
-                  <li>圖示與標籤設計：使用直觀的圖示（如車位狀態、樓層標示、偏好選擇）提升可讀性。</li>
-                  <li>顏色區分停車狀態：以不同顏色標示「可用車位、已佔用車位、長時間停放車輛」，讓使用者快速辨識車位情況。</li>
-              </ul>
-
-              
-            </div>
-
-            
-          </div>
-
-
-          <div class="hifi"> 
-
-            <h3>Hi-Fi Pototype</h3>
-
-            <div class="bigpic">
-              <img src="./quickpark/hifi-10.webp"></img>
-              <img src="./quickpark/hifi-11.webp"></img>
-              <img src="./quickpark/hifi-12.webp"></img>
-            </div>
-          </div>
-
-          <div class="reflection">
-            <h3 style="margin: 2rem auto;" id="reflection">Reflection</h3>
-
-              <div style="margin-bottom: 3rem;">
-
-                <h5 >What’s Next? </h5>
-                <h6>測試與優化系統</h6>
-                <ul>
-                  <li>多設備與瀏覽器兼容測試：確保應用在不同解析度的手機、平板與瀏覽器（Chrome, Safari, Edge）上運行順暢，避免 UI 變形或交互問題</li>
-                  <li>性能測試與優化：針對 API 響應時間、資料庫查詢速度、前端渲染效能進行壓力測試，確保系統在高流量下依然穩定運行。</li>
-                </ul>
-                <h6> 增加用戶個性化選項</h6>
-                <ul>
-                  <li>允許使用者設定 最愛停車區域，下次可直接推薦附近可用車位。</li>
-                  <li>根據歷史停車行為，透過 AI 建議最佳車位（例如偏好電梯附近、低樓層等）。</li>
-                </ul>
-
-                <h6> 強化無障礙設計（Accessibility, A11y）</h6>
-                <ul>
-                  <li>確保應用符合 WCAG 2.1 AA 標準，包括色彩對比、可調大小字體、語音輔助支援（VoiceOver / TalkBack）。</li>
-                  <li>無障礙車位強化：提供語音輸入或更直覺的篩選方式，確保身障人士能更輕鬆找到車位。</li>
-                </ul>
-
-              </div>
-
-              <div style="margin-bottom: 4rem;">
-
-                <h5>Project Takeaways</h5>
-                <P>本專案最大的挑戰是時程規劃與實際開發的落差。設計階段比預期耗時更久，特別是在使用者流程與互動細節的調整上，導致 Hi-Fi Prototype 進度延後。此外，前後端同步開發的協作難度高，UI 變更時前端需即時調整，後端 API 也需配合修改，增加了開發負擔。</P>
-                <ul>
-                  <li>設計時程需預留更多迭代空間，避免影響開發進度。</li>
-                  <li>前後端開發應更早對齊 API 與 UI，減少後期調整。</li>
-                  <li>技術難度評估需更精準，即時更新與導航等功能應提前 PoC 測試。</li>
-                </ul>
-            
-              </div>
-              
-          </div>
+          </section>
 
 
         </section>
 
 
-      </section>
-
-
-        
-      <footer>
+        <footer>
 
             <div class="footer-container">
 
@@ -363,7 +444,7 @@
                 &copy; 2025 Jingyuan Huang
             </p>
 
-       </footer>
+        </footer>
 
     </main>
 

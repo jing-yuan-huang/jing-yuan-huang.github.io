@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="OBJECTS" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 669.94 106.47">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #8bb7a1;
+      }
+
+      .cls-2 {
+        font-family: GenJyuuGothic-P-Heavy, 'Gen Jyuu Gothic P';
+        font-size: 13.39px;
+        font-weight: 800;
+      }
+
+      .cls-3 {
+        letter-spacing: 0em;
+      }
+
+      .cls-4 {
+        fill: #5f7776;
+      }
+
+      .cls-5 {
+        letter-spacing: 0em;
+      }
+
+      .cls-6 {
+        fill: #8cb5a8;
+      }
+
+      .cls-7 {
+        fill: #8bb2b1;
+      }
+
+      .cls-8 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-9 {
+        letter-spacing: 0em;
+      }
+
+      .cls-10 {
+        letter-spacing: 0em;
+      }
+
+      .cls-11 {
+        letter-spacing: 0em;
+      }
+
+      .cls-12 {
+        fill: #8bbc8e;
+      }
+
+      .cls-13 {
+        fill: #507560;
+      }
+
+      .cls-14 {
+        fill: #587566;
+      }
+    </style>
+  </defs>
+  <rect class="cls-12" x="11.08" y="25.73" width="150.01" height="56.22" rx="12" ry="12"/>
+  <text class="cls-2" transform="translate(32.72 57.42)"><tspan class="cls-11" x="0" y="0">U</tspan><tspan class="cls-5" x="10.08" y="0">ser In</tspan><tspan class="cls-11" x="47.64" y="0">t</tspan><tspan x="53.46" y="0">ervi</tspan><tspan class="cls-11" x="80.06" y="0">e</tspan><tspan x="87.91" y="0">ws</tspan></text>
+  <rect class="cls-1" x="177.08" y="25.73" width="150.01" height="56.22" rx="12" ry="12"/>
+  <text class="cls-2" transform="translate(205.91 57.42)"><tspan x="0" y="0">Em</tspan><tspan class="cls-11" x="21.83" y="0">p</tspan><tspan x="30.5" y="0">athy Map</tspan></text>
+  <rect class="cls-6" x="339.67" y="25.73" width="150.01" height="56.22" rx="12" ry="12"/>
+  <text class="cls-2" transform="translate(369.84 57.42)"><tspan class="cls-8" x="0" y="0">P</tspan><tspan class="cls-3" x="8.93" y="0">oint </tspan><tspan class="cls-9" x="39.56" y="0">o</tspan><tspan class="cls-3" x="48.01" y="0">f Vi</tspan><tspan class="cls-10" x="69.29" y="0">e</tspan><tspan class="cls-3" x="77.13" y="0">w</tspan></text>
+  <rect class="cls-7" x="511.11" y="25.73" width="150.01" height="56.22" rx="12" ry="12"/>
+  <text class="cls-2" transform="translate(541.28 57.42)"><tspan x="0" y="0">H</tspan><tspan class="cls-11" x="10.36" y="0">o</tspan><tspan x="18.75" y="0">w Might We</tspan></text>
+  <path class="cls-13" d="M151.2,52.3c.05-.16.32-.51.48-.51h30.86v-4.61s.15-.31.19-.33c.38-.22.81.23,1.09.43l9.98,9.73c.58.67.02,1.16-.43,1.66-1.66,1.83-3.54,3.6-5.27,5.37-1.33,1.37-2.75,3.05-4.15,4.31-.2.18-.78.68-1.02.35-.03-.04-.13-.34-.13-.38v-4.66h-31.21c-.19,0-.32-.42-.38-.56v-10.8Z"/>
+  <path class="cls-14" d="M312.97,52.3c.05-.16.32-.51.48-.51h30.86v-4.61s.15-.31.19-.33c.38-.22.81.23,1.09.43l9.98,9.73c.58.67.02,1.16-.43,1.66-1.66,1.83-3.54,3.6-5.27,5.37-1.33,1.37-2.75,3.05-4.15,4.31-.2.18-.78.68-1.02.35-.03-.04-.13-.34-.13-.38v-4.66h-31.21c-.19,0-.32-.42-.38-.56v-10.8Z"/>
+  <path class="cls-4" d="M474.75,52.3c.05-.16.32-.51.48-.51h30.86v-4.61s.15-.31.19-.33c.38-.22.81.23,1.09.43l9.98,9.73c.58.67.02,1.16-.43,1.66-1.66,1.83-3.54,3.6-5.27,5.37-1.33,1.37-2.75,3.05-4.15,4.31-.2.18-.78.68-1.02.35-.03-.04-.13-.34-.13-.38v-4.66h-31.21c-.19,0-.32-.42-.38-.56v-10.8Z"/>
+</svg>

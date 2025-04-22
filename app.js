@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-
   // 處理動畫效果
   const animatedElements = document.querySelectorAll(".fadeInUp");
   if (animatedElements.length > 0) {
@@ -11,7 +10,6 @@ document.addEventListener("DOMContentLoaded", function () {
       },
       { threshold: 0.5 }
     );
-
     animatedElements.forEach((element) => observer.observe(element));
   }
 
@@ -37,6 +35,25 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  // 滾動動畫效果
+  const cloud_1 = document.getElementById("cloud_1");
+  const cloud_2 = document.getElementById("cloud_2");
+  const hill_1 = document.getElementById("hill_1");
+  const hill_2 = document.getElementById("hill_2");
+
+  // 檢查是否成功抓到元素
+  if (cloud_1 && cloud_2 && hill_1 && hill_2) {
+    window.addEventListener("scroll", () => {
+      let value = window.scrollY;
+      cloud_1.style.left = value * -1.5 + "px";
+      cloud_2.style.left = value * 1.5 + "px";
+      hill_1.style.left = value * -1.5 + "px";
+      hill_2.style.left = value * 1.5 + "px";
+    });
+  } else {
+    console.warn("❗ 有些 hill 或 cloud 元素未正確載入！");
+  }
+
   // 通用滾動到指定元素的函數
   const scrollToElement = function (elementId, offset = 130) {
     const targetElement = document.getElementById(elementId);
@@ -59,27 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
     anchor.addEventListener("click", function(event) {
       event.preventDefault(); 
       const targetId = this.getAttribute("href").substring(1);
-      scrollToElement(targetId); // 使用通用滾動函數
+      scrollToElement(targetId);
     });
   });
-
 });
-
-// 滾動移動物件
-
-let cloud_1 = document.getElementById("cloud_1");
-let cloud_2 = document.getElementById("cloud_2");
-let hill_1 = document.getElementById("hill_1");
-let hill_2 = document.getElementById("hill_2");
-
-window.addEventListener("scroll",()=>{
-  let value = window.scrollY;
-
-  cloud_1.style.left = value * -1.5 + "px";
-  cloud_2.style.left = value * 1.5 + "px";
-  hill_1.style.left = value * -1.5 + "px";
-  hill_2.style.left = value * 1.5 + "px";
-
-});
-
-
