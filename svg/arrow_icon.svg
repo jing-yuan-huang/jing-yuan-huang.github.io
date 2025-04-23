@@ -12,6 +12,7 @@
       }
     </style>
   </defs>
-  <polyline class="st0" points="54.8 52.8 74.4 73.5 95.2 53.7"/>
-  <polyline class="st0" points="54.8 75.6 74.4 96.3 95.2 76.5"/>
+  <polyline class="st0" points="62 60 74.3 73 87.4 60.6"/>
+  <polyline class="st0" points="62 74.3 74.3 87.3 87.4 74.9"/>
+  <circle class="st0" cx="75" cy="73" r="38.6"/>
 </svg>
