@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -152,6 +153,9 @@ body main section.main-area .info .fadeInUp {
 }
 body main section.main-area .info .animated {
   animation: fadeInUp 1s ease-out forwards;
+}
+body main #work {
+  scroll-margin-top: 80px; /* 你想要下移多少就設多少，比如100px */
 }
 body main section.work-area {
   background-color: rgb(253, 244, 227);

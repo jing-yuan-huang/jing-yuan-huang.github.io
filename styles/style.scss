@@ -201,11 +201,17 @@ body {
       }
     }
 
+    #work {
+      scroll-margin-top: 80px; /* 你想要下移多少就設多少，比如100px */
+    }
+
+
     section.work-area{
 
       background-color: rgb(253,244,227);
       //margin: 1rem 5rem 10rem 5rem;
 
+      
       .topic{
 
         display: flex;
