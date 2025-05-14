@@ -1468,9 +1468,6 @@ body footer .footer-container .footer-links .copyright {
   .interact2 .interpic {
     grid-template-columns: repeat(1, 1fr) !important;
   }
-  section.work-area {
-    margin: 1rem 2rem 10rem 2rem !important;
-  }
   section.work-area .topic h1 {
     font-size: 1.5rem !important;
   }
