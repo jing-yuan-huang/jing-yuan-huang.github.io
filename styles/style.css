@@ -842,6 +842,11 @@ body main section.workintro-area .contect .interact-design {
   width: 100%;
   text-align: center;
 }
+body main section.workintro-area .contect .interact-design h5 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 1rem;
+}
 body main section.workintro-area .contect .interact-design .function {
   width: 100%;
   max-width: 800px;
