@@ -53,7 +53,7 @@ body header {
   position: sticky;
   top: 0;
   z-index: 10;
-  padding: 1.5rem 3.5rem 1rem 1rem;
+  padding: 1.4rem 3.5rem 1.4rem 1rem;
   justify-content: space-between;
 }
 body header .logo {
@@ -67,10 +67,11 @@ body header .logo h1 {
   font-size: 1rem;
   font-weight: medium;
   color: white;
+  margin: 0;
 }
 body header .logo img {
-  width: 50px;
-  height: 50px;
+  width: 38px;
+  height: 38px;
   border-radius: 50px;
 }
 body header .logo:hover h1 {
@@ -95,6 +96,10 @@ body header nav .close-menu {
 body header nav ul {
   display: flex;
   list-style-type: none;
+  gap: 3rem;
+  align-items: center;
+  margin: 0;
+  padding: 0;
 }
 body header nav ul li a {
   color: white;
@@ -103,7 +108,6 @@ body header nav ul li a {
   font-weight: medium;
   transition: all 0.2s ease;
   padding-bottom: 0.3rem;
-  padding-left: 3rem;
 }
 body header nav ul li a:hover {
   color: rgb(254, 192, 5);
@@ -119,6 +123,15 @@ body main section.main-area {
   align-items: center;
   justify-content: center;
   text-align: center;
+  overflow: hidden;
+}
+body main section.main-area .hero-game {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  cursor: pointer;
 }
 body main section.main-area .info {
   max-width: 850px;
@@ -127,17 +140,57 @@ body main section.main-area .info {
   position: relative;
   padding: 2rem;
   padding-bottom: 20vh;
+  pointer-events: none;
+}
+body main section.main-area .info .hero-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 0.2rem;
+  opacity: 0;
 }
 body main section.main-area .info h1 {
-  font-size: 5rem;
-  color: rgb(255, 254, 254);
-  padding: 1rem;
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #111;
+  line-height: 1.3;
+  padding: 0.5rem 0.5rem 0;
   opacity: 0;
 }
 body main section.main-area .info h2 {
-  font-size: 1.5rem;
-  color: rgb(255, 254, 254);
-  opacity: 0;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #555;
+  padding: 0 0.5rem;
+  opacity: 1;
+}
+body main section.main-area .info h3 {
+  font-size: 1.3rem;
+  font-weight: normal;
+  color: #888;
+  padding: 0.5rem;
+  opacity: 1;
+}
+body main section.main-area .info .hero-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  pointer-events: auto;
+}
+body main section.main-area .info .hero-social a {
+  color: #555;
+  font-size: 1.6rem;
+  line-height: 1;
+  display: inline-flex;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+body main section.main-area .info .hero-social a:hover {
+  color: #111;
+  transform: translateY(-3px);
 }
 body main section.main-area .info .svg-button {
   width: 90px;
@@ -147,6 +200,7 @@ body main section.main-area .info .svg-button {
   cursor: pointer;
   margin-top: 3rem;
   animation: scaleAnimation 1s infinite alternate;
+  pointer-events: auto;
 }
 body main section.main-area .info .fadeInUp {
   opacity: 0;
@@ -154,31 +208,98 @@ body main section.main-area .info .fadeInUp {
 body main section.main-area .info .animated {
   animation: fadeInUp 1s ease-out forwards;
 }
+body main section.main-area .info .hero-credentials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+body main section.main-area .info .hero-credentials .cred-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.45);
+  letter-spacing: 0.01em;
+}
+body main section.main-area .info .hero-credentials .cred-sep {
+  font-size: 0.85rem;
+  color: rgba(0, 0, 0, 0.2);
+}
+body main section.main-area.dark-hero {
+  background-color: rgb(43, 42, 42);
+}
+body main section.main-area.dark-hero .info h1 {
+  color: #ffffff;
+  font-size: 1.05rem;
+}
+body main section.main-area.dark-hero .info h2 {
+  color: #eaeaea;
+}
+body main section.main-area.dark-hero .info h3 {
+  color: #b5b5b5;
+}
+body main section.main-area.dark-hero .info .hero-social a {
+  color: #c9c9c9;
+}
+body main section.main-area.dark-hero .info .hero-social a:hover {
+  color: #ffffff;
+}
 body main #work {
   scroll-margin-top: 80px; /* 你想要下移多少就設多少，比如100px */
 }
 body main section.work-area {
-  background-color: rgb(253, 244, 227);
+  background-color: #fff;
 }
 body main section.work-area .topic {
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding-top: 10%;
-  padding-bottom: 2rem;
+  justify-content: flex-start;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 7rem 2rem 2rem 2rem;
 }
 body main section.work-area .topic img {
-  width: 30px;
-  height: 30px;
-  padding-bottom: 0.2rem;
-  animation: spin 3s linear infinite;
+  display: none;
 }
 body main section.work-area .topic h1 {
-  text-align: center;
+  text-align: left;
   font-size: 2rem;
   color: rgb(17, 17, 17);
   font-weight: 600;
-  padding: 0.5rem;
+  padding: 0;
+}
+body main section.work-area .work-filter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 8px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem 2rem 2rem;
+}
+body main section.work-area .work-filter .filter-pill {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 5px 14px;
+  border-radius: 20px;
+  letter-spacing: 0.01em;
+  background: #f2f2f2;
+  color: #555;
+  border: 0.5px solid #ddd;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+body main section.work-area .work-filter .filter-pill:hover {
+  border-color: #bbb;
+}
+body main section.work-area .work-filter .filter-pill.active {
+  background: #E6F1FB;
+  color: #185FA5;
+  border: 0.5px solid #B5D4F4;
 }
 body main section.work-area div.cards-container1 {
   display: grid;
@@ -255,131 +376,255 @@ body main section.work-area div.cards-container1 div.card .card-content p:hover 
   transform: translateY(0);
 }
 body main section.work-area div.cards-container2 {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4rem;
-  justify-content: center;
-  padding-bottom: 4rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4.5rem 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem 3rem 2rem;
 }
 body main section.work-area div.cards-container2 a {
   text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+body main section.work-area div.cards-container2 a.lg {
+  grid-column: span 2;
+}
+body main section.work-area div.cards-container2 a.wide {
+  grid-column: span 2;
+}
+body main section.work-area div.cards-container2 a.xl {
+  grid-column: span 3;
 }
 body main section.work-area div.cards-container2 a div.card {
-  display: flex;
-  width: 25vw;
-  height: auto;
-  margin-top: 1rem;
-  border-radius: 10px;
+  flex: 1 1 auto;
+  min-height: 240px;
+  border-radius: 14px;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+  background-color: #f5f5f5;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
-body main section.work-area div.cards-container2 a div.card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+body main section.work-area div.cards-container2 a.lg div.card {
+  min-height: 380px;
+}
+body main section.work-area div.cards-container2 a.wide div.card {
+  min-height: 260px;
+}
+body main section.work-area div.cards-container2 a.xl div.card {
+  min-height: 340px;
+}
+body main section.work-area div.cards-container2 a:hover div.card {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.14);
 }
 body main section.work-area div.cards-container2 a div.card img {
   width: 100%;
   height: 100%;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-body main section.work-area div.cards-container2 a div.card .card-content {
+body main section.work-area div.cards-container2 a .card-content {
   display: flex;
   flex-direction: column;
-  padding: 1.5rem;
-  gap: 5%;
+  gap: 0.5rem;
 }
-body main section.work-area div.cards-container2 a div.card .card-content h3 {
-  font-size: 1.4rem;
+body main section.work-area div.cards-container2 a .card-content h3 {
+  font-size: 1.1rem;
   color: #0b0b0b;
   font-weight: bold;
+  line-height: 1.4;
 }
-body main section.work-area div.cards-container2 a div.card .card-content .describe {
-  display: flex;
-  flex-direction: column;
+body main section.work-area div.cards-container2 a.lg .card-content h3 {
+  font-size: 1.45rem;
 }
-body main section.work-area div.cards-container2 a div.card .card-content .describe h4 {
-  font-size: 1rem;
-  color: #040404;
-  font-weight: 400;
-}
-body main section.work-area div.cards-container2 a div.card .card-content .describe p {
-  font-size: 1rem;
-  color: #494747;
-  font-weight: 400;
+body main section.work-area div.cards-container2 a.xl .card-content h3 {
+  font-size: 1.5rem;
 }
 body main section.normal-area {
-  background-color: rgb(253, 244, 227);
-  padding: 1rem 5rem 10rem 5rem;
+  background-color: #fff;
+  padding: 0 0 8rem 0;
 }
 body main section.normal-area .topic {
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin: 4rem 1rem 0rem 1rem;
+  justify-content: flex-start;
+  max-width: 1100px;
+  width: 100%;
+  margin: 4rem auto 1rem auto;
+  padding: 0;
 }
 body main section.normal-area .topic img {
-  width: 30px;
-  height: 30px;
-  padding-bottom: 0.2rem;
+  display: none;
 }
 body main section.normal-area .topic h1 {
-  text-align: center;
+  text-align: left;
   font-size: 2rem;
   color: rgb(17, 17, 17);
   font-weight: 600;
-  padding: 0.5rem;
+  padding: 0;
 }
 body main section.normal-area .publications {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: start;
+  gap: 4.5rem 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem 3rem 2rem;
 }
 body main section.normal-area .publications .publication {
   display: flex;
-  align-items: center;
-  margin: 1rem 3rem;
+  flex-direction: column;
+  gap: 1rem;
+  text-decoration: none;
+  color: inherit;
 }
-body main section.normal-area .publications .publication img {
-  flex: 0 0 300px;
-  width: 300px;
-  padding: 1rem;
-  padding-right: 3rem;
+body main section.normal-area .publications .publication.lg {
+  grid-column: span 2;
+}
+body main section.normal-area .publications .publication.lg > img {
+  aspect-ratio: 16/9;
+}
+body main section.normal-area .publications .publication.tall > img {
+  aspect-ratio: 3/4;
+}
+body main section.normal-area .publications .publication.wide {
+  grid-column: span 2;
+}
+body main section.normal-area .publications .publication.wide > img {
+  aspect-ratio: 21/9;
+}
+body main section.normal-area .publications .publication > img {
+  width: 100%;
+  aspect-ratio: 16/10;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 14px;
+  background-color: #f5f5f5;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+body main section.normal-area .publications .publication:hover > img {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.14);
 }
 body main section.normal-area .publications .publication .describe {
   display: flex;
   flex-direction: column;
-  padding: 1rem;
+  gap: 0.5rem;
 }
 body main section.normal-area .publications .publication .describe h1 {
-  font-size: 1.5rem;
-  font-weight: 500;
+  font-size: 1.05rem;
+  font-weight: bold;
+  line-height: 1.4;
+  color: #0b0b0b;
 }
-body main section.normal-area .publications .publication .describe p {
-  font-size: 1rem;
-  margin-bottom: 0.3rem;
-  color: #555454;
-}
-body main section.normal-area .publications .publication .describe p .underline {
-  display: inline-block;
-  border-bottom: 2px solid #696767;
-}
-body main section.normal-area .publications .publication .describe h3 {
-  font-size: 1rem;
-}
-body main section.normal-area .publications .publication .describe h3 .award {
+body main section.normal-area .publications .publication .describe h1 .award {
   font-size: 0.9em;
   font-weight: bold;
   color: rgb(183, 82, 82);
   margin-left: 8px;
 }
+body main section.normal-area .publications .publication .describe .tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+body main section.normal-area .publications .publication .describe .tag-row .tag {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: 20px;
+  letter-spacing: 0.01em;
+}
+body main section.normal-area .publications .publication .describe .tag-row .tag.tag-role {
+  background: #E6F1FB;
+  color: #185FA5;
+  border: 0.5px solid #B5D4F4;
+}
+body main section.normal-area .publications .publication .describe p {
+  display: none;
+}
 body main section.normal-area .publications .publication .describe .link {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+body main section.normal-area .publications .publication .describe .link a img {
+  padding: 0;
+  max-width: 1.3rem;
+  height: auto;
+}
+body main section.normal-area .publications .publication.lg .describe h1,
+body main section.normal-area .publications .publication.wide .describe h1 {
+  font-size: 1.3rem;
+}
+body main section.pub-detail-area {
+  background-color: #fff;
+  padding: 9rem 2rem 6rem 2rem;
+}
+body main section.pub-detail-area .pub-detail {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+body main section.pub-detail-area .pub-detail > img {
+  width: 100%;
+  border-radius: 14px;
+  background-color: #f5f5f5;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+body main section.pub-detail-area .pub-detail h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 1.4;
+  color: #0b0b0b;
+}
+body main section.pub-detail-area .pub-detail .authors {
+  font-size: 1rem;
+  color: #555454;
+}
+body main section.pub-detail-area .pub-detail .authors .underline {
+  display: inline-block;
+  border-bottom: 2px solid #696767;
+}
+body main section.pub-detail-area .pub-detail .venue {
+  font-size: 1rem;
+  color: #777;
+  font-weight: 400;
+}
+body main section.pub-detail-area .pub-detail .venue .award {
+  font-size: 0.9em;
+  font-weight: bold;
+  color: rgb(183, 82, 82);
+  margin-left: 8px;
+}
+body main section.pub-detail-area .pub-detail .link {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
-body main section.normal-area .publications .publication .describe .link a img {
-  padding: 0;
+body main section.pub-detail-area .pub-detail .link a img {
   max-width: 1.5rem;
   height: auto;
+}
+body main section.pub-detail-area .pub-detail .back-link {
+  margin-top: 1rem;
+  color: #444;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+body main section.pub-detail-area .pub-detail .back-link:hover {
+  color: #111;
 }
 body main section.workintro-area .tag {
   position: fixed;
@@ -410,7 +655,7 @@ body main section.workintro-area .contect {
   text-align: center;
 }
 body main section.workintro-area .contect .bkground {
-  background-color: rgb(253, 244, 227);
+  background-color: #fff;
   width: 100%;
   text-align: center;
   padding: 5% 0%;
@@ -421,11 +666,17 @@ body main section.workintro-area .contect .bkground .intro {
 body main section.workintro-area .contect .bkground .intro h1 {
   font-size: 2.5rem;
   font-weight: 800;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 body main section.workintro-area .contect .bkground .intro h2 {
   font-size: 1.3rem;
   padding-top: 1rem;
   font-weight: 500;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 body main section.workintro-area .contect .bkground .intro video {
   width: 100%;
@@ -493,7 +744,7 @@ body main section.workintro-area .contect .bkground .overview .overviewbox .chal
   padding-left: 20px;
 }
 body main section.workintro-area .contect .research {
-  background-color: rgb(237, 233, 229);
+  background-color: #fff;
   width: 100%;
   text-align: center;
   padding: 5% 0%;
@@ -708,7 +959,7 @@ body main section.workintro-area .contect .research .research-box .definition .t
   font-weight: bold;
 }
 body main section.workintro-area .contect .design {
-  background-color: rgb(253, 244, 227);
+  background-color: #fff;
   width: 100%;
   text-align: center;
   padding: 5% 0%;
@@ -766,7 +1017,7 @@ body main section.workintro-area .contect .design .design-box .design-pic img {
      object-fit: cover;
 }
 body main section.workintro-area .contect .testing {
-  background-color: rgb(237, 233, 229);
+  background-color: #fff;
   width: 100%;
   text-align: center;
   padding: 5% 0%;
@@ -841,7 +1092,7 @@ body main section.workintro-area .contect .testing .testing-box .test-bigpic2 im
      object-fit: cover;
 }
 body main section.workintro-area .contect .interact-design {
-  background-color: rgb(253, 244, 227);
+  background-color: #fff;
   width: 100%;
   text-align: center;
 }
@@ -986,7 +1237,7 @@ body main section.workintro-area .contect .interact-design .interact2 .interpic 
   border-radius: 10px;
 }
 body main section.workintro-area .contect .reflection {
-  background-color: rgb(253, 244, 227);
+  background-color: #fff;
   width: 100%;
   text-align: center;
   padding: 5% 0%;
@@ -1050,7 +1301,7 @@ body main section.workintro-area .contect .reflection .buttonin button:hover {
   color: rgb(254, 192, 5);
 }
 body main section.about-area {
-  background-color: rgb(253, 244, 227);
+  background-color: #fff;
   padding: 1rem 2rem 5rem 2rem;
 }
 body main section.about-area .aboutbox {
@@ -1305,7 +1556,7 @@ body footer .footer-container .footer-links .copyright {
   .interact2 .interpic {
     grid-template-columns: repeat(2, 1fr) !important;
   }
-  .tag {
+  div.tag {
     display: none !important;
   }
 }
@@ -1313,22 +1564,29 @@ body footer .footer-container .footer-links .copyright {
   .interact2 .interpic {
     grid-template-columns: repeat(2, 1fr) !important;
   }
-  .tag {
+  div.tag {
     display: none !important;
   }
-  section.work-area div.cards-container2 a div.card {
-    width: 60vw !important;
+  section.work-area div.cards-container2 {
+    grid-template-columns: 1fr !important;
   }
-  section.work-area div.cards-container2 a .card-content {
-    flex-direction: column !important;
-    padding-bottom: 0rem !important;
+  section.work-area div.cards-container2 a {
+    grid-column: auto !important;
+  }
+  section.work-area div.cards-container2 a div.card {
+    width: 100% !important;
+    min-height: auto !important;
+    flex: none !important;
+  }
+  section.work-area div.cards-container2 a div.card img {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 1280 / 810 !important;
+    -o-object-fit: cover !important;
+       object-fit: cover !important;
   }
   section.work-area div.cards-container2 a .card-content h3 {
-    font-size: 2rem;
-    flex: 1 1 20px !important;
-  }
-  section.work-area div.cards-container2 a .card-content .describe {
-    flex: 1 1 50px !important;
+    font-size: 1.25rem;
   }
   section.workintro-area .bkground {
     padding: 10% !important;
@@ -1402,11 +1660,17 @@ body footer .footer-container .footer-links .copyright {
     padding: 0.5rem 1rem;
   }
   main section.main-area .info h1 {
-    font-size: 8vw !important;
-    padding: 0.5rem !important;
+    font-size: 6vw !important;
+    padding: 0.3rem !important;
+  }
+  main section.main-area.dark-hero .info h1 {
+    font-size: 2.8vw !important;
   }
   main section.main-area .info h2 {
-    font-size: 4vw !important;
+    font-size: 4.2vw !important;
+  }
+  main section.main-area .info h3 {
+    font-size: 3.2vw !important;
   }
   main section.workintro-area .tag {
     display: none !important;
@@ -1446,27 +1710,22 @@ body footer .footer-container .footer-links .copyright {
     padding: 1rem 1rem;
     font-size: 0.9rem;
   }
-  main section.normal-area .publication {
-    flex-direction: column !important;
-    align-items: center;
-    justify-content: center;
-    margin: 0rem !important;
+  main section.normal-area .publications {
+    grid-template-columns: 1fr !important;
   }
-  main section.normal-area .publication img {
-    flex: 0 0 100px !important;
-    padding: 1rem !important;
+  main section.normal-area .publication {
+    margin: 0rem !important;
+    grid-column: auto !important;
+  }
+  main section.normal-area .publication > img {
+    aspect-ratio: 16/10 !important;
   }
   main section.normal-area .publication .describe {
     flex: unset;
     width: 100%;
-    padding-bottom: 2rem !important;
-    padding-top: 0rem !important;
   }
   main section.normal-area .publication .describe h1 {
     font-size: 1rem !important;
-  }
-  main section.normal-area .publication .describe p, main section.normal-area .publication .describe h3 {
-    font-size: 0.8rem !important;
   }
   main section.normal-area .publication .link a img {
     padding: 0 !important;
@@ -1479,14 +1738,18 @@ body footer .footer-container .footer-links .copyright {
   section.work-area .topic h1 {
     font-size: 1.5rem !important;
   }
-  section.work-area .cards-container2 a div.card {
-    width: 65vw !important;
+  section.work-area .cards-container2 {
+    padding: 0 1rem 3rem 1rem !important;
+  }
+  section.work-area .cards-container2 a div.card img {
+    height: auto !important;
+    aspect-ratio: 1280 / 810 !important;
+  }
+  section.work-area .cards-container2 a .card-content {
+    padding: 0.5rem 0 !important;
   }
   section.work-area .cards-container2 a .card-content h3 {
-    font-size: 4vw !important;
-  }
-  section.work-area .cards-container2 a .card-content .describe h4, section.work-area .cards-container2 a .card-content .describe p {
-    font-size: 3vw !important;
+    font-size: 1.2rem !important;
   }
   section.about-area .timelinecontainer .timeline::before {
     left: 45.5% !important;
@@ -1522,6 +1785,161 @@ body footer .footer-container .footer-links .copyright {
     transform: scale(1);
   }
 }
+/* ── Emma Chen-inspired design patterns ── */
+.key-result-cards {
+  display: flex;
+  gap: 1rem;
+  padding: 1.5rem 0;
+  max-width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.key-result-card {
+  flex: 1;
+  background: #141428;
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+.kr-title {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #8b9aff;
+  margin-bottom: 0.8rem;
+}
+.kr-metric {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.3;
+}
+.kr-sub {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 0.25rem;
+}
+.section-label {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: #888;
+  margin-bottom: 0.4rem;
+}
+.section-statement {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+.result-card {
+  background: #f0fdf4;
+  border-left: 4px solid #16a34a;
+  border-radius: 8px;
+  padding: 1.2rem 1.6rem;
+  margin-bottom: 1rem;
+}
+.result-card .result-metric {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #15803d;
+  margin-bottom: 0.5rem;
+}
+.result-card p {
+  font-size: 0.85rem;
+  color: #444;
+  margin: 0;
+}
+.before-after {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.ba-label {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #888;
+  margin-bottom: 0.5rem;
+}
+.before-after img {
+  width: 100%;
+  border-radius: 10px;
+}
+@media (max-width: 640px) {
+  .key-result-cards { flex-direction: column; }
+  .before-after { grid-template-columns: 1fr; }
+}
+
+/* ── Language toggle ── */
+.lang-toggle {
+  background: none;
+  border: 1.5px solid rgba(255,255,255,0.5);
+  border-radius: 4px;
+  padding: 0.18rem 0.55rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  color: rgba(255,255,255,0.85);
+  line-height: 1.5;
+  transition: border-color 0.2s, opacity 0.2s;
+  vertical-align: middle;
+}
+.lang-toggle:hover { border-color: rgba(255,255,255,0.9); opacity: 0.9; }
+
+/* 桌面版 navigation：右側項目縮小間距 */
+@media (min-width: 769px) {
+  body header nav ul {
+    gap: 1.25rem;
+  }
+}
+
+/* Card image overrides */
+body main section.work-area div.cards-container2 a div.card img.img-cover {
+  -o-object-fit: cover !important;
+     object-fit: cover !important;
+}
+
+/* Language switching */
+/* 全站僅英文：隱藏中文內容、顯示英文內容 */
+.zh-only { display: none !important; }
+.en-only { display: revert; }
+h1 .en-only, h2 .en-only, h3 .en-only { display: inline; }
+
+/* 平滑捲動 */
+html { scroll-behavior: smooth; }
+
+/* 進場動畫：元素滑入畫面時淡入上升（由 app.js 的 .reveal observer 加上 .is-visible 觸發） */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+  will-change: opacity, transform;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+/* Featured Work 卡片依序進場，製造層次 */
+body main section.work-area div.cards-container2 a.reveal:nth-child(1) { transition-delay: 0.05s; }
+body main section.work-area div.cards-container2 a.reveal:nth-child(2) { transition-delay: 0.12s; }
+body main section.work-area div.cards-container2 a.reveal:nth-child(3) { transition-delay: 0.19s; }
+body main section.work-area div.cards-container2 a.reveal:nth-child(4) { transition-delay: 0.26s; }
+body main section.work-area div.cards-container2 a.reveal:nth-child(5) { transition-delay: 0.33s; }
+
+/* 尊重使用者的「減少動態效果」偏好 */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
+
 @keyframes spin {
   from {
     transform: rotate(0deg);

@@ -1,16 +1,49 @@
+if (typeof gsap !== 'undefined' && typeof ScrambleTextPlugin !== 'undefined') {
+  gsap.registerPlugin(ScrambleTextPlugin);
+}
+
 document.addEventListener("DOMContentLoaded", function () {
-  // 處理動畫效果
+  // 處理動畫效果：讓元素進入畫面時淡入一次，之後不再移除
+  // （原本用 toggle，離開畫面會把名字拉回 opacity:0 導致消失或殘影）
   const animatedElements = document.querySelectorAll(".fadeInUp");
   if (animatedElements.length > 0) {
+    const reveal = (element) => element.classList.add("animated");
+
     const observer = new IntersectionObserver(
-      (entries) => {
+      (entries, obs) => {
         entries.forEach((entry) => {
-          entry.target.classList.toggle("animated", entry.isIntersecting);
+          if (entry.isIntersecting) {
+            reveal(entry.target);
+            obs.unobserve(entry.target);
+          }
         });
       },
       { threshold: 0.5 }
     );
     animatedElements.forEach((element) => observer.observe(element));
+
+    // 保險：若 observer 因分頁在背景/被節流而沒觸發，仍確保名字最終會顯示
+    window.setTimeout(() => animatedElements.forEach(reveal), 1500);
+  }
+
+  // 通用進場動畫：元素滑入畫面時淡入上升（一次性）
+  const revealElements = document.querySelectorAll(".reveal");
+  if (revealElements.length > 0) {
+    const revealObserver = new IntersectionObserver(
+      (entries, obs) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            obs.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15, rootMargin: "0px 0px -10% 0px" }
+    );
+    revealElements.forEach((element) => revealObserver.observe(element));
+
+    // 保險：若 observer 未觸發（分頁在背景/被節流），仍確保內容最終會顯示
+    window.setTimeout(() => revealElements.forEach((el) => el.classList.add("is-visible")), 3000);
   }
 
   // 處理菜單開關
@@ -35,25 +68,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // 滾動動畫效果
-  const cloud_1 = document.getElementById("cloud_1");
-  const cloud_2 = document.getElementById("cloud_2");
-  const hill_1 = document.getElementById("hill_1");
-  const hill_2 = document.getElementById("hill_2");
-
-  // 檢查是否成功抓到元素
-  if (cloud_1 && cloud_2 && hill_1 && hill_2) {
-    window.addEventListener("scroll", () => {
-      let value = window.scrollY;
-      cloud_1.style.left = value * -1.5 + "px";
-      cloud_2.style.left = value * 1.5 + "px";
-      hill_1.style.left = value * -1.5 + "px";
-      hill_2.style.left = value * 1.5 + "px";
-    });
-  } else {
-    console.warn("❗ 有些 hill 或 cloud 元素未正確載入！");
-  }
-
   // 通用滾動到指定元素的函數
   const scrollToElement = function (elementId, offset = 130) {
     const targetElement = document.getElementById(elementId);
@@ -70,6 +84,45 @@ document.addEventListener("DOMContentLoaded", function () {
   window.scrollToWork = function () {
     scrollToElement("worksection");
   };
+
+  // Work 標籤篩選
+  const filterBar = document.getElementById("work-filter");
+  if (filterBar) {
+    const filterButtons = Array.from(filterBar.querySelectorAll(".filter-pill"));
+    const allButton = filterBar.querySelector('[data-filter="all"]');
+    const cards = Array.from(document.querySelectorAll(".cards-container2 > a"));
+
+    const applyFilter = function () {
+      const active = filterButtons.filter((btn) => btn !== allButton && btn.classList.contains("active"));
+
+      if (active.length === 0) {
+        allButton.classList.add("active");
+        cards.forEach((card) => { card.style.display = ""; });
+        return;
+      }
+
+      allButton.classList.remove("active");
+      const selected = active.map((btn) => btn.dataset.filter);
+
+      cards.forEach((card) => {
+        const skills = (card.dataset.skills || "").split(",");
+        const matches = selected.some((skill) => skills.includes(skill));
+        card.style.display = matches ? "" : "none";
+      });
+    };
+
+    filterButtons.forEach((btn) => {
+      btn.addEventListener("click", function () {
+        if (btn === allButton) {
+          filterButtons.forEach((b) => b.classList.remove("active"));
+          allButton.classList.add("active");
+        } else {
+          btn.classList.toggle("active");
+        }
+        applyFilter();
+      });
+    });
+  }
 
   // 錨點鏈接滾動
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {

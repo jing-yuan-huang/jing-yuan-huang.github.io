@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-Hants">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,15 +16,11 @@
     
   </head>
   <body>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrambleTextPlugin.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/matter-js@0.19.0/build/matter.min.js"></script>
 
-    <img class="bg-svg" src="./svg/background_1.svg" alt="bg-svg">
-    <img class="bg-svg" src="./svg/hill_1.svg" id="hill_1">
-    <img class="bg-svg" src="./svg/hill_2.svg" id="hill_2">
-    <img class="bg-svg" src="./svg/hill.svg" id="hill_3">
-    <img class="bg-svg" src="./svg/cloud_1.svg" id="cloud_1">
-    <img class="bg-svg" src="./svg/cloud_2.svg" id="cloud_2">
 
-    
 
     <header>
       <a class="logo" href="index.html">
@@ -42,10 +38,7 @@
                 <a href="about.html"> About</a>
               </li>
               <li>
-                <a href="publication.html"> Publication</a>
-              </li>
-              <li>
-                <a href="https://drive.google.com/file/d/17ExZa_QDDZ0TT2PEzS_1TxyD4FYlCDWV/view?usp=sharing" target="_blank"> Resume</a>
+                <a href="mailto:jingyuanhuangg@gmail.com">Contact</a>
               </li>
             </ul>
       </nav>
@@ -54,13 +47,25 @@
 
     <main>
 
-      <section class="main-area">
+      <section class="main-area dark-hero">
+
+        <canvas id="hero-game" class="hero-game" aria-hidden="true"></canvas>
 
         <div class="info">
-          <h1 class="fadeInUp">Hello! I'm Yuan</h1>
-          <h2 class="fadeInUp"> With a Master’s degree in Computer Science and a Bachelor’s degree in Design, 
-            my work encompasses human-computer interaction, responsive web development, and interaction design.
-          </h2>
+          <h1 class="fadeInUp">Hi I'm Yuan</h1>
+          <h2>Product Designer</h2>
+          <h3 id="hero-subtitle">finds the constraint everyone else designs around.</h3>
+          <div class="hero-social">
+            <a href="https://www.linkedin.com/in/huang-jingyuan/" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <i class="bi bi-linkedin"></i>
+            </a>
+            <a href="https://github.com/jing-yuan-huang" target="_blank" rel="noopener" aria-label="GitHub">
+              <i class="bi bi-github"></i>
+            </a>
+            <a href="mailto:jingyuanhuangg@gmail.com" aria-label="Email">
+              <i class="bi bi-envelope-fill"></i>
+            </a>
+          </div>
           <button class="svg-button">
             <a href="javascript:void(0);" onclick="scrollToWork()">
               <img src="./svg/arrow_icon_white.svg" alt="arrow icon" />
@@ -73,111 +78,114 @@
 
       <section class="work-area" id="work">
 
-        <div class="topic">
+        <div class="topic reveal">
           <img src="./ICONS/icon-03.svg" >
-          <h1 id="worksection">My Recent Works</h1>
+          <h1 id="worksection">Featured Work</h1>
           <img src="./ICONS/icon-03.svg" >
         </div>
 
+        <div class="work-filter reveal" id="work-filter">
+          <button class="filter-pill active" data-filter="all">All</button>
+          <button class="filter-pill" data-filter="UX Design">UX Design</button>
+          <button class="filter-pill" data-filter="Design System">Design System</button>
+          <button class="filter-pill" data-filter="Frontend">Frontend</button>
+          <button class="filter-pill" data-filter="SEO">SEO</button>
+          <button class="filter-pill" data-filter="UI Design">UI Design</button>
+          <button class="filter-pill" data-filter="Research">Research</button>
+          <button class="filter-pill" data-filter="Data Viz">Data Viz</button>
+          <button class="filter-pill" data-filter="Implementation">Implementation</button>
+        </div>
 
         <div class="cards-container2">
 
-          <a href="tripteddy.html">
+          <a href="jorjin.html" class="lg reveal" data-skills="UX Design,Design System,Frontend,SEO">
             <div class="card">
-              <img src="./pictures/tripteddy.webp" alt="mypic" >
-              <div class="card-content">
-                <h3>Travel Planning App</h3>
-                <div class="describe">
-                    <h4>UX . UI</h4>
-                
-                <!--
-                  <p>
-                    TripTeddy is a travel app that streamlines trip planning with categorized attractions, personalized itineraries, and collaborative features.
-                  </p>
-                -->
-                </div>
-              </div>
+              <img src="./pictures/jorjin.webp" alt="Jorjin website" onerror="this.style.background='#c8d8e8'">
+            </div>
+            <div class="card-content">
+              <h3>Jorjin Corporate Website — Search Ranking +62%, CTR +75%</h3>
             </div>
           </a>
 
-          <a href="quickparking.html">
+          <a href="smartglasses.html" class="reveal" data-skills="UX Design,Design System">
             <div class="card">
-              <img src="./pictures/quuckparking.webp" alt="mypic">
-              <div class="card-content">
-                <h3>Quick Parking App</h3>
-                <div class="describe">
-                    <h4>UX . UI . Front-end</h4>
-                <!--
-                  <p>
-                    With a large workforce and limited parking, ensuring employees can quickly find available spots is a pressing issue.
-                  </p>
-                -->
-                </div>
-              </div>
+              <img src="./pictures/smartglasses.webp" alt="Smart Glasses Experience" onerror="this.style.background='#d8cfe8'">
+            </div>
+            <div class="card-content">
+              <h3>HJ1 AI Smart Glasses B2B Demo Design — Demo Time −70%</h3>
             </div>
           </a>
 
-          <a href="surgery.html">
+          <a href="j9.html" class="reveal" data-skills="UX Design,UI Design">
             <div class="card">
-              <img src="./pictures/VR surgery.webp" alt="mypic">
-              <div class="card-content">
-                <h3 >VR Medical Learning</h3>
-                <div class="describe">
-                  <h4>UX . UI . VR</h4>
-                <!--
-                  <p>
-                    This study explores the use of VR in thoracic anatomy learning by creating 3D models from real patient data and designing interactive tools to enhance medical education.
-                  </p>
-                -->
-                </div>
-              </div>
+              <img src="./pictures/j9.webp" alt="J9 Smart Glasses App" onerror="this.style.background='#1a1a2e'">
             </div>
-          </a>
-          
-
-          
-          <a href="foucus.html">
-            <div class="card">
-              <img src="./pictures/foucusmeow.webp" alt="mypic" >
-              <div class="card-content">
-                <h3>Productivity Tool</h3>
-                <div class="describe">
-                    <h4>UI. Front-end</h4>
-                
-                <!--
-                  <p>
-                    TripTeddy is a travel app that streamlines trip planning with categorized attractions, personalized itineraries, and collaborative features.
-                  </p>
-                -->
-                </div>
-              </div>
+            <div class="card-content">
+              <h3>J9 Smart Glasses App & UI — Dual-Device, Eye Tracking × Gesture × App</h3>
             </div>
           </a>
 
-          <a href="cdi.html">
+          <a href="humanfactors.html" class="wide reveal" data-skills="Research,Data Viz">
             <div class="card">
-              <img src="./pictures/cdiwed.webp" alt="mypic" >
-              <div class="card-content">
-                <h3>CDI Center Website</h3>
-                <div class="describe">
-                    <h4>UI . Front-end</h4>
-                
-                <!--
-                  <p>
-                    TripTeddy is a travel app that streamlines trip planning with categorized attractions, personalized itineraries, and collaborative features.
-                  </p>
-                -->
-                </div>
-              </div>
+              <img src="./pictures/humanfactors.webp" alt="Human Factors Research" onerror="this.style.background='#d8e8d0'">
+            </div>
+            <div class="card-content">
+              <h3>Smart Glasses Ergonomic Database — 4,000 Data Points, 5-Ethnicity Coverage</h3>
+            </div>
+          </a>
+
+          <a href="surgery.html" class="xl reveal" data-skills="UX Design,Research,Implementation">
+            <div class="card">
+              <img src="./pictures/VR surgery.webp" alt="VR Medical Learning" class="img-cover">
+            </div>
+            <div class="card-content">
+              <h3>Dual-Modal VR Anatomy System — SUS 76 (Above Average), 20 Professionals</h3>
             </div>
           </a>
           
 
 
         </div>
+        
   
       </section>
 
+
+      <section class="normal-area" id="publications">
+
+        <div class="publications">
+
+          <a class="publication lg" href="vr-relaxation.html">
+            <img src="./pictures/Exploring.webp">
+            <div class="describe">
+              <h1>Multisensory Feedback for VR Relaxation · ICMEW 2022 <span class="award">🏆 Best Demo Award</span></h1>
+            </div>
+          </a>
+
+          <a class="publication tall" href="breathm.html">
+            <img src="./pictures/breathm.webp">
+            <div class="describe">
+              <h1>Breathm — Personalized Breathing Guidance Device · CHI EA</h1>
+            </div>
+          </a>
+
+          <a class="publication" href="pseudo3d.html">
+            <img src="./pictures/pseudo3d.webp">
+            <div class="describe">
+              <h1>Pseudo-3D Scene Modeling for VR · SIGGRAPH 2022 Posters</h1>
+            </div>
+          </a>
+
+          <a class="publication wide" href="pumping-life.html">
+            <img src="./pictures/pumping.webp">
+            <div class="describe">
+              <h1>Pumping Life — Embodied Virtual Companion · SIGGRAPH Asia 2019 <span class="award">🏆 Runner-Up Award</span></h1>
+            </div>
+          </a>
+
+        </div>
+
+      </section>
 
       <footer>
 
@@ -214,6 +222,7 @@
    
   </body>
   <script src="./app.js" defer></script>
+  <script src="./merge-game.js" defer></script>
   <script
   src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/js/bootstrap.min.js"
   integrity="sha512-fHY2UiQlipUq0dEabSM4s+phmn+bcxSYzXP4vAXItBvBHU7zAM/mkhCZjtBEIJexhOMzZbgFlPLuErlJF2b+0g=="
