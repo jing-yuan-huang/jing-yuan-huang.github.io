@@ -328,4 +328,22 @@ document.addEventListener('DOMContentLoaded', function () {
   } else {
     startLoop();
   }
+
+  // 捲動時讓物件微微晃動：往捲動的反方向輕推，做出慣性感（僅在遊戲運行時）
+  var Body = Matter.Body;
+  var lastScrollY = window.scrollY;
+  window.addEventListener('scroll', function () {
+    var y = window.scrollY;
+    var delta = y - lastScrollY;
+    lastScrollY = y;
+    if (!running || !delta) return;
+    delta = Math.max(-50, Math.min(50, delta)); // 限制單次擾動幅度
+    Composite.allBodies(world).forEach(function (b) {
+      if (b.isStatic || b.tier === undefined) return;
+      Body.applyForce(b, b.position, {
+        x: (Math.random() - 0.5) * 0.00003 * b.mass,
+        y: -delta * 0.00006 * b.mass
+      });
+    });
+  }, { passive: true });
 });

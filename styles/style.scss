@@ -2586,8 +2586,15 @@ h1 .en-only, h2 .en-only, h3 .en-only { display: inline; }
   }
 }
 
-/* 平滑捲動 */
+/* 平滑捲動（無 JS 時的後備） */
 html { scroll-behavior: smooth; }
+
+/* Lenis 平滑捲動所需樣式 */
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+.lenis.lenis-stopped { overflow: hidden; }
+.lenis.lenis-smooth iframe { pointer-events: none; }
 
 /* 底部跑馬燈：白底黑字，隨捲動左右移動（位移由 app.js 依 scroll 設定） */
 .marquee {

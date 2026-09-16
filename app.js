@@ -3,6 +3,14 @@ if (typeof gsap !== 'undefined' && typeof ScrambleTextPlugin !== 'undefined') {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
+  // 平滑捲動（Lenis）：整頁帶緩動地跟著捲動，手感更滑順
+  var lenis = null;
+  if (typeof Lenis !== "undefined" && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    lenis = new Lenis({ duration: 1.1, smoothWheel: true });
+    var lenisRaf = function (time) { lenis.raf(time); requestAnimationFrame(lenisRaf); };
+    requestAnimationFrame(lenisRaf);
+  }
+
   // 處理動畫效果：讓元素進入畫面時淡入一次，之後不再移除
   // （原本用 toggle，離開畫面會把名字拉回 opacity:0 導致消失或殘影）
   const animatedElements = document.querySelectorAll(".fadeInUp");
@@ -106,6 +114,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const targetElement = document.getElementById(elementId);
     if (!targetElement) return;
 
+    if (lenis) {
+      lenis.scrollTo(targetElement, { offset: -offset });
+      return;
+    }
     const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
     window.scrollTo({
       top: elementPosition - offset,
