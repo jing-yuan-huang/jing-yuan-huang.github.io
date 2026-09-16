@@ -2589,6 +2589,29 @@ h1 .en-only, h2 .en-only, h3 .en-only { display: inline; }
 /* 平滑捲動 */
 html { scroll-behavior: smooth; }
 
+/* 底部跑馬燈：白底黑字，隨捲動左右移動（位移由 app.js 依 scroll 設定） */
+.marquee {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  background: #fff;
+  color: #111;
+  margin: 0;
+  padding: 0.85rem 0;
+}
+.marquee-track {
+  display: inline-flex;
+  will-change: transform;
+}
+.marquee-item {
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
 /* 進場動畫：元素滑入畫面時淡入上升（由 app.js 的 .reveal observer 加上 .is-visible 觸發） */
 .reveal {
   opacity: 0;

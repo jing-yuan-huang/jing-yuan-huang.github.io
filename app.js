@@ -46,6 +46,39 @@ document.addEventListener("DOMContentLoaded", function () {
     window.setTimeout(() => revealElements.forEach((el) => el.classList.add("is-visible")), 3000);
   }
 
+  // 底部跑馬燈：隨捲動位置左右移動（往下滑文字往左移，往上滑往右移）
+  const marquee = document.querySelector(".marquee");
+  if (marquee) {
+    const track = marquee.querySelector(".marquee-track");
+    const baseItem = track.querySelector(".marquee-item");
+    if (track && baseItem) {
+      const SPEED = 0.6; // 捲動 1px，文字移動的比例
+      let oneWidth = baseItem.getBoundingClientRect().width;
+
+      const buildClones = () => {
+        // 移除舊的複製，只留第一份
+        while (track.children.length > 1) track.removeChild(track.lastChild);
+        oneWidth = baseItem.getBoundingClientRect().width;
+        // 複製到足夠寬（視窗寬 + 兩份），確保左移時右側不留白、可無縫循環
+        const need = window.innerWidth + oneWidth * 2;
+        while (track.getBoundingClientRect().width < need) {
+          track.appendChild(baseItem.cloneNode(true));
+        }
+      };
+
+      const updateMarquee = () => {
+        if (!oneWidth) return;
+        const offset = (window.scrollY * SPEED) % oneWidth;
+        track.style.transform = "translateX(" + -offset + "px)";
+      };
+
+      buildClones();
+      updateMarquee();
+      window.addEventListener("scroll", updateMarquee, { passive: true });
+      window.addEventListener("resize", () => { buildClones(); updateMarquee(); });
+    }
+  }
+
   // 處理菜單開關
   const menuToggle = document.querySelector(".menu-toggle");
   const closeMenu = document.querySelector(".close-menu");

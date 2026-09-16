@@ -30,13 +30,87 @@ document.addEventListener('DOMContentLoaded', function () {
   var MAX_TIER = TIERS.length - 1;
   var MAX_BODIES = 20;
 
-  // 預載每個階級的圖片
+  // 凸包（Andrew monotone chain），用來把圖片輪廓轉成碰撞多邊形
+  function cross(o, a, b) { return (a.x - o.x) * (b.y - o.y) - (a.y - o.y) * (b.x - o.x); }
+  function convexHull(points) {
+    points = points.slice().sort(function (a, b) { return a.x - b.x || a.y - b.y; });
+    var n = points.length, k = 0, h = [];
+    for (var i = 0; i < n; i++) {
+      while (k >= 2 && cross(h[k - 2], h[k - 1], points[i]) <= 0) k--;
+      h[k++] = points[i];
+    }
+    for (var i2 = n - 2, tlim = k + 1; i2 >= 0; i2--) {
+      while (k >= tlim && cross(h[k - 2], h[k - 1], points[i2]) <= 0) k--;
+      h[k++] = points[i2];
+    }
+    h.length = k - 1;
+    return h;
+  }
+
+  // 多邊形質心（面積加權），用來補償繪圖對齊
+  function polygonCentroid(pts) {
+    var a = 0, cx = 0, cy = 0;
+    for (var i = 0; i < pts.length; i++) {
+      var p = pts[i], q = pts[(i + 1) % pts.length];
+      var f = p.x * q.y - q.x * p.y;
+      a += f; cx += (p.x + q.x) * f; cy += (p.y + q.y) * f;
+    }
+    a *= 0.5;
+    if (Math.abs(a) < 1e-6) return { x: 0, y: 0 };
+    return { x: cx / (6 * a), y: cy / (6 * a) };
+  }
+
+  // 讀圖片的透明邊緣，算出物件輪廓的凸多邊形（相對中心、縮放到該階級大小）
+  function computeHull(img, radius) {
+    var N = 40;
+    try {
+      var oc = document.createElement('canvas');
+      oc.width = N; oc.height = N;
+      var octx = oc.getContext('2d');
+      octx.drawImage(img, 0, 0, N, N);
+      var data = octx.getImageData(0, 0, N, N).data;
+      var pts = [];
+      for (var y = 0; y < N; y++) {
+        for (var x = 0; x < N; x++) {
+          if (data[(y * N + x) * 4 + 3] > 40) pts.push({ x: x, y: y });
+        }
+      }
+      if (pts.length < 3) return null;
+      var hull = convexHull(pts);
+      if (hull.length < 3) return null;
+      var s = (2 * radius) / N;
+      var scaled = hull.map(function (p) { return { x: (p.x - N / 2) * s, y: (p.y - N / 2) * s }; });
+      return { hull: scaled, offset: polygonCentroid(scaled) };
+    } catch (e) {
+      return null; // 圖片跨來源無法讀像素時，退回圓形碰撞
+    }
+  }
+
+  var pendingImages = 0, initialSpawned = false;
+  function maybeSpawnInitial() {
+    if (!initialSpawned && pendingImages <= 0) {
+      initialSpawned = true;
+      spawnInitial();
+    }
+  }
+
+  // 預載每個階級的圖片，並算好碰撞用的多邊形；全部載入後才生成初始物件
   TIERS.forEach(function (t) {
     t.image = null;
     t.loaded = false;
+    t.hull = null;
+    t.hullOffset = null;
     if (t.src) {
+      pendingImages++;
       var img = new Image();
-      img.onload = function () { t.loaded = true; };
+      img.onload = function () {
+        t.loaded = true;
+        var res = computeHull(img, t.radius);
+        if (res) { t.hull = res.hull; t.hullOffset = res.offset; }
+        pendingImages--;
+        maybeSpawnInitial();
+      };
+      img.onerror = function () { pendingImages--; maybeSpawnInitial(); };
       img.src = t.src;
       t.image = img;
     }
@@ -70,8 +144,9 @@ document.addEventListener('DOMContentLoaded', function () {
   function buildWalls() {
     if (walls.length) World.remove(world, walls);
     var thickness = 60;
+    var bottomGap = 48; // 物件堆疊時離畫面最底留一點間隙
     walls = [
-      Bodies.rectangle(width / 2, height + thickness / 2, width + thickness * 2, thickness, { isStatic: true }),
+      Bodies.rectangle(width / 2, (height - bottomGap) + thickness / 2, width + thickness * 2, thickness, { isStatic: true }),
       Bodies.rectangle(-thickness / 2, height / 2, thickness, height * 2, { isStatic: true }),
       Bodies.rectangle(width + thickness / 2, height / 2, thickness, height * 2, { isStatic: true })
     ];
@@ -122,11 +197,13 @@ document.addEventListener('DOMContentLoaded', function () {
   function spawnBody(x, y, tier) {
     if (tier < 0 || !TIERS[tier]) return null; // 無效階級（沒有圖片）不生成
     var t = TIERS[tier];
-    var body = Bodies.circle(x, y, t.radius, {
-      restitution: 0.2,
-      friction: 0.3,
-      frictionAir: 0.001
-    });
+    var opts = { restitution: 0.2, friction: 0.3, frictionAir: 0.001 };
+    var body = null;
+    if (t.hull && Bodies.fromVertices) {
+      body = Bodies.fromVertices(x, y, [t.hull], opts, true); // 用圖片輪廓多邊形碰撞
+      if (body && (!body.vertices || body.vertices.length < 3)) body = null;
+    }
+    if (!body) body = Bodies.circle(x, y, t.radius, opts); // 退回圓形
     body.tier = tier;
     World.add(world, body);
     return body;
@@ -170,16 +247,16 @@ document.addEventListener('DOMContentLoaded', function () {
     nextTier = pickNextTier();
   });
 
-  // 在指定位置畫出某階級的圖片（圓形裁切，符合物理碰撞外觀）
+  // 在指定位置畫出某階級的圖片（完整方形，不做圓形裁切）
+  // 多邊形 body 以質心為原點，補償偏移讓圖片對齊
   function drawSprite(tier, alpha) {
     var t = TIERS[tier];
     var d = t.radius * 2;
+    var ox = t.hullOffset ? t.hullOffset.x : 0;
+    var oy = t.hullOffset ? t.hullOffset.y : 0;
     ctx.save();
     if (alpha !== undefined) ctx.globalAlpha = alpha;
-    ctx.beginPath();
-    ctx.arc(0, 0, t.radius, 0, Math.PI * 2);
-    ctx.clip();
-    ctx.drawImage(t.image, -t.radius, -t.radius, d, d);
+    ctx.drawImage(t.image, -t.radius - ox, -t.radius - oy, d, d);
     ctx.restore();
   }
 
@@ -236,7 +313,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
   resize();
   window.addEventListener('resize', resize);
-  spawnInitial();
+  // 初始物件在圖片（含碰撞多邊形）載入完成後由 maybeSpawnInitial() 生成；
+  // 保險：即使圖片載入偵測失敗，最多 3 秒後仍生成（會退回圓形碰撞）
+  window.setTimeout(function () { pendingImages = 0; maybeSpawnInitial(); }, 3000);
 
   // 只在 hero 進入畫面時才運算＋繪製，滑到下方時暫停，維持捲動流暢並省效能
   if ('IntersectionObserver' in window) {
