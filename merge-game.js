@@ -341,8 +341,8 @@ document.addEventListener('DOMContentLoaded', function () {
     Composite.allBodies(world).forEach(function (b) {
       if (b.isStatic || b.tier === undefined) return;
       Body.applyForce(b, b.position, {
-        x: (Math.random() - 0.5) * 0.00003 * b.mass,
-        y: -delta * 0.00006 * b.mass
+        x: (Math.random() - 0.5) * 0.00007 * b.mass,
+        y: -delta * 0.00015 * b.mass
       });
     });
   }, { passive: true });
