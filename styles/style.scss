@@ -180,7 +180,7 @@ body {
         z-index: 2;
         position: relative;
         padding: 2rem;
-        padding-bottom: 20vh;
+        padding-bottom: 26vh;
         pointer-events: none;
 
         .hero-label {
@@ -239,13 +239,12 @@ body {
         }
 
         .svg-button {
-          width: 90px;
-          height: 90px;
+          width: 72px;
+          height: 72px;
           background: none;
           border: none;
           cursor: pointer;
-          margin-top: 3rem;
-          animation: scaleAnimation 1s infinite alternate;
+          margin-top: 2rem;
           pointer-events: auto;
         }
         

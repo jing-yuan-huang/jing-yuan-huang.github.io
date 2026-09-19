@@ -13,8 +13,8 @@ document.addEventListener('DOMContentLoaded', function () {
   // src 留空（'')的階級不會出現在遊戲中；請從最小的階級開始「連續」往下填，
   //   避免中間有空缺（合成到沒有圖的階級時會看不見）。
   var TIERS = [
-    { src: './pictures/merge/1.png',  radius: 24 },
-    { src: './pictures/merge/2.png',  radius: 30 },
+    { src: './pictures/merge/1.png',  radius: 42 },
+    { src: './pictures/merge/2.png',  radius: 40 },
     { src: './pictures/merge/3.png',  radius: 38 },
     { src: './pictures/merge/4.png',  radius: 46 },
     { src: './pictures/merge/5.png',  radius: 56 },
@@ -23,7 +23,10 @@ document.addEventListener('DOMContentLoaded', function () {
     { src: './pictures/merge/8.png',  radius: 90 },
     { src: './pictures/merge/9.png',  radius: 104 },
     { src: './pictures/merge/10.png', radius: 120 },
-    { src: './pictures/merge/11.png', radius: 140 }
+    { src: './pictures/merge/11.png', radius: 140 },
+    { src: './pictures/merge/15.png', radius: 96 },
+    { src: './pictures/merge/16.png', radius: 90 },
+    { src: './pictures/merge/17.png', radius: 100 }
   ];
   // ────────────────────────────────────────────────────────────
 
@@ -67,7 +70,10 @@ document.addEventListener('DOMContentLoaded', function () {
       var oc = document.createElement('canvas');
       oc.width = N; oc.height = N;
       var octx = oc.getContext('2d');
-      octx.drawImage(img, 0, 0, N, N);
+      var iw = img.naturalWidth || N, ih = img.naturalHeight || N;
+      var sc = Math.min(N / iw, N / ih); // 與繪製一致：維持原比例 contain
+      var dw = iw * sc, dh = ih * sc;
+      octx.drawImage(img, (N - dw) / 2, (N - dh) / 2, dw, dh);
       var data = octx.getImageData(0, 0, N, N).data;
       var pts = [];
       for (var y = 0; y < N; y++) {
@@ -252,11 +258,15 @@ document.addEventListener('DOMContentLoaded', function () {
   function drawSprite(tier, alpha) {
     var t = TIERS[tier];
     var d = t.radius * 2;
+    var img = t.image;
+    var iw = img.naturalWidth || d, ih = img.naturalHeight || d;
+    var scale = Math.min(d / iw, d / ih); // 維持原比例，contain 進外框
+    var w = iw * scale, h = ih * scale;
     var ox = t.hullOffset ? t.hullOffset.x : 0;
     var oy = t.hullOffset ? t.hullOffset.y : 0;
     ctx.save();
     if (alpha !== undefined) ctx.globalAlpha = alpha;
-    ctx.drawImage(t.image, -t.radius - ox, -t.radius - oy, d, d);
+    ctx.drawImage(img, -w / 2 - ox, -h / 2 - oy, w, h);
     ctx.restore();
   }
 
