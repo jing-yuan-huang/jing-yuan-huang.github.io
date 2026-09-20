@@ -26,7 +26,9 @@ document.addEventListener('DOMContentLoaded', function () {
     { src: './pictures/merge/11.png', radius: 140 },
     { src: './pictures/merge/15.png', radius: 96 },
     { src: './pictures/merge/16.png', radius: 90 },
-    { src: './pictures/merge/17.png', radius: 100 }
+    { src: './pictures/merge/17.png', radius: 100 },
+    { src: './ICONS/icon-02.svg', radius: 30 },
+    { src: './ICONS/icon-04.svg', radius: 28 }
   ];
   // ────────────────────────────────────────────────────────────
 
@@ -110,8 +112,18 @@ document.addEventListener('DOMContentLoaded', function () {
       pendingImages++;
       var img = new Image();
       img.onload = function () {
+        var source = img;
+        // SVG 只有 viewBox、無像素尺寸，canvas drawImage 會縮放異常；
+        // 先光柵化到固定尺寸的離屏 canvas 當繪圖來源
+        if (/\.svg(\?|$)/i.test(t.src)) {
+          var rc = document.createElement('canvas');
+          rc.width = 200; rc.height = 200;
+          rc.getContext('2d').drawImage(img, 0, 0, 200, 200);
+          t.image = rc;
+          source = rc;
+        }
         t.loaded = true;
-        var res = computeHull(img, t.radius);
+        var res = computeHull(source, t.radius);
         if (res) { t.hull = res.hull; t.hullOffset = res.offset; }
         pendingImages--;
         maybeSpawnInitial();

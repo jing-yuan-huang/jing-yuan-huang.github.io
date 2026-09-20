@@ -87,6 +87,19 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
+  // 滑過首頁 hero 之後，header 才變半透明毛玻璃
+  const headerEl = document.querySelector("header");
+  const heroEl = document.querySelector(".main-area");
+  if (headerEl && heroEl) {
+    const updateHeader = () => {
+      const threshold = heroEl.offsetHeight - headerEl.offsetHeight;
+      headerEl.classList.toggle("scrolled", window.scrollY > threshold);
+    };
+    updateHeader();
+    window.addEventListener("scroll", updateHeader, { passive: true });
+    window.addEventListener("resize", updateHeader);
+  }
+
   // 處理菜單開關
   const menuToggle = document.querySelector(".menu-toggle");
   const closeMenu = document.querySelector(".close-menu");

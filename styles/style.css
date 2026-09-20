@@ -48,6 +48,7 @@ body .bg-svg {
 body header {
   display: flex;
   background-color: rgb(43, 42, 42);
+  transition: background-color 0.3s ease, -webkit-backdrop-filter 0.3s ease, backdrop-filter 0.3s ease;
   align-items: center;
   flex-wrap: wrap;
   position: sticky;
@@ -55,6 +56,12 @@ body header {
   z-index: 10;
   padding: 1.4rem 3.5rem 1.4rem 1rem;
   justify-content: space-between;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+}
+body header.scrolled {
+  background-color: rgba(43, 42, 42, 0.8);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 body header .logo {
   display: flex;
@@ -139,7 +146,7 @@ body main section.main-area .info {
   z-index: 2;
   position: relative;
   padding: 2rem;
-  padding-bottom: 26vh;
+  padding-bottom: 38vh;
   pointer-events: none;
 }
 body main section.main-area .info .hero-label {
@@ -229,16 +236,22 @@ body main section.main-area.dark-hero {
 }
 body main section.main-area.dark-hero .info h1 {
   color: #ffffff;
-  font-size: 1.05rem;
+  font-size: 1.25rem;
+}
+body main section.main-area .info h1 .hi-icon {
+  width: 1.1em;
+  height: 1.1em;
+  vertical-align: -0.15em;
+  margin: 0 0.45em;
 }
 body main section.main-area.dark-hero .info h2 {
-  color: #eaeaea;
+  color: #ffffff;
 }
 body main section.main-area.dark-hero .info h3 {
-  color: #b5b5b5;
+  color: #ffffff;
 }
 body main section.main-area.dark-hero .info .hero-social a {
-  color: #c9c9c9;
+  color: #ffffff;
 }
 body main section.main-area.dark-hero .info .hero-social a:hover {
   color: #ffffff;
@@ -1927,10 +1940,10 @@ html.lenis, html.lenis body { height: auto; }
   display: block;
   overflow: hidden;
   white-space: nowrap;
-  background: #fff;
-  color: #111;
+  background: #ea9d00;
+  color: #fff;
   margin: 0;
-  padding: 0.85rem 0;
+  padding: 1.2rem 0;
 }
 .marquee-track {
   display: inline-flex;
@@ -1939,7 +1952,7 @@ html.lenis, html.lenis body { height: auto; }
 .marquee-item {
   display: inline-block;
   white-space: nowrap;
-  font-size: 0.95rem;
+  font-size: 1rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
