@@ -143,44 +143,22 @@ document.addEventListener("DOMContentLoaded", function () {
     scrollToElement("worksection");
   };
 
-  // Work 標籤篩選
-  const filterBar = document.getElementById("work-filter");
-  if (filterBar) {
-    const filterButtons = Array.from(filterBar.querySelectorAll(".filter-pill"));
-    const allButton = filterBar.querySelector('[data-filter="all"]');
-    const cards = Array.from(document.querySelectorAll(".cards-container2 > a"));
-
-    const applyFilter = function () {
-      const active = filterButtons.filter((btn) => btn !== allButton && btn.classList.contains("active"));
-
-      if (active.length === 0) {
-        allButton.classList.add("active");
-        cards.forEach((card) => { card.style.display = ""; });
-        return;
-      }
-
-      allButton.classList.remove("active");
-      const selected = active.map((btn) => btn.dataset.filter);
-
-      cards.forEach((card) => {
-        const skills = (card.dataset.skills || "").split(",");
-        const matches = selected.some((skill) => skills.includes(skill));
-        card.style.display = matches ? "" : "none";
-      });
-    };
-
-    filterButtons.forEach((btn) => {
-      btn.addEventListener("click", function () {
-        if (btn === allButton) {
-          filterButtons.forEach((b) => b.classList.remove("active"));
-          allButton.classList.add("active");
-        } else {
-          btn.classList.toggle("active");
-        }
-        applyFilter();
-      });
+  // 每張作品卡片下方顯示分類標籤（取自 data-skills）
+  document.querySelectorAll(".cards-container2 > a").forEach((card) => {
+    const skills = (card.dataset.skills || "").split(",").map((s) => s.trim()).filter(Boolean);
+    if (!skills.length) return;
+    const content = card.querySelector(".card-content");
+    if (!content || content.querySelector(".card-tags")) return;
+    const wrap = document.createElement("div");
+    wrap.className = "card-tags";
+    skills.forEach((s) => {
+      const span = document.createElement("span");
+      span.className = "card-tag";
+      span.textContent = s;
+      wrap.appendChild(span);
     });
-  }
+    content.appendChild(wrap);
+  });
 
   // 錨點鏈接滾動
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {

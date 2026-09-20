@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -33,7 +34,7 @@ h6 {
 }
 
 body {
-  font-family: "GenJyuuGothic", sans-serif;
+  font-family: "Inter", sans-serif;
   overflow-x: hidden;
 }
 body .bg-svg {
@@ -269,7 +270,7 @@ body main section.work-area .topic {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
-  padding: 7rem 2rem 2rem 2rem;
+  padding: 9rem 2rem 2rem 2rem;
 }
 body main section.work-area .topic img {
   display: none;
@@ -411,22 +412,21 @@ body main section.work-area div.cards-container2 a.xl {
   grid-column: span 3;
 }
 body main section.work-area div.cards-container2 a div.card {
-  flex: 1 1 auto;
-  min-height: 240px;
+  flex: none;
+  height: 320px;
   border-radius: 14px;
   overflow: hidden;
   background-color: #f5f5f5;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
-body main section.work-area div.cards-container2 a.lg div.card {
-  min-height: 380px;
+body main section.work-area div.cards-container2.filtered a.lg,
+body main section.work-area div.cards-container2.filtered a.wide,
+body main section.work-area div.cards-container2.filtered a.xl {
+  grid-column: span 1;
 }
-body main section.work-area div.cards-container2 a.wide div.card {
-  min-height: 260px;
-}
-body main section.work-area div.cards-container2 a.xl div.card {
-  min-height: 340px;
+body main section.work-area div.cards-container2.filtered a div.card {
+  min-height: 240px;
 }
 body main section.work-area div.cards-container2 a:hover div.card {
   transform: translateY(-4px);
@@ -455,6 +455,22 @@ body main section.work-area div.cards-container2 a.lg .card-content h3 {
 }
 body main section.work-area div.cards-container2 a.xl .card-content h3 {
   font-size: 1.5rem;
+}
+body main section.work-area div.cards-container2 a .card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 0.2rem;
+}
+body main section.work-area div.cards-container2 a .card-tag {
+  font-size: 0.72rem;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: 20px;
+  background: #f2f2f2;
+  color: #555;
+  border: 0.5px solid #ddd;
+  letter-spacing: 0.01em;
 }
 body main section.normal-area {
   background-color: #fff;
@@ -554,6 +570,9 @@ body main section.normal-area .publications .publication .describe .tag-row .tag
   padding: 3px 10px;
   border-radius: 20px;
   letter-spacing: 0.01em;
+  background: #f2f2f2;
+  color: #555;
+  border: 0.5px solid #ddd;
 }
 body main section.normal-area .publications .publication .describe .tag-row .tag.tag-role {
   background: #E6F1FB;
@@ -640,11 +659,13 @@ body main section.pub-detail-area .pub-detail .back-link:hover {
 }
 body main section.workintro-area .tag {
   position: fixed;
-  left: -10vw;
+  left: -7vw;
   top: 55%;
   transform: translateY(-50%) rotate(90deg);
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  width: 26rem;
   gap: 2rem;
 }
 body main section.workintro-area .tag li {
@@ -686,7 +707,7 @@ body main section.workintro-area .contect .bkground .intro h2 {
   font-size: 1.3rem;
   padding-top: 1rem;
   font-weight: 500;
-  max-width: 800px;
+  max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -715,7 +736,7 @@ body main section.workintro-area .contect .bkground .overview {
   justify-content: center;
 }
 body main section.workintro-area .contect .bkground .overview .overviewbox {
-  max-width: 800px;
+  max-width: 900px;
   text-align: left;
 }
 body main section.workintro-area .contect .bkground .overview .overviewbox .main-info {
@@ -770,7 +791,7 @@ body main section.workintro-area .contect .research .research-box {
 }
 body main section.workintro-area .contect .research .research-box .research-overall {
   width: 100%;
-  max-width: 800px;
+  max-width: 900px;
   padding-bottom: 3rem;
 }
 body main section.workintro-area .contect .research .research-box .research-overall h3 {
@@ -786,7 +807,7 @@ body main section.workintro-area .contect .research .research-box .research-over
 }
 body main section.workintro-area .contect .research .research-box .research-content {
   width: 100%;
-  max-width: 800px;
+  max-width: 900px;
   padding-bottom: 3rem;
 }
 body main section.workintro-area .contect .research .research-box .research-content h5 {
@@ -883,7 +904,7 @@ body main section.workintro-area .contect .research .research-box .research-pic-
 }
 body main section.workintro-area .contect .research .research-box .definition {
   width: 100%;
-  max-width: 800px;
+  max-width: 900px;
 }
 body main section.workintro-area .contect .research .research-box .definition h4 {
   font-size: 1.2rem;
@@ -981,10 +1002,10 @@ body main section.workintro-area .contect .design .design-box {
   flex-wrap: wrap;
   justify-content: center;
   margin: 0 auto; /* Centers the container */
-  max-width: 800px;
+  max-width: 1000px;
 }
 body main section.workintro-area .contect .design .design-box .design-overall {
-  width: 800px;
+  width: 900px;
   padding-bottom: 3rem;
 }
 body main section.workintro-area .contect .design .design-box .design-overall h3 {
@@ -996,7 +1017,7 @@ body main section.workintro-area .contect .design .design-box .design-overall im
   max-width: 100%;
 }
 body main section.workintro-area .contect .design .design-box .design-content {
-  width: 800px;
+  width: 900px;
   padding-bottom: 2rem;
 }
 body main section.workintro-area .contect .design .design-box .design-content h5 {
@@ -1039,10 +1060,10 @@ body main section.workintro-area .contect .testing .testing-box {
   flex-wrap: wrap;
   justify-content: center;
   margin: 0 auto; /* Centers the container */
-  max-width: 800px;
+  max-width: 1000px;
 }
 body main section.workintro-area .contect .testing .testing-box .testing-overall {
-  width: 800px;
+  width: 900px;
   padding-bottom: 3rem;
 }
 body main section.workintro-area .contect .testing .testing-box .testing-overall h3 {
@@ -1054,7 +1075,7 @@ body main section.workintro-area .contect .testing .testing-box .testing-overall
   max-width: 100%;
 }
 body main section.workintro-area .contect .testing .testing-box .test-content {
-  width: 800px;
+  width: 900px;
   padding-bottom: 2rem;
 }
 body main section.workintro-area .contect .testing .testing-box .test-content h5 {
@@ -1259,10 +1280,10 @@ body main section.workintro-area .contect .reflection .reflection-box {
   flex-wrap: wrap;
   justify-content: center;
   margin: 0 auto; /* Centers the container */
-  max-width: 800px;
+  max-width: 1000px;
 }
 body main section.workintro-area .contect .reflection .reflection-box .reflection-overall {
-  width: 800px;
+  width: 900px;
   padding-bottom: 3rem;
 }
 body main section.workintro-area .contect .reflection .reflection-box .reflection-overall h3 {
@@ -1274,7 +1295,7 @@ body main section.workintro-area .contect .reflection .reflection-box .reflectio
   max-width: 100%;
 }
 body main section.workintro-area .contect .reflection .reflection-box .reflection-content {
-  width: 800px;
+  width: 900px;
   padding-bottom: 2rem;
 }
 body main section.workintro-area .contect .reflection .reflection-box .reflection-content h5 {
@@ -1801,14 +1822,16 @@ body footer .footer-container .footer-links .copyright {
 .key-result-cards {
   display: flex;
   gap: 1rem;
-  padding: 1.5rem 0;
-  max-width: 50%;
+  padding: 1.5rem 1rem;
+  max-width: 1000px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
 .key-result-card {
   flex: 1;
-  background: #141428;
+  background: transparent;
+  border: 1.5px solid #111;
   border-radius: 12px;
   padding: 1.5rem;
 }
@@ -1817,18 +1840,18 @@ body footer .footer-container .footer-links .copyright {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: #8b9aff;
+  color: #ea9d00;
   margin-bottom: 0.8rem;
 }
 .kr-metric {
   font-size: 1.45rem;
   font-weight: 700;
-  color: #fff;
+  color: #111;
   line-height: 1.3;
 }
 .kr-sub {
   font-size: 0.78rem;
-  color: rgba(255, 255, 255, 0.5);
+  color: #111;
   margin-top: 0.25rem;
 }
 .section-label {
