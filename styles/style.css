@@ -78,9 +78,9 @@ body header .logo h1 {
   margin: 0;
 }
 body header .logo img {
-  width: 38px;
-  height: 38px;
-  border-radius: 50px;
+  width: auto;
+  height: 40px;
+  border-radius: 0;
 }
 body header .logo:hover h1 {
   color: rgb(254, 192, 5);
