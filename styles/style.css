@@ -2005,6 +2005,111 @@ body main section.work-area div.cards-container2 a.reveal:nth-child(5) { transit
   .reveal { opacity: 1; transform: none; transition: none; }
 }
 
+/* About hero：照片 + 標語 + 介紹 + 數據（依參考版面） */
+body main section.about-area .about-hero {
+  display: flex;
+  gap: 6.75rem;
+  align-items: flex-start;
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+body main section.about-area .about-hero .about-hero-side {
+  flex: 0 0 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.1rem;
+}
+body main section.about-area .about-hero .about-hero-photo {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+}
+body main section.about-area .about-hero .resume-btn {
+  display: inline-block;
+  padding: 0.6rem 1.1rem;
+  min-width: 158px;
+  text-align: center;
+  background: #f0f0f0;
+  border-radius: 24px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #111;
+  text-decoration: none;
+}
+body main section.about-area .about-hero .resume-btn:hover {
+  background: #e4e4e4;
+}
+body main section.about-area .about-hero .about-hero-photo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 4px;
+  display: block;
+}
+body main section.about-area .about-hero .about-hero-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+body main section.about-area .about-hero .about-hero-text h1 {
+  font-size: 2.6rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #111;
+}
+body main section.about-area .about-hero .about-hero-text .about-intro {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #333;
+  margin-top: 2.5rem;
+}
+body main section.about-area .about-hero .about-hero-text .about-intro .highlight {
+  color: #d93c0f;
+}
+body main section.about-area .about-hero .about-hero-text .about-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: auto;
+  padding-top: 3.5rem;
+}
+body main section.about-area .about-hero .about-hero-text .about-stats .about-stat {
+  border: 1px solid #e2e2e2;
+  border-radius: 12px;
+  padding: 1.3rem 1.2rem;
+}
+body main section.about-area .about-hero .about-hero-text .about-stats .stat-num {
+  font-size: 2.6rem;
+  font-weight: 600;
+  color: #111;
+  line-height: 1;
+}
+body main section.about-area .about-hero .about-hero-text .about-stats .stat-label {
+  font-size: 0.85rem;
+  color: #555;
+  line-height: 1.4;
+  margin-top: 0.6rem;
+}
+@media (max-width: 768px) {
+  body main section.about-area .about-hero {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 1.5rem;
+  }
+  body main section.about-area .about-hero .about-hero-photo {
+    flex: none;
+  }
+  body main section.about-area .about-hero .about-hero-text h1 {
+    font-size: 1.8rem;
+  }
+  body main section.about-area .about-hero .about-hero-text .about-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @keyframes spin {
   from {
     transform: rotate(0deg);
@@ -2012,4 +2117,142 @@ body main section.work-area div.cards-container2 a.reveal:nth-child(5) { transit
   to {
     transform: rotate(360deg);
   }
-}/*# sourceMappingURL=style.css.map */
+}
+body main section.about-area .aboutbox .timelinecontainer,
+body main section.about-area .aboutbox .timelinecontainer2,
+body main section.about-area .aboutbox .timelinecontainer3 {
+  display: flex;
+  gap: 8rem;
+  max-width: 1150px;
+  margin: 0 auto 3.5rem;
+  padding: 0 2rem;
+}
+body main section.about-area .aboutbox .skill-groups {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+body main section.about-area .aboutbox .skill-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+body main section.about-area .aboutbox .skill-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #999;
+}
+body main section.about-area .aboutbox .skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+body main section.about-area .aboutbox .skill-tag {
+  padding: 0.5rem 1rem;
+  background: #f4f4f4;
+  border-radius: 24px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #333;
+}
+body main section.about-area .aboutbox .section-side {
+  flex: 0 0 240px;
+}
+body main section.about-area .aboutbox .section-side .section-head {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #111;
+  margin: 0;
+}
+body main section.about-area .aboutbox .section-side .linkedin-btn,
+body main section.about-area .aboutbox .section-side .scholar-btn {
+  display: inline-block;
+  margin-top: 1.2rem;
+  padding: 0.6rem 1.1rem;
+  min-width: 158px;
+  text-align: center;
+  background: #f0f0f0;
+  border-radius: 24px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #111;
+  text-decoration: none;
+}
+body main section.about-area .aboutbox .section-side .linkedin-btn:hover,
+body main section.about-area .aboutbox .section-side .scholar-btn:hover {
+  background: #e4e4e4;
+}
+body main section.about-area .aboutbox .exp-list {
+  flex: 1;
+}
+body main section.about-area .aboutbox .exp-list .exp-item {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  padding: 1.2rem 0;
+  border-bottom: 1px solid #e5e5e5;
+  text-decoration: none;
+}
+body main section.about-area .aboutbox .exp-list .exp-item:first-child {
+  padding-top: 0;
+}
+body main section.about-area .aboutbox .exp-list .exp-icon {
+  flex: 0 0 46px;
+  width: 46px;
+  height: 46px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+body main section.about-area .aboutbox .exp-list .exp-main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+body main section.about-area .aboutbox .exp-list .exp-role {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #111;
+}
+body main section.about-area .aboutbox .exp-list .exp-desc {
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: #888;
+}
+body main section.about-area .aboutbox .exp-list .exp-role .exp-org {
+  color: #777;
+  font-weight: 500;
+}
+body main section.about-area .aboutbox .exp-list .exp-date {
+  margin-left: auto;
+  padding-left: 1rem;
+  color: #666;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+@media (max-width: 768px) {
+  body main section.about-area .aboutbox .timelinecontainer,
+  body main section.about-area .aboutbox .timelinecontainer2,
+  body main section.about-area .aboutbox .timelinecontainer3 {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  body main section.about-area .aboutbox .exp-list .exp-item {
+    flex-wrap: wrap;
+  }
+  body main section.about-area .aboutbox .exp-list .exp-date {
+    margin-left: 57px;
+    padding-left: 0;
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
