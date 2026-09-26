@@ -2061,10 +2061,19 @@ body main section.about-area .about-hero .about-hero-text h1 {
   color: #111;
 }
 body main section.about-area .about-hero .about-hero-text .about-intro {
+  margin-top: 2.5rem;
+}
+body main section.about-area .about-hero .about-hero-text .about-intro p {
   font-size: 1.05rem;
   line-height: 1.75;
   color: #333;
-  margin-top: 2.5rem;
+}
+body main section.about-area .about-hero .about-hero-text .about-intro p + p {
+  margin-top: 1.1rem;
+}
+body main section.about-area .about-hero .about-hero-text .about-intro .about-intro-note {
+  margin-top: 1.5rem;
+  color: #777;
 }
 body main section.about-area .about-hero .about-hero-text .about-intro .highlight {
   color: #d93c0f;
