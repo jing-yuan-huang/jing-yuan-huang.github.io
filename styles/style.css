@@ -1912,23 +1912,6 @@ body footer .footer-container .footer-links .copyright {
   .before-after { grid-template-columns: 1fr; }
 }
 
-/* ── Language toggle ── */
-.lang-toggle {
-  background: none;
-  border: 1.5px solid rgba(255,255,255,0.5);
-  border-radius: 4px;
-  padding: 0.18rem 0.55rem;
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  cursor: pointer;
-  color: rgba(255,255,255,0.85);
-  line-height: 1.5;
-  transition: border-color 0.2s, opacity 0.2s;
-  vertical-align: middle;
-}
-.lang-toggle:hover { border-color: rgba(255,255,255,0.9); opacity: 0.9; }
-
 /* 桌面版 navigation：右側項目縮小間距 */
 @media (min-width: 769px) {
   body header nav ul {
@@ -1941,12 +1924,6 @@ body main section.work-area div.cards-container2 a div.card img.img-cover {
   -o-object-fit: cover !important;
      object-fit: cover !important;
 }
-
-/* Language switching */
-/* 全站僅英文：隱藏中文內容、顯示英文內容 */
-.zh-only { display: none !important; }
-.en-only { display: revert; }
-h1 .en-only, h2 .en-only, h3 .en-only { display: inline; }
 
 /* 平滑捲動（無 JS 時的後備） */
 html { scroll-behavior: smooth; }
