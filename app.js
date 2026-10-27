@@ -163,9 +163,44 @@ document.addEventListener("DOMContentLoaded", function () {
   // 錨點鏈接滾動
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener("click", function(event) {
-      event.preventDefault(); 
+      event.preventDefault();
       const targetId = this.getAttribute("href").substring(1);
       scrollToElement(targetId);
     });
   });
+});
+
+// ── 左欄 scroll-spy：捲到哪一區，.tag 選單對應標題就變色 ──
+document.addEventListener("DOMContentLoaded", function () {
+  const nav = document.querySelector(".tag");
+  if (!nav) return;
+  const links = Array.from(nav.querySelectorAll('a[href^="#"]'));
+  const targets = links
+    .map((link) => {
+      const el = document.getElementById(link.getAttribute("href").slice(1));
+      return el ? { link: link, el: el } : null;
+    })
+    .filter(Boolean);
+  if (!targets.length) return;
+
+  let ticking = false;
+  function update() {
+    ticking = false;
+    const line = window.innerHeight * 0.35; // 啟用線：距頂 35%
+    let active = null;
+    for (let i = 0; i < targets.length; i++) {
+      if (targets[i].el.getBoundingClientRect().top <= line) active = targets[i];
+      else break;
+    }
+    links.forEach((l) => l.classList.toggle("active", !!active && l === active.link));
+  }
+  function onScroll() {
+    if (!ticking) {
+      ticking = true;
+      requestAnimationFrame(update);
+    }
+  }
+  window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("resize", onScroll, { passive: true });
+  update();
 });
