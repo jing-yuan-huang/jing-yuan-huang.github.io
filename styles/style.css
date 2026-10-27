@@ -450,6 +450,13 @@ body main section.work-area div.cards-container2 a .card-content h3 {
   font-weight: bold;
   line-height: 1.4;
 }
+body main section.work-area div.cards-container2 a .card-content .card-meta {
+  margin: -0.25rem 0 0;
+  font-size: 0.85rem;
+  color: #6b6b6b;
+  font-weight: 500;
+  line-height: 1.4;
+}
 body main section.work-area div.cards-container2 a.lg .card-content h3 {
   font-size: 1.45rem;
 }
