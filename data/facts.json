@@ -1,0 +1,161 @@
+{
+  "_readme": "履歷與網站共用的事實帳本。這是唯一來源——數字要改只改這裡。每個項目除了值，記著它成立的條件(qualifier)與使用時的限制(rule)。rule 存在的項目，引用時必須遵守。",
+  "_updated": "2026-10-29",
+
+  "profile": {
+    "name_zh": "黃敬媛",
+    "name_en": "Jing-Yuan Huang",
+    "title_zh": "產品設計師 Product Designer (UI/UX)",
+    "title_en": "Product Designer (UI/UX)",
+    "location_zh": "台北，台灣",
+    "location_en": "Taipei, Taiwan",
+    "email": "jingyuanhuangg@gmail.com",
+    "phone": "+886 975-626-022",
+    "site": "jingyuanhuang.com",
+    "linkedin": "linkedin.com/in/huang-jingyuan",
+    "github": "github.com/jing-yuan-huang",
+    "scholar": "scholar.google.com/citations?user=NT0NI04AAAAJ"
+  },
+
+  "education": [
+    {
+      "school_zh": "國立臺灣大學",
+      "school_en": "National Taiwan University",
+      "degree_zh": "資訊網路與多媒體研究所 碩士（主要研究領域：人機互動）",
+      "degree_en": "M.S., Graduate Institute of Networking and Multimedia — Human–Computer Interaction",
+      "lab_zh": "影像與視覺處理實驗室（IMLab）",
+      "lab_en": "IMLab",
+      "years": "2022 – 2024",
+      "rule": "是資訊網路與多媒體研究所，不是資工系。這個欄位會被驗證，不要簡化。"
+    },
+    {
+      "school_zh": "國立臺北科技大學",
+      "school_en": "National Taipei University of Technology",
+      "degree_zh": "互動設計系 設計學士",
+      "degree_en": "B.Des., Interaction Design",
+      "years": "2015 – 2019"
+    }
+  ],
+
+  "employment": [
+    {
+      "company_zh": "佐臻科技 Jorjin Technologies",
+      "company_en": "Jorjin Technologies",
+      "role_zh": "產品設計師（UI/UX）",
+      "role_en": "Product Designer (UI/UX)",
+      "years": "2025 – 至今",
+      "years_en": "2025 – Present",
+      "context_zh": "智慧眼鏡與 AR 解決方案（B2B）",
+      "context_en": "Smart glasses and AR solutions (B2B)"
+    },
+    {
+      "company_zh": "國立臺灣大學 影像與視覺處理實驗室（IMLab）",
+      "company_en": "National Taiwan University, IMLab",
+      "role_zh": "研究助理",
+      "role_en": "Research Assistant",
+      "years": "2020 – 2024",
+      "years_en": "2020 – 2024"
+    }
+  ],
+
+  "facts": {
+    "search_ctr": {
+      "value_zh": "6% → 11.5%",
+      "value_en": "6% to 11.5%",
+      "qualifier_zh": "Google Search Console，2025/02 → 2026/02",
+      "qualifier_en": "Google Search Console, Feb 2025 – Feb 2026",
+      "verified": true
+    },
+    "search_position": {
+      "value_zh": "16.8 → 4.1",
+      "value_en": "16.8 to 4.1",
+      "qualifier_zh": "Google 搜尋平均排名，同期",
+      "qualifier_en": "Average Google position, same period",
+      "verified": true
+    },
+    "components_web": {
+      "value_zh": "20 種核心元件類型（48 個版面變體）",
+      "value_en": "20 core component types (48 layout variants)",
+      "qualifier_zh": "佐臻官網 Design System",
+      "qualifier_en": "Jorjin corporate platform design system",
+      "verified": true
+    },
+    "components_j9": {
+      "value_zh": "30 個核心元件",
+      "value_en": "30 shared core components",
+      "qualifier_zh": "J9 眼鏡端與手機端共用",
+      "qualifier_en": "Shared across glasses and companion app",
+      "verified": true
+    },
+    "components_hj1": {
+      "value_zh": "10 個共用元件",
+      "value_en": "10 shared components",
+      "qualifier_zh": "HJ1",
+      "qualifier_en": "HJ1",
+      "verified": true
+    },
+    "ai_translation_completion": {
+      "value_zh": "2/5 → 5/5",
+      "value_en": "2 of 5 to 5 of 5",
+      "qualifier_zh": "三輪迭代，每輪 5 位全新受試者；指能獨立完成任務的人數",
+      "qualifier_en": "3 rounds, 5 fresh participants each; users completing the task unaided",
+      "rule": "小樣本不換算百分比。2/5 不可以寫成 40%。",
+      "verified": true
+    },
+    "capture_completion": {
+      "value_zh": "3/5 → 3/5 → 3/5 → 4/5",
+      "value_en": "3 of 5, 3 of 5, 3 of 5, then 4 of 5",
+      "qualifier_zh": "跨裝置拍照任務，四輪，每輪 5 位全新受試者",
+      "qualifier_en": "Cross-device capture task, 4 rounds, 5 fresh participants each",
+      "rule": "前三輪相同的結果是重點——那是排除流程變因的證據，不要只寫最後的 4/5。",
+      "verified": true
+    },
+    "sus": {
+      "value_zh": "SUS 85",
+      "value_en": "SUS 85",
+      "qualifier_zh": "J9 整體，8 位受試者、每人 10 分鐘，迭代後測得",
+      "qualifier_en": "J9 overall, 8 participants, 10-minute sessions, post-iteration",
+      "rule": "必須標註「J9 整體」。這不是任何單一功能的改版成效。",
+      "verified": true
+    },
+    "product_validations": {
+      "value_zh": "3 件產品設計驗證",
+      "value_en": "3 customer product validations",
+      "qualifier_zh": "客戶：ENOVIS、AWEAR、KONA",
+      "qualifier_en": "Customers: ENOVIS, AWEAR, KONA",
+      "verified": true
+    },
+    "citations": {
+      "value_zh": "110+",
+      "value_en": "110+",
+      "qualifier_zh": "Google Scholar 累計引用",
+      "qualifier_en": "Total citations, Google Scholar",
+      "verified": true
+    },
+    "nstc_projects": {
+      "value_zh": "多件國科會產學合作 AR／VR 專案",
+      "value_en": "Several government-funded (NSTC) industry–academia AR/VR projects",
+      "qualifier_zh": "合作單位包含臺大醫院與國立故宮博物院",
+      "qualifier_en": "Partners include National Taiwan University Hospital and the National Palace Museum",
+      "rule": "實際是四件，但不要寫具體數字；只有臺大醫院和故宮適合對外提。",
+      "verified": true
+    },
+    "publications": {
+      "value_zh": "CHI、SIGGRAPH、SIGGRAPH Asia（Runner-Up）、IEEE VR",
+      "value_en": "CHI, SIGGRAPH, SIGGRAPH Asia (Runner-Up), IEEE VR",
+      "qualifier_zh": "研討會發表",
+      "qualifier_en": "Conference publications",
+      "verified": true
+    }
+  },
+
+  "pending": {
+    "_note": "尚未查證或尚未取得的數字。寫進履歷或網站前必須先補齊。",
+    "anthropometric_sample_size": "人因量測資料庫的受試者人數（n=?）",
+    "anthropometric_instrument": "量測工具（游標卡尺／3D 掃描／其他）",
+    "visual_comfort_design": "視覺舒適度實驗的受試者數、變因與水準、使用的量表",
+    "visual_comfort_finding": "具體結論（目前只有「建立了資料庫」這個產出，沒有發現）",
+    "hf_standards": "是否參照過 ISO 人體計測標準、ANSI/HFES 100 或 IEC 62366",
+    "hf_role_boundary": "人因專案中我主導的範圍：是我設計 protocol，還是照既有 protocol 執行？"
+  }
+}

@@ -9,11 +9,11 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://jingyuanhuang.com/jorjin.html" />
     <meta property="og:title" content="Jorjin Corporate Website — Jing-Yuan Huang" />
-    <meta property="og:description" content="A full redesign of a smart glasses company's website — UX architecture, design system, Next.js frontend, and technical SEO (search ranking +62%, CTR +75%)." />
+    <meta property="og:description" content="A full redesign of a smart glasses company's website — UX architecture, design system, Next.js frontend, and technical SEO (average position 16.8 → 4.1, CTR 6% → 11.5%)." />
     <meta property="og:image" content="https://jingyuanhuang.com/pictures/jorjin.webp" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Jorjin Corporate Website — Jing-Yuan Huang" />
-    <meta name="twitter:description" content="A full redesign of a smart glasses company's website — UX architecture, design system, Next.js frontend, and technical SEO (search ranking +62%, CTR +75%)." />
+    <meta name="twitter:description" content="A full redesign of a smart glasses company's website — UX architecture, design system, Next.js frontend, and technical SEO (average position 16.8 → 4.1, CTR 6% → 11.5%)." />
     <meta name="twitter:image" content="https://jingyuanhuang.com/pictures/jorjin.webp" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
@@ -62,12 +62,12 @@
               <div class="key-result-cards">
                 <div class="key-result-card">
                   <div class="kr-title">Key Results</div>
-                  <div class="kr-metric">CTR +75%</div>
-                  <div class="kr-sub">5.5% → 9.6%&ensp;·&ensp;Google Search Console</div>
+                  <div class="kr-metric">CTR 6% → 11.5%</div>
+                  <div class="kr-sub">Google Search Console&ensp;·&ensp;Jul 2025 – May 2026</div>
                   <div class="kr-metric" style="margin-top:0.8rem;">
-                    <span>Ranking +62%</span>
+                    <span>Position 16.8 → 4.1</span>
                   </div>
-                  <div class="kr-sub">15.1 → 5.7&ensp;·&ensp;2025/3–11 vs. 2026/1–6</div>
+                  <div class="kr-sub">Average Google position&ensp;·&ensp;same period</div>
                 </div>
                 <div class="key-result-card">
                   <div class="kr-title">Role &amp; Timeline</div>
@@ -93,7 +93,7 @@
 
                 <div class="chall-goal">
                   <h5 id="problem">Problem</h5>
-                  <p>Jorjin is a hardware-first smart glasses company with no dedicated front-end engineer, and its site ran on an aging WordPress template. Running stakeholder interviews across sales and management, I kept hitting the same gap: visitors — mostly B2B partners — couldn't tell within seconds <em>what Jorjin actually does</em>. Three business lines were flattened into one undifferentiated pile of product pages, so prospects had to dig to reach the line relevant to them, and the site barely surfaced in search (average position 15.1 — the bottom of page 2). A company with strong industrial design simply wasn't coming across online.</p>
+                  <p>Jorjin is a hardware-first smart glasses company with no dedicated front-end engineer, and its site ran on an aging WordPress template. Running stakeholder interviews across sales and management, I kept hitting the same gap: visitors — mostly B2B partners — couldn't tell within seconds <em>what Jorjin actually does</em>. Three business lines were flattened into one undifferentiated pile of product pages, so prospects had to dig to reach the line relevant to them, and the site barely surfaced in search (average position 16.8 — the bottom of page 2). A company with strong industrial design simply wasn't coming across online.</p>
                   <p>I led a full rebuild to fix three things at once: make the company's scope legible at a glance, give the product the premium visual treatment it deserved, and build an SEO foundation that could actually be found.</p>
                   <h5 id="constraints">Constraints</h5>
                   <ul>
@@ -125,10 +125,17 @@
                   <li><strong>Module:</strong> Core optical modules, targeting system integrators</li>
                   <li><strong>Solution / Application:</strong> AR deployment planning, targeting enterprise end-users</li>
                 </ul>
-                <figure style="margin:1.5rem 0; text-align:center;">
-                  <img src="./pictures/jorjin_ia.webp" alt="Jorjin information architecture — ODM as the central axis" style="width:100%; max-width:850px; border-radius:16px;" onerror="this.onerror=null;this.removeAttribute('src');this.style.cssText='display:block;width:100%;max-width:850px;height:300px;border:2px dashed #cbd5e1;border-radius:16px;background:#f8fafc;margin:0 auto;'">
-                  <figcaption style="font-size:0.8rem; color:#888; margin-top:0.5rem;">Information architecture — ODM as the central axis, extending to modules and AR solutions</figcaption>
-                </figure>
+                <div class="before-after">
+                  <div>
+                    <span class="ba-label">Before — flat product list</span>
+                    <img src="./pictures/jorjin_ia_old.webp" alt="Jorjin old information architecture — a flat product list">
+                  </div>
+                  <div>
+                    <span class="ba-label"><span>After — ODM as the central axis</span></span>
+                    <img src="./pictures/jorjin_ia.webp" alt="Jorjin new information architecture — ODM as the central axis, extending to modules and AR solutions">
+                  </div>
+                </div>
+                <p style="font-size:0.8rem; color:#888; margin-top:0.5rem; text-align:center;">Information architecture, before and after — restructured around ODM as the central axis, extending to modules and AR solutions.</p>
               </div>
 
               <div class="research-content">
@@ -179,20 +186,21 @@
             <div class="design-box">
               <div class="design-overall">
                 <h3 id="result">Results</h3>
-                <p style="text-align:left;">Comparison period: Pre-redesign baseline (Mar–Nov 2025) vs. post-redesign stable phase (Jan–Jun 2026). Source: Google Search Console.</p>
+                <p style="text-align:left;">Comparison period: before redesign (Jul–Nov 2025) vs. after redesign (Dec 2025–May 2026). Source: Google Search Console.</p>
                 <figure style="margin:1.5rem 0 0; text-align:center;">
-                  <img src="./pictures/jorjin_gsc.webp" alt="Google Search Console — ranking and CTR over the comparison period" style="width:100%; max-width:850px; border-radius:16px;" onerror="this.onerror=null;this.removeAttribute('src');this.style.cssText='display:block;width:100%;max-width:850px;height:300px;border:2px dashed #cbd5e1;border-radius:16px;background:#f8fafc;margin:0 auto;'">
-                  <figcaption style="font-size:0.8rem; color:#888; margin-top:0.5rem;">Google Search Console — ranking and CTR across the comparison period</figcaption>
+                  <img src="./pictures/jorjin_gsc1.webp" alt="Google Search Console — average position over the comparison period" style="width:100%; max-width:850px; border-radius:16px;">
+                  <img src="./pictures/jorjin_gsc2.webp" alt="Google Search Console — average CTR over the comparison period" style="width:100%; max-width:850px; border-radius:16px; margin-top:1rem;">
+                  <figcaption style="font-size:0.8rem; color:#888; margin-top:0.5rem;">Google Search Console — average position and CTR across the comparison period</figcaption>
                 </figure>
               </div>
 
               <div class="design-content result-card">
-                <div class="result-metric"><span>Search position 15.1 → 5.7 &nbsp;(+62%)</span></div>
-                <p>Jumped from the bottom of page 2 to the top of page 1 in search results. After restructuring the technical SEO architecture, Google's relevance assessment for the pages improved dramatically. Comparison: Mar–Nov 2025 vs. Jan 16–Jun 22, 2026.</p>
+                <div class="result-metric"><span>Search position 16.8 → 4.1</span></div>
+                <p>Jumped from the bottom of page 2 to the top of page 1 in search results. After restructuring the technical SEO architecture, Google's relevance assessment for the pages improved dramatically. Comparison: before redesign (Jul–Nov 2025) vs. after redesign (Dec 2025–May 2026), via Google Search Console.</p>
               </div>
 
               <div class="design-content result-card">
-                <div class="result-metric"><span>CTR 5.5% → 9.6% &nbsp;(+75%)</span></div>
+                <div class="result-metric"><span>CTR 6% → 11.5%</span></div>
                 <p>The new title tags and meta descriptions proved more compelling to searchers — users became more likely to choose Jorjin from search results.</p>
               </div>
 
