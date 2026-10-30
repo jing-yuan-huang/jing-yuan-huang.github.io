@@ -38,200 +38,149 @@
     </header>
 
     <main>
-      <section class="workintro-area">
+      <section class="casestudy-area">
+        <div class="cs-wrap">
 
-        <div class="tag">
-          <li><a href="#problem">Problem</a></li>
-          <li><a href="#constraints">Constraints</a></li>
-          <li><a href="#design">Design</a></li>
-          <li><a href="#result">Results</a></li>
-          <li><a href="#reflection">Reflection</a></li>
-        </div>
+          <!-- ── Sticky meta column ── -->
+          <aside class="cs-meta">
+            <h1 class="cs-title">Jorjin Corporate Website</h1>
+            <p class="cs-subtitle">A brand-distinctive corporate website for a smart glasses company — UX, design system, front-end, and technical SEO.</p>
 
-        <section class="contect">
-
-          <!-- ── OVERVIEW ── -->
-          <div class="bkground">
-            <div class="intro">
-              <h1 id="overview">
-                <span>Jorjin Corporate Website</span>
-              </h1>
-              <h2>
-                <span>A brand-distinctive corporate website for a smart glasses company — UX, design system, front-end, and technical SEO.</span>
-              </h2>
-              <div class="key-result-cards">
-                <div class="key-result-card">
-                  <div class="kr-title">Key Results</div>
-                  <div class="kr-metric">CTR 6% → 11.5%</div>
-                  <div class="kr-sub">Google Search Console&ensp;·&ensp;Jul 2025 – May 2026</div>
-                  <div class="kr-metric" style="margin-top:0.8rem;">
-                    <span>Position 16.8 → 4.1</span>
-                  </div>
-                  <div class="kr-sub">Average Google position&ensp;·&ensp;same period</div>
-                </div>
-                <div class="key-result-card">
-                  <div class="kr-title">Role &amp; Timeline</div>
-                  <div class="kr-metric" style="font-size:1.1rem; line-height:1.4;">Sole UX/UI Designer<br>&amp; Front-end Developer</div>
-                  <div class="kr-sub" style="margin-top:0.35rem;">+ 1 visual designer (renders &amp; video)</div>
-                  <div class="kr-sub" style="margin-top:0.8rem; color:#888; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;">What I owned</div>
-                  <ul class="kr-owned">
-                    <li>UX architecture &amp; info hierarchy</li>
-                    <li>Design System &amp; components</li>
-                    <li>Front-end — Next.js, hand-crafted RWD</li>
-                    <li>Technical SEO — Sitemap, hreflang, metadata</li>
-                  </ul>
-                  <div class="kr-sub" style="margin-top:0.8rem;">2025 – Present · Jorjin Technologies Inc.</div>
-                  <div class="kr-sub" style="margin-top:0.5rem;"><a href="https://www.jorjin.com" target="_blank" style="color:#8b9aff;">jorjin.com →</a></div>
-                </div>
-              </div>
-              <img src="./pictures/jorjin.webp" alt="Jorjin website" style="border-radius:16px;">
+            <div class="cs-meta-block">
+              <span class="cs-eyebrow">Timeline</span>
+              <p>2025 – Present</p>
             </div>
 
-            <div class="overview">
-              <div class="overviewbox">
-
-
-                <div class="chall-goal">
-                  <h5 id="problem">Problem</h5>
-                  <p>Jorjin is a hardware-first smart glasses company with no dedicated front-end engineer, and its site ran on an aging WordPress template. Running stakeholder interviews across sales and management, I kept hitting the same gap: visitors — mostly B2B partners — couldn't tell within seconds <em>what Jorjin actually does</em>. Three business lines were flattened into one undifferentiated pile of product pages, so prospects had to dig to reach the line relevant to them, and the site barely surfaced in search (average position 16.8 — the bottom of page 2). A company with strong industrial design simply wasn't coming across online.</p>
-                  <p>I led a full rebuild to fix three things at once: make the company's scope legible at a glance, give the product the premium visual treatment it deserved, and build an SEO foundation that could actually be found.</p>
-                  <h5 id="constraints">Constraints</h5>
-                  <ul>
-                    <li><strong>No in-house front-end:</strong> a hardware-first company with no dedicated front-end engineer — the rebuild had to be something I could design <em>and</em> ship myself.</li>
-                    <li><strong>Three business lines, one story:</strong> ODM manufacturing, module sales, and AR application planning all had to coexist without overwhelming visitors.</li>
-                    <li><strong>Had to look premium:</strong> the site needed to carry Jorjin's strong industrial design, not flatten it into a generic template.</li>
-                  </ul>
-                </div>
-              </div>
+            <div class="cs-meta-block">
+              <span class="cs-eyebrow">Team</span>
+              <p>Sole UX/UI Designer &amp; Front-end Developer — Me<br>+ 1 Visual Designer (renders &amp; video)</p>
             </div>
-          </div>
 
-          <!-- ── DESIGN ── -->
-          <div class="research">
-            <div class="research-box">
-              <div class="research-overall">
-                <h3 id="design">Design Process</h3>
-                <p>The redesign covered information architecture, visual system, component library, and frontend implementation — planned and led by me, with deep collaboration with a visual designer.</p>
-              </div>
-
-              <div class="research-content">
-                <span class="section-label">UX ARCHITECTURE</span>
-                <p class="section-statement">Interviews first — hierarchy built around ODM</p>
-                <p>Before redesigning, I conducted lightweight interviews with internal team members to understand what each department wanted to communicate externally, then held in-depth interviews with sales and management to clarify core product strengths and communication priorities.</p>
-                <p>Based on interview findings, I structured the site with "complete smart glasses" as the entry point, ODM manufacturing as the central axis, and extended outward to core module sales and AR application use cases — letting visitors quickly understand what Jorjin does, then explore the relevant business line at their own pace.</p>
-                <p><strong>Why &amp; trade-off:</strong> Giving all three lines equal billing would have been "fair" but left every visitor equally lost. I made ODM the spine and deliberately subordinated module sales and AR solutions on the entry path — those two audiences take one extra click, in exchange for the majority instantly grasping what the company is. I optimized for clarity for the many over equal weight for all.</p>
-                <ul>
-                  <li><strong>ODM / OEM:</strong> Full glasses manufacturing — the company's core business and the primary axis of the site</li>
-                  <li><strong>Module:</strong> Core optical modules, targeting system integrators</li>
-                  <li><strong>Solution / Application:</strong> AR deployment planning, targeting enterprise end-users</li>
-                </ul>
-                <div class="before-after">
-                  <div>
-                    <span class="ba-label">Before — flat product list</span>
-                    <img src="./pictures/jorjin_ia_old.webp" alt="Jorjin old information architecture — a flat product list">
-                  </div>
-                  <div>
-                    <span class="ba-label"><span>After — ODM as the central axis</span></span>
-                    <img src="./pictures/jorjin_ia.webp" alt="Jorjin new information architecture — ODM as the central axis, extending to modules and AR solutions">
-                  </div>
-                </div>
-                <p style="font-size:0.8rem; color:#888; margin-top:0.5rem; text-align:center;">Information architecture, before and after — restructured around ODM as the central axis, extending to modules and AR solutions.</p>
-              </div>
-
-              <div class="research-content">
-                <span class="section-label">DESIGN SYSTEM</span>
-                <p class="section-statement">Design-led, no templates</p>
-                <p>Following a "design-first" principle, I avoided ready-made templates. Starting from the visual designer's layout style, I synthesized a complete Design System to preserve the site's distinctive visual identity.</p>
-                <ul>
-                  <li><strong>Color:</strong> Dark background, premium tech aesthetic with high-contrast accent colors to emphasize product presence.</li>
-                  <li><strong>Typography:</strong> Tight letter-spacing on headings, with clearly defined line-height and tracking for headings, body, and labels — creating strong visual hierarchy.</li>
-                  <li><strong>Component spec:</strong> Unified button styles with fully defined Normal / Hover / Selected states; all interactive components follow consistent state rules.</li>
-                  <li><strong>Responsive:</strong> All breakpoints manually planned — no auto-scaling frameworks — ensuring every layout decision was intentional, not mechanically compressed.</li>
-                </ul>
-                <p><strong>Why &amp; trade-off:</strong> Hand-planning every breakpoint and refusing a UI framework cost real time up front — but for a company whose edge <em>is</em> design, a mechanically compressed layout would have undercut the one thing we were selling. I traded build speed for visual control.</p>
-                <p>The Design System was shared with the visual designer, ensuring product renders and video assets could be placed directly into the layout without adjustment. The goal: maximize the visual impact of the product and leave a lasting impression on visitors.</p>
-                <figure style="margin:1.5rem 0; text-align:center;">
-                  <img src="./pictures/jorjin_designsystem.webp" alt="Jorjin Design System — color, type scale, and component states" style="width:100%; max-width:850px; border-radius:16px;" onerror="this.onerror=null;this.removeAttribute('src');this.style.cssText='display:block;width:100%;max-width:850px;height:300px;border:2px dashed #cbd5e1;border-radius:16px;background:#f8fafc;margin:0 auto;'">
-                  <figcaption style="font-size:0.8rem; color:#888; margin-top:0.5rem;">Design System — color, type scale, and button states (Normal / Hover / Selected)</figcaption>
-                </figure>
-                <div class="before-after">
-                  <div>
-                    <span class="ba-label">Before — WordPress</span>
-                    <img src="./pictures/jorjin_before.webp" alt="Jorjin 舊版 WordPress 網站">
-                  </div>
-                  <div>
-                    <span class="ba-label"><span>After — Next.js Rebuild</span></span>
-                    <img src="./pictures/jorjin_after.webp" alt="Jorjin 新版網站">
-                  </div>
-                </div>
-              </div>
-
-              <div class="research-content">
-                <span class="section-label" id="seo">SEO</span>
-                <p class="section-statement">Technical SEO, iterated on Search Console data</p>
-                <p>The SEO work was grounded in technical foundation, continuously iterated using Google Search Console data — without relying on keyword research tools.</p>
-                <p><strong>Why &amp; trade-off:</strong> With no SEO budget or keyword tools, I bet on technical fundamentals plus live Search Console data rather than chasing keyword volumes. Slower to show signal, but it optimized for the queries real visitors actually used — and it was something I could own and iterate end to end.</p>
-                <ul>
-                  <li><strong>Dynamic Sitemap:</strong> Auto-generated via Next.js, covering all <code>/products/[slug]</code> and <code>/modules/[slug]</code> pages — new products are indexed automatically without manual updates.</li>
-                  <li><strong>Bilingual hreflang:</strong> English (<code>/</code>) and Traditional Chinese (<code>/zh</code>) versions correctly configured with <code>hreflang</code> alternates, letting Google serve the appropriate version by user locale.</li>
-                  <li><strong>Metadata management:</strong> Each page has its own <code>&lt;title&gt;</code> and <code>&lt;meta description&gt;</code>, with precise, non-duplicated descriptions.</li>
-                  <li><strong>Search Console monitoring:</strong> Submitted Sitemap, corrected indexing errors, and regularly adjusted page copy and internal linking based on impressions, CTR, and ranking data.</li>
-                </ul>
-              </div>
+            <div class="cs-meta-block">
+              <span class="cs-eyebrow">My Role</span>
+              <ul>
+                <li>UX architecture &amp; information hierarchy</li>
+                <li>Design System &amp; component library</li>
+                <li>Front-end build — Next.js, hand-crafted RWD</li>
+                <li>Technical SEO — Sitemap, hreflang, metadata</li>
+              </ul>
             </div>
-          </div>
 
-          <!-- ── RESULT ── -->
-          <div class="design" style="padding: 4% 0% 2% 0%;">
-            <div class="design-box">
-              <div class="design-overall">
-                <h3 id="result">Results</h3>
-                <p style="text-align:left;">Comparison period: before redesign (Jul–Nov 2025) vs. after redesign (Dec 2025–May 2026). Source: Google Search Console.</p>
-                <figure style="margin:1.5rem 0 0; text-align:center;">
-                  <img src="./pictures/jorjin_gsc1.webp" alt="Google Search Console — average position over the comparison period" style="width:100%; max-width:850px; border-radius:16px;">
-                  <img src="./pictures/jorjin_gsc2.webp" alt="Google Search Console — average CTR over the comparison period" style="width:100%; max-width:850px; border-radius:16px; margin-top:1rem;">
-                  <figcaption style="font-size:0.8rem; color:#888; margin-top:0.5rem;">Google Search Console — average position and CTR across the comparison period</figcaption>
-                </figure>
+            <div class="cs-meta-block">
+              <span class="cs-eyebrow">Live</span>
+              <p><a href="https://www.jorjin.com" target="_blank" rel="noopener">jorjin.com &rarr;</a></p>
+            </div>
+          </aside>
+
+          <!-- ── Scrolling content column ── -->
+          <div class="cs-body">
+            <img class="cs-hero" src="./pictures/jorjin.webp" alt="Jorjin corporate website, redesigned">
+
+            <!-- OVERVIEW -->
+            <section class="cs-section" id="overview">
+              <span class="cs-eyebrow">Overview</span>
+              <h2 class="cs-headline">A company with strong hardware design that wasn't coming across online.</h2>
+              <p>Jorjin is a hardware-first smart glasses company with no dedicated front-end engineer, and its site ran on an aging WordPress template. In stakeholder interviews across sales and management, the same gap kept surfacing: visitors — mostly B2B partners — couldn't tell within seconds <em>what Jorjin actually does</em>.</p>
+              <p>Three business lines were flattened into one undifferentiated pile of product pages, and the site barely surfaced in search (average position 16.8 — the bottom of page 2). I led a full rebuild to fix three things at once: make the company's scope legible at a glance, give the product the premium visual treatment it deserved, and build an SEO foundation that could actually be found.</p>
+              <div class="before-after">
+                <div>
+                  <span class="ba-label">Before — WordPress</span>
+                  <img src="./pictures/jorjin_before.webp" alt="Jorjin's previous WordPress site">
+                </div>
+                <div>
+                  <span class="ba-label"><span>After — Next.js rebuild</span></span>
+                  <img src="./pictures/jorjin_after.webp" alt="Jorjin's redesigned Next.js site">
+                </div>
               </div>
+              <p class="cs-caption">From an aging WordPress template to a hand-built Next.js site with a distinct visual identity.</p>
+            </section>
 
-              <div class="design-content result-card">
+            <!-- CHALLENGE -->
+            <section class="cs-section" id="challenge">
+              <span class="cs-eyebrow">Challenge</span>
+              <h2 class="cs-headline">Three constraints, each limiting how I could solve the others.</h2>
+              <p>This was never a visual refresh. Three problems had to be solved at the same time, and each one narrowed the options for the rest.</p>
+              <ul class="cs-list">
+                <li><strong>No in-house front-end.</strong> A hardware-first company with no dedicated front-end engineer — whatever I designed, I also had to be able to ship myself.</li>
+                <li><strong>Three business lines, one story.</strong> ODM manufacturing, module sales, and AR application planning all had to coexist without overwhelming a first-time visitor.</li>
+                <li><strong>It had to look premium.</strong> The site needed to carry Jorjin's strong industrial design, not flatten it into a generic template.</li>
+              </ul>
+            </section>
+
+            <!-- DISCOVERY -->
+            <section class="cs-section" id="discovery">
+              <span class="cs-eyebrow">Discovery</span>
+              <h2 class="cs-headline">Interviews pointed to one spine: ODM.</h2>
+              <p>Before touching the design, I ran lightweight interviews with each internal team to learn what they needed to communicate externally, then went deeper with sales and management to pin down the real product strengths and communication priorities.</p>
+              <p>Giving all three business lines equal billing would have been "fair" — and would have left every visitor equally lost. The fix wasn't visual; it was deciding what the site was actually <em>for</em>. I made ODM manufacturing the central axis and let module sales and AR solutions extend outward from it.</p>
+              <ul class="cs-list">
+                <li><strong>ODM / OEM.</strong> Full glasses manufacturing — the core business, and the site's primary axis.</li>
+                <li><strong>Module.</strong> Core optical modules, aimed at system integrators.</li>
+                <li><strong>Solution / Application.</strong> AR deployment planning, aimed at enterprise end-users.</li>
+              </ul>
+              <div class="before-after">
+                <div>
+                  <span class="ba-label">Before — flat product list</span>
+                  <img src="./pictures/jorjin_ia_old.webp" alt="Jorjin old information architecture — a flat product list">
+                </div>
+                <div>
+                  <span class="ba-label"><span>After — ODM as the central axis</span></span>
+                  <img src="./pictures/jorjin_ia.webp" alt="Jorjin new information architecture — ODM as the central axis, extending to modules and AR solutions">
+                </div>
+              </div>
+              <p class="cs-caption">Information architecture, before and after — restructured around ODM as the central axis, extending to modules and AR solutions.</p>
+              <p><strong>Why &amp; trade-off:</strong> Those two audiences take one extra click to reach their line — in exchange, the majority grasp what the company is within seconds. I optimized for clarity for the many over equal weight for all.</p>
+            </section>
+
+            <!-- SOLUTION -->
+            <section class="cs-section" id="solution">
+              <span class="cs-eyebrow">Solution</span>
+              <h2 class="cs-headline">Design-led, and built to ship by one person.</h2>
+              <p>With the architecture settled, the build followed a single principle: let the design lead, and keep every layer something I could own end to end.</p>
+              <ol class="cs-steps">
+                <li><strong>A Design System instead of a template.</strong> Starting from the visual designer's layout, I synthesized a full system — a dark, high-contrast palette, a defined type scale, and button states (Normal / Hover / Selected) — so product renders and video dropped straight into the layout without adjustment.</li>
+                <li><strong>Hand-planned responsive, no UI framework.</strong> Every breakpoint was planned by hand rather than mechanically compressed. It cost real time up front, but for a company whose edge <em>is</em> design, a generic auto-scaled layout would have undercut the one thing we were selling.</li>
+                <li><strong>A front-end I could own.</strong> A Next.js rebuild, so design decisions landed directly in code with no hand-off loss between design and build.</li>
+                <li><strong>Technical SEO, iterated on live data.</strong> With no SEO budget or keyword tools, I bet on fundamentals — a dynamic Sitemap covering every <code>/products/[slug]</code>, bilingual <code>hreflang</code>, and per-page metadata — then tuned copy and internal links on Google Search Console data.</li>
+              </ol>
+              <figure>
+                <img src="./pictures/jorjin_designsystem.webp" alt="Jorjin Design System — color, type scale, and button states">
+                <figcaption>Design System — color, type scale, and button states (Normal / Hover / Selected).</figcaption>
+              </figure>
+            </section>
+
+            <!-- IMPACT -->
+            <section class="cs-section" id="impact">
+              <span class="cs-eyebrow">Result</span>
+              <h2 class="cs-headline">The site started showing up — and reading clearly.</h2>
+              <p>Comparison: before redesign (Jul–Nov 2025) vs. after redesign (Dec 2025–May 2026), via Google Search Console.</p>
+
+              <div class="result-card">
                 <div class="result-metric"><span>Search position 16.8 → 4.1</span></div>
-                <p>Jumped from the bottom of page 2 to the top of page 1 in search results. After restructuring the technical SEO architecture, Google's relevance assessment for the pages improved dramatically. Comparison: before redesign (Jul–Nov 2025) vs. after redesign (Dec 2025–May 2026), via Google Search Console.</p>
+                <p>From the bottom of page 2 to the top of page 1. After the technical SEO restructure, Google's relevance assessment for the pages improved sharply.</p>
               </div>
 
-              <div class="design-content result-card">
+              <div class="result-card">
                 <div class="result-metric"><span>CTR 6% → 11.5%</span></div>
-                <p>The new title tags and meta descriptions proved more compelling to searchers — users became more likely to choose Jorjin from search results.</p>
+                <p>New title tags and meta descriptions — together with the higher ranking — made searchers far more likely to choose Jorjin from the results.</p>
               </div>
 
-              <div class="design-content result-card">
+              <div class="result-card">
                 <div class="result-metric"><span>8 new product pages, all indexed</span></div>
-                <p>The Next.js dynamic Sitemap auto-updates when new products are published. All 8 new pages — including <code>/products/hj1</code>, <code>/products/j9</code>, <code>/products/c9t2</code> — were indexed and received organic traffic after launch. The bilingual homepage (<code>/zh</code>) also gained independent search traffic, confirming correct hreflang configuration.</p>
+                <p>The dynamic Sitemap auto-updates on publish; all 8 new pages were indexed and drew organic traffic, and the <code>/zh</code> homepage gained independent search traffic — confirming correct hreflang configuration.</p>
               </div>
-            </div>
+
+              <figure>
+                <img src="./pictures/jorjin_gsc1.webp" alt="Google Search Console — average position and CTR across the comparison period">
+                <img src="./pictures/jorjin_gsc2.webp" alt="Google Search Console — top queries and top pages after the redesign" style="margin-top:1rem;">
+                <figcaption>Google Search Console — position, CTR, and the queries and pages that gained traffic.</figcaption>
+              </figure>
+
+              <p>The thread through all of it was holding to a design-first principle. As AI tools push more sites toward the same templates, that distinctiveness is itself the competitive advantage — the right bet for a company whose core competency is hardware design.</p>
+            </section>
+
           </div>
-
-          <!-- ── REFLECTION ── -->
-          <div class="reflection">
-            <div class="reflection-box">
-              <div class="reflection-overall">
-                <h3 id="reflection">Reflection</h3>
-                <p style="text-align:left;">The most rewarding part of this project was holding to the "design-first" principle. As AI tools and website builders proliferate, many sites are converging toward the same templates and visual language. When planning Jorjin's website, I deliberately resisted that pull — working closely with a visual designer and letting the design lead. After establishing the main interaction flows, the visual design drove everything; the frontend implementation followed faithfully, never compromising visual details for technical convenience. The result is a website with a clear identity in both usability and aesthetic — the right choice for a company whose core competency is hardware design.</p>
-              </div>
-
-              <div class="reflection-content">
-                <h5>Key Takeaways</h5>
-                <ul>
-                  <li>Design-first, faithfully implemented — never let tooling dictate visual decisions</li>
-                  <li>In the age of AI tools, distinctiveness itself is a competitive advantage</li>
-                  <li>Deep collaboration between UX and visual design is key to breaking through template homogenization</li>
-                  <li>Frontend capability lets design decisions land directly — reducing communication overhead and compromise</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-        </section>
+        </div>
       </section>
 
       <footer>
