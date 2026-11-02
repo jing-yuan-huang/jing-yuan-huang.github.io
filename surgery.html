@@ -9,11 +9,11 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://jingyuanhuang.com/surgery.html" />
     <meta property="og:title" content="Dual-Modal VR Anatomy System — Jing-Yuan Huang" />
-    <meta property="og:description" content="A VR anatomy learning system reconstructing 3D thoracic models from real patient CT data, with dual-modal (controller + gesture) interaction and three medical-specific tools. SUS 76." />
+    <meta property="og:description" content="A VR anatomy learning system reconstructing 3D thoracic models from real patient CT data, with dual-modal (controller + gesture) interaction and three medical-specific tools." />
     <meta property="og:image" content="https://jingyuanhuang.com/pictures/VR%20surgery.webp" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Dual-Modal VR Anatomy System — Jing-Yuan Huang" />
-    <meta name="twitter:description" content="A VR anatomy learning system reconstructing 3D thoracic models from real patient CT data, with dual-modal (controller + gesture) interaction and three medical-specific tools. SUS 76." />
+    <meta name="twitter:description" content="A VR anatomy learning system reconstructing 3D thoracic models from real patient CT data, with dual-modal (controller + gesture) interaction and three medical-specific tools." />
     <meta name="twitter:image" content="https://jingyuanhuang.com/pictures/VR%20surgery.webp" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
@@ -38,384 +38,260 @@
     </header>
 
     <main>
-      <section class="workintro-area">
+      <section class="casestudy-area">
+        <div class="cs-wrap">
 
-        <div class="tag">
-          <li><a href="#overview">Overview</a></li>
-          <li><a href="#research">Research</a></li>
-          <li><a href="#design">Design</a></li>
-          <li><a href="#result">Result</a></li>
-          <li><a href="#reflection">Reflection</a></li>
-        </div>
+          <!-- ── Sticky meta column ── -->
+          <aside class="cs-meta">
+            <h1 class="cs-title">Dual-Modal VR Anatomy System</h1>
+            <p class="cs-subtitle">A VR anatomy learning system reconstructing 3D thoracic models from real patient CT data — dual-modal (controller + gesture) interaction and three medical-specific tools for surgical anatomy education.</p>
 
-        <section class="contect">
-
-          <!-- ── OVERVIEW ── -->
-          <div class="bkground">
-            <div class="intro">
-              <h1 id="overview">
-                <span>Dual-Modal VR Anatomy System</span>
-              </h1>
-              <h2>
-                <span>Reconstructed 3D thoracic anatomy models from real patient CT data, designed dual-modal interactions and three medical-specific tools to enhance spatial comprehension and learning efficiency in surgical anatomy education.</span>
-              </h2>
-              <div class="key-result-cards">
-                <div class="key-result-card">
-                  <div class="kr-title">Key Results</div>
-                  <div class="kr-metric">
-                    <span>2 Input Modalities</span>
-                  </div>
-                  <div class="kr-sub">Controller · Hand Gesture</div>
-                  <div class="kr-metric" style="margin-top:0.8rem;">
-                    <span>3 Specialized VR Tools</span>
-                  </div>
-                  <div class="kr-sub">CT Viewer · Measurement · Material</div>
-                  <div class="kr-metric" style="margin-top:0.8rem;">
-                    <span>Dual Evaluation</span>
-                  </div>
-                  <div class="kr-sub">SUS + USEQ</div>
-                </div>
-                <div class="key-result-card">
-                  <div class="kr-title">Role &amp; Timeline</div>
-                  <div class="kr-metric" style="font-size:1rem; line-height:1.7;">UI Design · UX Research<br>System Dev</div>
-                  <div class="kr-sub" style="margin-top:0.8rem;">2025 · NTUST Graduate Course Project</div>
-                  <div class="kr-sub" style="margin-top:0.3rem;">Unity · Meta Quest · C#</div>
-                  <div class="kr-sub" style="margin-top:0.5rem;">
-                    <a href="https://youtu.be/QmlM4-hTCxM" target="_blank" style="color:#8b9aff;">Demo Video ↗</a>
-                  </div>
-                </div>
-              </div>
-              <video autoplay loop muted playsinline style="max-width: 850px;">
-                <source src="./surgery/front.webm" type="video/webm">
-              </video>
+            <div class="cs-meta-block">
+              <span class="cs-eyebrow">Timeline</span>
+              <p>2025 · NTUST Graduate Course Project</p>
             </div>
 
-            <div class="overview">
-              <div class="overviewbox">
-
-
-                <div class="chall-goal">
-                  <h5>Design Context</h5>
-                  <p>Traditional surgical anatomy education relies on cadavers, physical models, or 2D textbook illustrations. For thoracic surgical planning, surgeons need to precisely understand 3D spatial relationships between organs, lesions, and vessels — something 2D media struggles to convey.</p>
-                  <p>This research project explores how VR can bridge that gap: reconstructing 3D thoracic anatomy models from real patient CT data, designing two complete input modalities, and building three medical-specific tools to enhance spatial comprehension and interaction efficiency in anatomy learning.</p>
-                  <h5>Challenges</h5>
-                  <ul>
-                    <li><strong>Dual-modal consistency:</strong> Controller and gesture have different operational instincts — both need to support all features while keeping the usage logic coherent.</li>
-                    <li><strong>Gesture precision:</strong> Measurement tools require high spatial accuracy, but gesture detection introduces variability that affects measurement reliability.</li>
-                    <li><strong>3D spatial UI:</strong> Menus and tools operate in 3D space — they must not occlude the anatomy model while keeping the user's gaze flow natural.</li>
-                  </ul>
-                  <h5>What I Did</h5>
-                  <ul>
-                    <li>Reconstructed 3D thoracic anatomy models from real patient CT data and integrated into Unity VR</li>
-                    <li>Designed and implemented controller modality: direct/indirect selection, translation/rotation, scaling</li>
-                    <li>Designed and implemented hand gesture modality: pinch-select, pinch-hold-grab, thumb-up menu summon, dual-index measurement</li>
-                    <li>Designed three medical-specific tools: CT Viewer, Measurement Tool, Model Material Replacement (opacity control)</li>
-                    <li>Designed 3D spatial menu UI and interaction flows</li>
-                    <li>Planned and conducted user testing: task-based tests (completion time, accuracy, error count) + SUS + USEQ + interviews</li>
-                  </ul>
-                </div>
-              </div>
+            <div class="cs-meta-block">
+              <span class="cs-eyebrow">My Role</span>
+              <ul>
+                <li>UI Design · UX Research · System Development</li>
+                <li>Dual-modal interaction (controller + gesture)</li>
+                <li>Three medical-specific VR tools</li>
+                <li>3D spatial menu UI</li>
+                <li>User testing (task-based + SUS + USEQ)</li>
+              </ul>
             </div>
-          </div>
 
-          <!-- ── RESEARCH ── -->
-          <div class="research">
-            <div class="research-box">
-              <div class="research-overall">
-                <h3 id="research">Research</h3>
-                <p>Research covers two directions: controller-based VR interaction and hand gesture-based VR interaction — analyzing common interaction patterns in existing VR applications as the foundational reference for design.</p>
-              </div>
+            <div class="cs-meta-block">
+              <span class="cs-eyebrow">Tools</span>
+              <p>Unity · Meta Quest · C#</p>
+            </div>
 
-              <div class="research-content">
-                <span class="section-label">CONTROLLER-BASED INTERACTION</span>
-                <p class="section-statement">Hand-held controllers deliver explicit button feedback and predictable precise manipulation</p>
-                <ul>
-                  <li><strong>Translation and Rotation:</strong> Moving the controller simultaneously changes the object's position and orientation — two operations in one gesture.</li>
-                  <li><strong>Scaling:</strong> Moving controllers along a specific axis adjusts the object's size.</li>
-                </ul>
-              </div>
-              <div class="research-pic-single">
-                <div class="stage">
-                  <img src="./surgery/controllerResearch.png" alt="Controller interaction research">
-                </div>
+            <div class="cs-meta-block">
+              <span class="cs-eyebrow">Demo</span>
+              <p><a href="https://youtu.be/QmlM4-hTCxM" target="_blank" rel="noopener">Demo video ↗</a></p>
+            </div>
+          </aside>
+
+          <!-- ── Scrolling content column ── -->
+          <div class="cs-body">
+            <video class="cs-hero" autoplay loop muted playsinline>
+              <source src="./surgery/front.webm" type="video/webm">
+            </video>
+
+            <!-- OVERVIEW -->
+            <section class="cs-section" id="overview">
+              <span class="cs-eyebrow">Overview</span>
+              <h2 class="cs-headline">2D textbooks can't show the space a surgeon has to plan in.</h2>
+              <p>Traditional surgical anatomy education relies on cadavers, physical models, or 2D textbook illustrations. For thoracic surgical planning, surgeons need to precisely understand the 3D spatial relationships between organs, lesions, and vessels — something 2D media struggles to convey.</p>
+              <p>This research project explores how VR can bridge that gap: reconstructing 3D thoracic anatomy models from real patient CT data, designing two complete input modalities, and building three medical-specific tools to enhance spatial comprehension and interaction efficiency in anatomy learning.</p>
+            </section>
+
+            <!-- CHALLENGE -->
+            <section class="cs-section" id="challenge">
+              <span class="cs-eyebrow">Challenge</span>
+              <h2 class="cs-headline">One system, two very different ways to use it.</h2>
+              <ul class="cs-list">
+                <li><strong>Dual-modal consistency.</strong> Controller and gesture carry different operational instincts — both had to support every feature while keeping the usage logic coherent.</li>
+                <li><strong>Gesture precision.</strong> Measurement tools require high spatial accuracy, but gesture detection introduces variability that affects measurement reliability.</li>
+                <li><strong>3D spatial UI.</strong> Menus and tools operate in 3D space — they must not occlude the anatomy model while keeping the user's gaze flow natural.</li>
+              </ul>
+            </section>
+
+            <!-- RESEARCH -->
+            <section class="cs-section" id="research">
+              <span class="cs-eyebrow">Research</span>
+              <h2 class="cs-headline">Two interaction paradigms, studied before designing.</h2>
+              <p>I analyzed common interaction patterns in existing VR applications across two directions — controller-based and gesture-based — as the foundation for design.</p>
+
+              <p class="cs-sublabel">Controller-based interaction — explicit button feedback, predictable precision</p>
+              <ul class="cs-list">
+                <li><strong>Translation &amp; rotation.</strong> Moving the controller changes the object's position and orientation at once — two operations in one gesture.</li>
+                <li><strong>Scaling.</strong> Moving controllers along a specific axis adjusts the object's size.</li>
+              </ul>
+              <div class="cs-media"><img src="./surgery/controllerResearch.png" alt="Controller interaction research"></div>
+
+              <p class="cs-sublabel">Hand-gesture interaction — intuitive and natural, but precision-critical tasks are harder</p>
+              <ul class="cs-list">
+                <li><strong>Translation &amp; rotation.</strong> Moving the hand changes position and orientation at once — same logic as controllers, minimizing the learning curve.</li>
+                <li><strong>Scaling.</strong> Pinch-hold with both hands and expand or contract to adjust size.</li>
+              </ul>
+              <div class="cs-media"><img src="./surgery/gestureResearch.png" alt="Hand gesture research"></div>
+            </section>
+
+            <!-- SYSTEM & INPUT MAPPING -->
+            <section class="cs-section" id="design">
+              <span class="cs-eyebrow">System &amp; Input Mapping</span>
+              <h2 class="cs-headline">Starting from CT data, with six operations mapped across both modalities.</h2>
+              <p>Starting from patient CT data, the VR environment integrates the anatomy models with interactive tools. Six operations are mapped across both modalities, with consistent underlying logic.</p>
+              <div class="cs-figrow cs-2up">
+                <div class="cs-fig"><img src="./surgery/so.png" alt="System overview"></div>
+                <div class="cs-fig"><img src="./surgery/soi.png" alt="System interface"></div>
               </div>
 
-              <div class="research-content">
-                <span class="section-label">HAND GESTURE INTERACTION</span>
-                <p class="section-statement">Hand gestures feel intuitive and natural, but precision-critical tasks face stability challenges</p>
-                <ul>
-                  <li><strong>Translation and Rotation:</strong> Moving the hand simultaneously changes position and orientation — same logic as controllers, minimizing the learning curve.</li>
-                  <li><strong>Scaling:</strong> Pinch-hold the object with both hands and expand or contract to adjust size.</li>
-                </ul>
-              </div>
-              <div class="research-pic-single">
-                <div class="stage">
-                  <img src="./surgery/gestureResearch.png" alt="Hand gesture research">
-                </div>
-              </div>
-            </div>
-          </div>
+              <p class="cs-sublabel">Controller button mapping</p>
+              <ul class="cs-list">
+                <li><strong>Direct selection.</strong> Move the controller close to the desired object.</li>
+                <li><strong>Indirect selection.</strong> Aim the ray at the desired object.</li>
+                <li><strong>Trigger.</strong> PrimaryIndexTrigger or SecondaryIndexTrigger.</li>
+                <li><strong>Grab.</strong> PrimaryHandTrigger or SecondaryHandTrigger.</li>
+                <li><strong>Menu.</strong> Button.Start.</li>
+                <li><strong>Measurement.</strong> Button.One.</li>
+              </ul>
+              <div class="cs-media"><img src="./surgery/controllerbutton.png" alt="Controller button mapping"></div>
 
-          <!-- ── DESIGN ── -->
-          <div class="design" style="padding: 4% 0% 1% 0%;">
-            <div class="design-box">
-              <div class="design-overall">
-                <h3 id="design">Design Process</h3>
-                <p style="text-align:left;">Design covers three levels: overall system architecture, input mapping specifications (controller / gesture), and three interaction contexts (3D object manipulation, menu interaction, specialized tools). Both modalities were designed in parallel to ensure full feature coverage and consistent logic.</p>
-              </div>
-              <div class="design-content">
-                <span class="section-label">SYSTEM OVERVIEW</span>
-                <p class="section-statement">Starting from patient CT data, the VR environment integrates anatomy models with interactive tools</p>
-              </div>
-            </div>
-          </div>
+              <p class="cs-sublabel">Hand-gesture mapping</p>
+              <ul class="cs-list">
+                <li><strong>Direct selection.</strong> Move the hand close to the desired object.</li>
+                <li><strong>Indirect selection.</strong> Aim the ray indicator (points only, no line) at the object.</li>
+                <li><strong>Trigger.</strong> After selecting, pinch and release.</li>
+                <li><strong>Grab.</strong> After selecting, pinch and hold.</li>
+                <li><strong>Bring up menu.</strong> Left-hand thumb-up gesture.</li>
+                <li><strong>Measurement.</strong> Touch index fingers together to start; move them to draw the measurement line.</li>
+              </ul>
+              <div class="cs-media"><img src="./surgery/gesture.png" alt="Hand gesture mapping"></div>
+            </section>
 
-          <!-- ── INTERACT DESIGN (keeps existing CSS classes for video grid layout) ── -->
-          <div class="interact-design">
-
-            <div class="picsingle" style="gap:1rem;">
-              <div class="stage"><img src="./surgery/so.png" alt="System overall"></div>
-            </div>
-            <div class="picsingle" style="gap:1rem;">
-              <div class="stage"><img src="./surgery/soi.png" alt="System interface"></div>
-            </div>
-
-            <div style="max-width:800px; margin:2rem auto 0; text-align:left; padding:0 1rem 1.5rem;">
-              <span class="section-label">INPUT MAPPING</span>
-              <p class="section-statement">Six mapped operations across both modalities — consistent underlying logic</p>
-            </div>
-
-            <div class="function">
-              <h5>
-                <span>Controller Button Mapper</span>
-              </h5>
-              <ol>
-                <li><strong>Direct Selection:</strong><span>Move the controller close to the desired object.</span></li>
-                <li><strong>Indirect Selection:</strong><span>Aim the ray at the desired object.</span></li>
-                <li><strong>Trigger:</strong> <span>PrimaryIndexTrigger</span> or <span>SecondaryIndexTrigger</span>.</li>
-                <li><strong>Grab:</strong> <span>PrimaryHandTrigger</span> or <span>SecondaryHandTrigger</span>.</li>
-                <li><strong>Menu:</strong> <span>Button.Start</span>.</li>
-                <li><strong>Measurement:</strong> <span>Button.One</span>.</li>
-              </ol>
-            </div>
-            <div class="picsingle" style="gap:1rem;">
-              <div class="stage"><img src="./surgery/controllerbutton.png" alt="Controller button mapping"></div>
-            </div>
-
-            <div class="function2">
-              <h5>
-                <span>Hand Gestures</span>
-              </h5>
-              <ol>
-                <li><strong>Direct Selection:</strong><span>Move the hand close to the desired object.</span></li>
-                <li><strong>Indirect Selection:</strong><span>Aim the ray indicator (points only, no line) at the desired object.</span></li>
-                <li><strong>Trigger:</strong><span>After selecting,</span> <span>pinch and then release</span>.</li>
-                <li><strong>Grab:</strong><span>After selecting,</span> <span>pinch and hold</span>.</li>
-                <li><strong>Bring up Menu:</strong><span>Left hand</span> <span>thumb up</span><span>gesture.</span></li>
-                <li><strong>Measurement:</strong> <span>Touch index fingers together</span><span>to start; move index fingers to draw the measurement line.</span></li>
-              </ol>
-            </div>
-            <div class="picsingle" style="gap:1rem;">
-              <div class="stage"><img src="./surgery/gesture.png" alt="Hand gesture mapping"></div>
-            </div>
-
-            <div style="max-width:800px; margin:2rem auto 0; text-align:left; padding:0 1rem 1.5rem;">
-              <span class="section-label">3D OBJECT MANIPULATION</span>
-              <p class="section-statement">Both modalities designed in parallel, supporting identical translate, rotate, and scale operations</p>
-            </div>
-
-            <div class="interact">
-              <div class="pic" style="gap:2rem;">
-                <div class="stage">
-                  <video autoplay loop muted playsinline>
-                    <source src="./surgery/crotate.webm" type="video/webm">
-                  </video>
+            <!-- 3D OBJECT MANIPULATION -->
+            <section class="cs-section" id="manipulation">
+              <span class="cs-eyebrow">3D Object Manipulation</span>
+              <h2 class="cs-headline">Both modalities, identical translate, rotate, and scale.</h2>
+              <div class="cs-figrow">
+                <div class="cs-fig">
+                  <video autoplay loop muted playsinline><source src="./surgery/crotate.webm" type="video/webm"></video>
                   <h6 style="color:rgb(4,122,219)">Translation &amp; Rotation</h6>
-                  <p>Controller: Direct Select and Grab</p>
+                  <p>Controller: direct select and grab</p>
                 </div>
-                <div class="stage">
-                  <video autoplay loop muted playsinline>
-                    <source src="./surgery/hrotate.webm" type="video/webm">
-                  </video>
+                <div class="cs-fig">
+                  <video autoplay loop muted playsinline><source src="./surgery/hrotate.webm" type="video/webm"></video>
                   <h6 style="color:#6aa84f">Translation &amp; Rotation</h6>
-                  <p>Gesture: Direct Select and Pinch-Hold</p>
+                  <p>Gesture: direct select and pinch-hold</p>
                 </div>
-                <div class="stage">
-                  <video autoplay loop muted playsinline>
-                    <source src="./surgery/cscale.webm" type="video/webm">
-                  </video>
+                <div class="cs-fig">
+                  <video autoplay loop muted playsinline><source src="./surgery/cscale.webm" type="video/webm"></video>
                   <h6 style="color:rgb(4,122,219)">Scaling</h6>
-                  <p>Controller: Direct Select and Grab with both controllers</p>
+                  <p>Controller: grab with both controllers</p>
                 </div>
-                <div class="stage">
-                  <video autoplay loop muted playsinline>
-                    <source src="./surgery/hscale.webm" type="video/webm">
-                  </video>
+                <div class="cs-fig">
+                  <video autoplay loop muted playsinline><source src="./surgery/hscale.webm" type="video/webm"></video>
                   <h6 style="color:#6aa84f">Scaling</h6>
-                  <p>Gesture: Direct Select and Pinch-Hold with both hands</p>
+                  <p>Gesture: pinch-hold with both hands</p>
                 </div>
               </div>
-            </div>
+            </section>
 
-            <div style="max-width:800px; margin:2rem auto 0; text-align:left; padding:0 1rem 1.5rem;">
-              <span class="section-label">MENU INTERACTION</span>
-              <p class="section-statement">3D spatial menu: freely summoned and repositioned to avoid occluding the anatomy view</p>
-            </div>
-
-            <div class="interact2">
-              <div class="interpic">
-                <div class="stage">
+            <!-- MENU INTERACTION -->
+            <section class="cs-section" id="menu">
+              <span class="cs-eyebrow">Menu Interaction</span>
+              <h2 class="cs-headline">A 3D menu that can be summoned and moved out of the way.</h2>
+              <p>The spatial menu can be freely summoned and repositioned so it never occludes the anatomy view.</p>
+              <p class="cs-sublabel">Controller</p>
+              <div class="cs-figrow">
+                <div class="cs-fig">
                   <video autoplay loop muted playsinline><source src="./surgery/cpanel.webm" type="video/webm"></video>
-                  <h6 style="color:rgb(4,122,219)">Bring Up Menu</h6>
+                  <h6 style="color:rgb(4,122,219)">Bring up menu</h6>
                   <p>Press the menu button on the left controller.</p>
                 </div>
-                <div class="stage">
+                <div class="cs-fig">
                   <video autoplay loop muted playsinline><source src="./surgery/cmovepanel.webm" type="video/webm"></video>
-                  <h6 style="color:rgb(4,122,219)">Reposition Menu</h6>
+                  <h6 style="color:rgb(4,122,219)">Reposition menu</h6>
                   <p>Select the panel edge and grab to reposition.</p>
                 </div>
-                <div class="stage">
+                <div class="cs-fig">
                   <video autoplay loop muted playsinline><source src="./surgery/cbutton.webm" type="video/webm"></video>
-                  <h6 style="color:rgb(4,122,219)">Press Buttons</h6>
-                  <p>Directly or Indirectly Select and Trigger — both work.</p>
+                  <h6 style="color:rgb(4,122,219)">Press buttons</h6>
+                  <p>Direct or indirect select and trigger — both work.</p>
                 </div>
               </div>
-              <div class="interpic">
-                <div class="stage">
+              <p class="cs-sublabel">Hand gesture</p>
+              <div class="cs-figrow">
+                <div class="cs-fig">
                   <video autoplay loop muted playsinline><source src="./surgery/hpanel.webm" type="video/webm"></video>
-                  <h6 style="color:#6aa84f">Bring Up Menu</h6>
-                  <p>Left hand thumb-up gesture to summon menu.</p>
+                  <h6 style="color:#6aa84f">Bring up menu</h6>
+                  <p>Left-hand thumb-up gesture to summon the menu.</p>
                 </div>
-                <div class="stage">
+                <div class="cs-fig">
                   <video autoplay loop muted playsinline><source src="./surgery/hmovepanel.webm" type="video/webm"></video>
-                  <h6 style="color:#6aa84f">Reposition Menu</h6>
+                  <h6 style="color:#6aa84f">Reposition menu</h6>
                   <p>Select the panel edge and pinch-hold to reposition.</p>
                 </div>
-                <div class="stage">
+                <div class="cs-fig">
                   <video autoplay loop muted playsinline><source src="./surgery/hbutton.webm" type="video/webm"></video>
-                  <h6 style="color:#6aa84f">Press Buttons</h6>
-                  <p>Directly or Indirectly Select and Trigger — both work.</p>
+                  <h6 style="color:#6aa84f">Press buttons</h6>
+                  <p>Direct or indirect select and trigger — both work.</p>
                 </div>
               </div>
-            </div>
+            </section>
 
-            <div style="max-width:800px; margin:2rem auto 0; text-align:left; padding:0 1rem 1.5rem;">
-              <span class="section-label">SPECIALIZED TOOLS</span>
-              <p class="section-statement">Three medical-specific tools addressing the core needs of anatomy learning</p>
-            </div>
-
-            <div class="interact2">
-              <div class="interpic">
-                <div class="stage">
+            <!-- SPECIALIZED TOOLS -->
+            <section class="cs-section" id="tools">
+              <span class="cs-eyebrow">Specialized Tools</span>
+              <h2 class="cs-headline">Three medical-specific tools for anatomy learning.</h2>
+              <p class="cs-sublabel">Controller</p>
+              <div class="cs-figrow">
+                <div class="cs-fig">
                   <video autoplay loop muted playsinline><source src="./surgery/cruler.webm" type="video/webm"></video>
                   <h6 style="color:rgb(4,122,219)">Measurement Tool</h6>
                   <p>Press the measurement button, move the controller to draw the line, release to complete.</p>
                 </div>
-                <div class="stage">
+                <div class="cs-fig">
                   <video autoplay loop muted playsinline><source src="./surgery/cct.webm" type="video/webm"></video>
                   <h6 style="color:rgb(4,122,219)">CT Viewer Tool</h6>
                   <p>Grab the red panel and move the controller vertically to browse CT slices.</p>
                 </div>
-                <div class="stage">
+                <div class="cs-fig">
                   <video autoplay loop muted playsinline><source src="./surgery/copacity.webm" type="video/webm"></video>
                   <h6 style="color:rgb(4,122,219)">Material Replacement Tool</h6>
-                  <p>Indirectly or directly select the button to change model material (opacity).</p>
+                  <p>Select the button to change model material (opacity).</p>
                 </div>
               </div>
-              <div class="interpic">
-                <div class="stage">
+              <p class="cs-sublabel">Hand gesture</p>
+              <div class="cs-figrow">
+                <div class="cs-fig">
                   <video autoplay loop muted playsinline><source src="./surgery/hruler.webm" type="video/webm"></video>
                   <h6 style="color:#6aa84f">Measurement Tool</h6>
-                  <p>Touch index fingers together to start; trigger with right hand to complete.</p>
+                  <p>Touch index fingers together to start; trigger with the right hand to complete.</p>
                 </div>
-                <div class="stage">
+                <div class="cs-fig">
                   <video autoplay loop muted playsinline><source src="./surgery/hct.webm" type="video/webm"></video>
                   <h6 style="color:#6aa84f">CT Viewer Tool</h6>
                   <p>Grab the red panel and move the hand vertically to browse CT slices.</p>
                 </div>
-                <div class="stage">
+                <div class="cs-fig">
                   <video autoplay loop muted playsinline><source src="./surgery/hopacity.webm" type="video/webm"></video>
                   <h6 style="color:#6aa84f">Material Replacement Tool</h6>
-                  <p>Indirectly or directly select the button to change model material (opacity).</p>
+                  <p>Select the button to change model material (opacity).</p>
                 </div>
               </div>
-            </div>
+            </section>
+
+            <!-- RESULT -->
+            <section class="cs-section" id="result">
+              <span class="cs-eyebrow">Result</span>
+              <h2 class="cs-headline">Validated with a structured, mixed-methods test.</h2>
+              <p>A structured user-testing process combining quantitative and qualitative methods evaluated the system's usability and learning support.</p>
+
+              <div class="result-card">
+                <div class="result-metric"><span>Task-based testing: completion time × accuracy × error count</span></div>
+                <p>Core tasks aligned with learning objectives — identifying lesion locations, measuring distances, and completing specific operations. Participants performed them in VR, with three quantitative metrics collected as design-validity indicators.</p>
+              </div>
+
+              <div class="cs-figrow">
+                <div class="cs-fig"><img src="./surgery/test1.png" alt="Task 1: identifying lesion locations"><h6>Task 1</h6><p>Identifying lesion locations</p></div>
+                <div class="cs-fig"><img src="./surgery/test2.png" alt="Task 2: measuring distances"><h6>Task 2</h6><p>Measuring distances</p></div>
+                <div class="cs-fig"><img src="./surgery/test3.png" alt="Task 3: completing operations"><h6>Task 3</h6><p>Completing specific operations</p></div>
+              </div>
+
+              <div class="result-card">
+                <div class="result-metric"><span>Subjective evaluation: SUS + USEQ + post-test interviews</span></div>
+                <p>SUS and USEQ quantified subjective impressions of the interface and experience; post-test interviews gathered qualitative insight on emotions, challenges, and improvement ideas. Both modalities scored positively; gesture interaction rated well on intuitiveness, but measurement accuracy still has room to improve.</p>
+              </div>
+
+              <p style="margin-top:1.5rem;">Designing two input modalities in parallel gave me a real feel for the complexity of "same function, different interaction instinct." Controllers offer explicit feedback and precision; gestures feel natural, but in precision-critical contexts like measurement, stability is the real challenge. Both scored well — yet "natural feel" and "precision" are sometimes not the same thing, and that divergence is itself a meaningful finding that points straight at the next problem to solve: assistive visual cues or redesigned gestures to improve measurement precision, separate manipulation of individual thoracic structures, and expert-guided, replayable lessons for self-directed learning.</p>
+            </section>
 
           </div>
-
-          <!-- ── RESULT ── -->
-          <div class="testing">
-            <div class="testing-box">
-              <div class="testing-overall">
-                <h3 id="result">Results</h3>
-                <p>A structured user testing process combining quantitative and qualitative methods evaluated the system's usability and learning support effectiveness.</p>
-              </div>
-
-              <div class="test-content result-card">
-                <div class="result-metric">
-                  <span>Task-Based Quantitative Testing: Completion Time × Accuracy × Error Count</span>
-                </div>
-                <p>Designed core tasks aligned with learning objectives: identifying lesion locations, measuring distances, and completing specific operations. Participants performed tasks in VR; three quantitative metrics collected as design validity indicators.</p>
-              </div>
-
-              <div class="test-bigpic">
-                <img src="./surgery/test1.png" alt="Task 1: Identifying lesion locations">
-                <h5>
-                  <span>Task 1: Identifying Lesion Locations</span>
-                </h5>
-              </div>
-              <div class="test-bigpic">
-                <img src="./surgery/test2.png" alt="Task 2: Measuring distances">
-                <h5>
-                  <span>Task 2: Measuring Distances</span>
-                </h5>
-              </div>
-              <div class="test-bigpic">
-                <img src="./surgery/test3.png" alt="Task 3: Completing operations">
-                <h5>
-                  <span>Task 3: Completing Specific Operations</span>
-                </h5>
-              </div>
-
-              <div class="test-content result-card">
-                <div class="result-metric">
-                  <span>Subjective Evaluation: SUS + USEQ + Post-test Interviews</span>
-                </div>
-                <p>Used the System Usability Scale (SUS) and USEQ to quantify subjective impressions of the interface and experience. Post-test interviews gathered qualitative insights on user emotions, challenges, and improvement suggestions. Both input modalities received positive evaluations; gesture interaction scored well on intuitiveness, but measurement accuracy still has room for improvement.</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- ── REFLECTION ── -->
-          <div class="reflection">
-            <div class="reflection-box">
-              <div class="reflection-overall">
-                <h3>Reflection</h3>
-                <p style="text-align:left;">This project revealed VR's genuine potential in medical education — not as a novelty, but as a tool that makes spatial relationships manipulable, measurable, and repeatedly confirmable.</p>
-                <p style="text-align:left; margin-top:1rem;">Designing two input modalities in parallel gave me deep appreciation for the design complexity of "same function, different interaction instinct." Controllers offer explicit button feedback and precise manipulation; gestures feel naturally intuitive, but in contexts requiring precise spatial positioning — like measurement — stability is the real challenge.</p>
-                <p style="text-align:left; margin-top:1rem;">Both modalities received positive evaluations, but "natural feel" and "precision" are sometimes not the same thing — this divergence is itself a meaningful design finding, and points directly to the core problem to solve next.</p>
-              </div>
-
-              <div class="reflection-content">
-                <h5>Key Takeaways</h5>
-                <ul>
-                  <li>VR makes spatial relationships — impossible to convey in 2D anatomy materials — directly manipulable: this is the core design value</li>
-                  <li>Dual-modal parallel design requires balancing "consistent logic" with "natural fit for each modality's instinct"</li>
-                  <li>Gestures work well for "feel-based" interactions (object manipulation, menus), but precision-critical interactions (measurement) still need supplementary design support</li>
-                  <li>The SUS + USEQ + interview triangulation captures the full picture of user experience better than any single scale</li>
-                </ul>
-              </div>
-
-              <div class="reflection-content">
-                <h5>
-                  <span>What's Next</span>
-                </h5>
-                <p>Design assistive visual cues or redesign gestures to improve measurement precision; enable separate manipulation of individual thoracic structures; add expert-guided sessions and replayable lessons to fully support self-directed learning.</p>
-              </div>
-            </div>
-          </div>
-
-        </section>
+        </div>
       </section>
 
       <footer>

@@ -38,165 +38,105 @@
     </header>
 
     <main>
-      <section class="workintro-area">
+      <section class="casestudy-area">
+        <div class="cs-wrap">
 
-        <div class="tag">
-          <li><a href="#overview">Overview</a></li>
-          <li><a href="#design">Design</a></li>
-          <li><a href="#result">Result</a></li>
-          <li><a href="#reflection">Reflection</a></li>
+          <!-- ── Sticky meta column ── -->
+          <aside class="cs-meta">
+            <h1 class="cs-title">J9 Smart Glasses — App &amp; UI</h1>
+            <p class="cs-subtitle">From B2B demo prototype to real product — a cross-device experience integrating eye-tracking interaction, a companion app, and on-glasses UI, so partners can see the glasses' capabilities and customizable directions.</p>
+
+            <div class="cs-meta-block">
+              <span class="cs-eyebrow">Timeline</span>
+              <p>2025 – Present · Jorjin Technologies Inc.</p>
+            </div>
+
+            <div class="cs-meta-block">
+              <span class="cs-eyebrow">Team</span>
+              <p>Me — UX &amp; UI Design<br>+ firmware &amp; engineering teams</p>
+            </div>
+
+            <div class="cs-meta-block">
+              <span class="cs-eyebrow">My Role</span>
+              <ul>
+                <li>App pairing flow &amp; feature menu</li>
+                <li>Glasses UI for 4 core functions</li>
+                <li>Interaction specs (design handoff)</li>
+                <li>Design System across App &amp; glasses</li>
+                <li>Prototyping &amp; exhibition user testing</li>
+              </ul>
+            </div>
+
+            <div class="cs-meta-block">
+              <span class="cs-eyebrow">Platforms</span>
+              <p>Companion App (Android) · On-glasses UI · Eye tracking</p>
+            </div>
+          </aside>
+
+          <!-- ── Scrolling content column ── -->
+          <div class="cs-body">
+            <img class="cs-hero" src="./pictures/j9.webp" alt="J9 smart glasses app and UI">
+
+            <!-- OVERVIEW -->
+            <section class="cs-section" id="overview">
+              <span class="cs-eyebrow">Overview</span>
+              <h2 class="cs-headline">From a one-trick demo to a product partners could build on.</h2>
+              <p>HJ1 was a B2B eye-tracking demo prototype. J9 is the next-generation product — an upgraded processing chip and shared hardware (front-frame camera, eye-tracking module, AI-capable chip, speaker, microphone). The key difference: J9 pairs with a full Android phone system, enabling far more flexible feature planning and interaction design that leverages phone hardware.</p>
+              <p>J9 also has a clearer commercial goal: a B2B product offering customizable solutions to consumer-facing brands — letting partners freely combine features, adapt interaction modes per scenario, and build their own branded smart glasses applications.</p>
+            </section>
+
+            <!-- CHALLENGE -->
+            <section class="cs-section" id="challenge">
+              <span class="cs-eyebrow">Challenge</span>
+              <h2 class="cs-headline">Multiple inputs, two screens, and a product category no one knows yet.</h2>
+              <ul class="cs-list">
+                <li><strong>Integrating multiple input modalities.</strong> Eye-dwell selection and eye-triggered photos differ from touchpad or phone controls — the design had to be both easy to learn and able to demonstrate each feature clearly.</li>
+                <li><strong>Cross-device visual consistency.</strong> Phone and glasses screens differ dramatically in size and input method; keeping one visual language and design system across both was the core visual challenge.</li>
+                <li><strong>Interaction architecture division.</strong> Phone handles feature selection, glasses handle detailed interaction — the two ends had to complement each other while keeping overall complexity low.</li>
+                <li><strong>Building a mental model for a new category.</strong> Most partners have little exposure to smart glasses — demo scenarios had to be concrete enough to make the features tangible.</li>
+              </ul>
+            </section>
+
+            <!-- DISCOVERY -->
+            <section class="cs-section" id="discovery">
+              <span class="cs-eyebrow">Discovery</span>
+              <h2 class="cs-headline">The problem was learnability, not features.</h2>
+              <p>The core question: how do we help users quickly grasp eye-tracking operation and switch fluidly between the App and the glasses? Two principles came out of it and guided every later decision — the phone handles function-level selection while the glasses handle detailed interaction, and new eye-tracking behaviors are anchored as close as possible to users' existing instincts.</p>
+            </section>
+
+            <!-- SOLUTION -->
+            <section class="cs-section" id="solution">
+              <span class="cs-eyebrow">Solution</span>
+              <h2 class="cs-headline">Familiar patterns on the phone; the glasses do the precise work.</h2>
+              <ol class="cs-steps">
+                <li><strong>App — pairing modeled on Bluetooth.</strong> Users step through a linear, familiar click sequence until pairing is confirmed, minimizing the learning curve.</li>
+                <li><strong>App — feature menu as a vertical list, not a 2×2 grid.</strong> The four glasses-side features sit in a single vertical column. This follows J9's input logic — eye-dwell is primary, touchpad secondary: a vertical layout gives each option enough space for comfortable gaze targeting, while a 2×2 grid would complicate horizontal touchpad navigation and hide eye tracking's advantage.</li>
+                <li><strong>Glasses — a camera that feels like a phone's.</strong> Users already know phone cameras, so the glasses camera uses the same logic: a circular shutter at the bottom, triggered by eye-dwell. But there's a parallax gap between the front-frame camera and the user's eyes, so the viewfinder doesn't match what's captured — I designed a <strong>3-2-1 countdown</strong> after the trigger, letting the user confirm the frame before the photo is taken, turning a hardware constraint into an intuitive confirmation step.</li>
+                <li><strong>One Design System across both devices.</strong> A unified system spans App and glasses UI — consistent visual language, color, and type hierarchy — then each device adapts for its screen size and input method, so users never feel a disconnect when switching between the two. (The four glasses functions: photo gallery, camera, AI translation, and ECD electrochromic lens control.)</li>
+              </ol>
+            </section>
+
+            <!-- RESULT -->
+            <section class="cs-section" id="result">
+              <span class="cs-eyebrow">Result</span>
+              <h2 class="cs-headline">Validated in testing, refined across four iterations.</h2>
+              <p>Internal usability testing combined with exhibition user testing, across 4 design iterations, continuously refining interaction details.</p>
+
+              <div class="result-card">
+                <div class="result-metric"><span>Task completion 80% — internal usability test</span></div>
+                <p>Lightweight usability testing across the four core functions, as a quantitative baseline for design validity.</p>
+              </div>
+
+              <div class="result-card">
+                <div class="result-metric"><span>4 prototype iterations, continuously refined</span></div>
+                <p>Real-world feedback gathered through exhibition user testing; each iteration focused on improving interaction precision and flattening the learning curve. The project is still in active development, with design and engineering advancing in parallel.</p>
+              </div>
+
+              <p style="margin-top:1.5rem;">The biggest shift from HJ1 was moving from "demonstrate one thing" to "integrate many." A demo succeeds when nothing interrupts the flow; a product has to be learned, remembered, and operated flexibly across contexts — which makes the relationships between features, the division of labor between App and glasses, and the overall learning curve the real design work. For emerging hardware, continuous iteration <em>is</em> the design: not a perfect first version, but finding the next most important thing to improve each round.</p>
+            </section>
+
+          </div>
         </div>
-
-        <section class="contect">
-
-          <!-- ── OVERVIEW ── -->
-          <div class="bkground">
-            <div class="intro">
-              <h1 id="overview">
-                <span>J9 Smart Glasses App & UI</span>
-              </h1>
-              <h2>
-                <span>From B2B demo prototype to real product — designing a cross-device experience integrating eye-tracking interaction, companion App, and on-glasses UI, helping partners clearly understand the glasses' capabilities and customizable directions.</span>
-              </h2>
-              <div class="key-result-cards">
-                <div class="key-result-card">
-                  <div class="kr-title">Key Results</div>
-                  <div class="kr-metric">
-                    <span>Task Completion 80%</span>
-                  </div>
-                  <div class="kr-sub">
-                    <span>Internal usability test</span>
-                  </div>
-                  <div class="kr-metric" style="margin-top:0.8rem;">
-                    <span>4 Prototype Iterations</span>
-                  </div>
-                  <div class="kr-sub">
-                    <span>Continuously refined from test feedback</span>
-                  </div>
-                </div>
-                <div class="key-result-card">
-                  <div class="kr-title">Role &amp; Timeline</div>
-                  <div class="kr-metric" style="font-size:1rem; line-height:1.7;">UX Design · UI Design<br>App · Glasses UI · Design System</div>
-                  <div class="kr-sub" style="margin-top:0.8rem;">2025 – Present · Jorjin Technologies Inc.</div>
-                </div>
-              </div>
-              <img src="./pictures/j9.webp" alt="J9 Smart Glasses" style="border-radius:16px;">
-            </div>
-
-            <div class="overview">
-              <div class="overviewbox">
-
-
-                <div class="chall-goal">
-                  <h5>Design Context</h5>
-                  <p>HJ1 was a B2B eye-tracking demo prototype. J9 is the next-generation product — with an upgraded processing chip and shared hardware components (front-frame camera, eye-tracking module, AI-capable chip, speaker, microphone). The key difference: J9 pairs with a full Android phone system, enabling far more flexible feature planning and interaction design leveraging phone hardware.</p>
-                  <p>J9 has a clearer commercial goal: a B2B product offering customizable solutions to consumer-facing brands — letting partners freely combine features, adapt interaction modes per scenario, and build their own branded smart glasses applications.</p>
-                  <h5>Challenges</h5>
-                  <ul>
-                    <li><strong>Integrating multiple input modalities:</strong> Eye-dwell selection and eye-triggered photos differ from touchpad or phone controls — the design needed to be both easy to learn and capable of clearly demonstrating each feature.</li>
-                    <li><strong>Cross-device visual consistency:</strong> Phone and glasses screens differ dramatically in size and input method. Maintaining the same visual language and design system across both was the core visual challenge.</li>
-                    <li><strong>Interaction architecture division:</strong> Phone handles feature selection; glasses handle detailed interaction — the two ends needed to complement each other while minimizing overall complexity.</li>
-                    <li><strong>Building mental models for a new product category:</strong> Most partners have limited exposure to smart glasses — demo scenarios had to be concrete enough to make the features tangible.</li>
-                  </ul>
-                  <h5>What I Did</h5>
-                  <ul>
-                    <li>Designed App pairing flow and feature menu, giving partners a clear picture of the glasses' full capabilities</li>
-                    <li>Planned glasses-side UI for four core functions: photo gallery, camera, AI translation, ECD (electrochromic lens control)</li>
-                    <li>Defined interaction specs as the design handoff basis for firmware and engineering teams</li>
-                    <li>Built a Design System to maintain visual consistency between App and glasses UI</li>
-                    <li>Built prototypes, conducted User Testing at exhibitions, and continuously refined based on feedback</li>
-                    <li>Co-authored user documentation with engineers</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- ── DESIGN ── -->
-          <div class="research">
-            <div class="research-box">
-              <div class="research-overall">
-                <h3 id="design">Design Process</h3>
-                <p>Core interaction design question: How do we help users quickly grasp eye-tracking operation and switch fluidly between the App and the glasses?</p>
-              </div>
-
-              <div class="research-content">
-                <span class="section-label">APP DESIGN</span>
-                <p class="section-statement">Pairing flow modeled on Bluetooth; feature menu designed for eye-dwell selection</p>
-
-                <p><strong>Pairing flow</strong>: Modeled on familiar Bluetooth connection UI — users step through a linear click sequence until pairing is confirmed, minimizing the learning curve.</p>
-
-                <p><strong>Feature menu — key design decision: vertical list vs. 2×2 grid</strong></p>
-                <p>The four glasses-side features are arranged in a single vertical column — not the intuitive 2×2 grid.</p>
-                <p>This decision follows J9's input logic: eye-dwell selection is primary, touchpad is secondary. A vertical layout makes eye-dwell precision easier to demonstrate — each option has enough vertical space for comfortable gaze targeting. A 2×2 grid would complicate horizontal touchpad navigation and make eye tracking's advantage less visible.</p>
-              </div>
-
-              <div class="research-content">
-                <span class="section-label">GLASSES UI</span>
-                <p class="section-statement">Reduce learning cost with familiar patterns; use design to resolve hardware constraints</p>
-
-                <p><strong>Camera function</strong>: Users are already deeply familiar with phone camera interaction — so the glasses camera UI follows the same logic: a circular shutter button at the bottom of the display, triggered by eye-dwell.</p>
-                <p>However, there is a parallax gap between the front-frame camera and the user's eyes — what the viewfinder shows doesn't match what actually gets captured. To address this, I designed a <strong>3-2-1 countdown mechanism</strong>: after triggering, a countdown appears, letting the user confirm the intended frame before the photo is taken — converting a hardware constraint into an intuitive confirmation step.</p>
-
-                <p style="margin-top:1rem;"><strong>Other functions</strong>: Photo gallery, AI translation, ECD (electrochromic lens shade control) — all four functions accessible via the vertical menu. The glasses handle detailed interactions; the phone handles function-level selection and management.</p>
-              </div>
-
-              <div class="research-content">
-                <span class="section-label">DESIGN SYSTEM</span>
-                <p class="section-statement">One shared visual language across devices; each adapted to its hardware constraints</p>
-                <p>Built a unified Design System spanning both the App and glasses UI — ensuring consistent visual language, color, and typography hierarchy across both ends, rather than designing two separate systems. Each device then adapts for its screen size and input method, so users never feel a disconnect when switching between devices.</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- ── RESULT ── -->
-          <div class="design" style="padding: 4% 0% 2% 0%;">
-            <div class="design-box">
-              <div class="design-overall">
-                <h3 id="result">Results</h3>
-                <p style="text-align:left;">Internal usability testing combined with exhibition User Testing, across 4 design iterations, continuously refining interaction details.</p>
-              </div>
-
-              <div class="design-content result-card">
-                <div class="result-metric">
-                  <span>Task Completion Rate 80% — Internal Usability Test</span>
-                </div>
-                <p>Conducted lightweight usability testing across the four core functions as a quantitative baseline for design validity.</p>
-              </div>
-
-              <div class="design-content result-card">
-                <div class="result-metric">
-                  <span>4 Prototype Iterations, Continuously Refined</span>
-                </div>
-                <p>Real-world usage feedback collected through exhibition User Testing. Each iteration focused on improving interaction precision and flattening the learning curve. The project is still in active development, with design and engineering advancing in parallel.</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- ── REFLECTION ── -->
-          <div class="reflection">
-            <div class="reflection-box">
-              <div class="reflection-overall">
-                <h3>Reflection</h3>
-                <p style="text-align:left;">The biggest shift from HJ1: moving from "demonstrate one thing" to "integrate multiple functions."</p>
-                <p style="text-align:left; margin-top:1rem;">HJ1 had a single design goal: make a visitor feel eye tracking's core value in 1.5 minutes. Success meant no flow interruptions. J9 is a real product — users need to learn it, remember how to use it, and operate it flexibly across different contexts. That makes the design complexity completely different: not just thinking about each feature's interaction logic, but also the relationships between features, the division of labor between App and glasses, and the overall learning curve for new users.</p>
-                <p style="text-align:left; margin-top:1rem;">The cross-device design system challenge also exceeded expectations. The gap between phone and glasses — screen size, input method, visual rendering space — is enormous. Maintaining consistent visual language and interaction logic across both ends is far harder than designing for a single device.</p>
-                <p style="text-align:left; margin-top:1rem;">This project taught me that for emerging hardware products, continuous iteration is the core design work — not producing a perfect first version, but finding the next most important thing to improve in every round of exhibitions and testing.</p>
-              </div>
-
-              <div class="reflection-content">
-                <h5>Key Takeaways</h5>
-                <ul>
-                  <li>Integrating multiple functions is far harder than showcasing one — the relationships and division of labor between features is the most central UX architecture challenge</li>
-                  <li>Cross-device design system means finding a shared design language, not building two separate UIs — then adapting each to its own hardware constraints</li>
-                  <li>For eye-tracking interaction, the key to flattening the learning curve is anchoring new behaviors as close as possible to users' existing instincts — the circular shutter button is a perfect example</li>
-                  <li>For emerging hardware products, continuous iteration matters more than chasing a perfect first version</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-        </section>
       </section>
 
       <footer>

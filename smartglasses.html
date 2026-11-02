@@ -38,195 +38,132 @@
     </header>
 
     <main>
-      <section class="workintro-area">
+      <section class="casestudy-area">
+        <div class="cs-wrap">
 
-        <div class="tag">
-          <li><a href="#overview">Overview</a></li>
-          <li><a href="#design">Design</a></li>
-          <li><a href="#result">Result</a></li>
-          <li><a href="#reflection">Reflection</a></li>
-        </div>
+          <!-- ── Sticky meta column ── -->
+          <aside class="cs-meta">
+            <h1 class="cs-title">HJ1 AI Smart Glasses — B2B Demo</h1>
+            <p class="cs-subtitle">A 1.5-minute, eye-tracking-centric B2B demo flow for Jorjin's standalone AI smart glasses — built with firmware engineers in a no-OS hardware environment for CES 2026 and other commercial presentations.</p>
 
-        <section class="contect">
-
-          <!-- ── OVERVIEW ── -->
-          <div class="bkground">
-            <div class="intro">
-              <h1 id="overview">
-                <span>HJ1 AI Smart Glasses B2B Demo Design</span>
-              </h1>
-              <h2>
-                <span>Working with firmware engineers in a no-OS hardware environment, designed a 1.5-minute eye-tracking-centric B2B demo flow supporting CES 2026 and other major commercial presentations.</span>
-              </h2>
-              <div class="key-result-cards">
-                <div class="key-result-card">
-                  <div class="kr-title">Key Results</div>
-                  <div class="kr-metric">
-                    <span>Demo Time −70%</span>
-                  </div>
-                  <div class="kr-sub">
-                    <span>5 min → 1.5 min</span>
-                  </div>
-                  <div class="kr-metric" style="margin-top:0.8rem;">
-                    <span>6 Major Demo Events</span>
-                  </div>
-                  <div class="kr-sub">
-                    <span>1,000+ customer experiences</span>
-                  </div>
-                </div>
-                <div class="key-result-card">
-                  <div class="kr-title">Role &amp; Timeline</div>
-                  <div class="kr-metric" style="font-size:1rem; line-height:1.7;">UX Design · Interaction Design<br>Multi-modal AR</div>
-                  <div class="kr-sub" style="margin-top:0.8rem;">2025 – Present · Jorjin Technologies Inc.</div>
-                  <div class="kr-sub" style="margin-top:0.3rem;">Eye Tracking · Voice · Touch Pad</div>
-                </div>
-              </div>
-              <img src="./pictures/smartglasses.webp" alt="Smart Glasses Demo" style="border-radius:16px;">
+            <div class="cs-meta-block">
+              <span class="cs-eyebrow">Timeline</span>
+              <p>2025 – Present · Jorjin Technologies Inc.</p>
             </div>
 
-            <div class="overview">
-              <div class="overviewbox">
-
-
-                <div class="chall-goal">
-                  <h5>Design Context</h5>
-                  <p>HJ1 is Jorjin's in-house AI smart glasses with an eye-tracking module. Before I joined, the demo approach was "glasses connected to phone" — showcasing the phone software and display resolution, not the glasses' own interaction capabilities.</p>
-                  <p>After joining, I led the complete B2B demo experience design for the HJ1 standalone device. With no full OS at the time, UI assets and detailed interaction specs had to be delivered directly to firmware engineers for implementation — and we jointly tuned the eye tracking UX parameters (trigger timing, trigger zone, data smoothing, and outlier rejection).</p>
-                  <h5>Challenges</h5>
-                  <ul>
-                    <li><strong>No OS support:</strong> Designs had to rely entirely on firmware implementation with highly precise specs — no UI frameworks available.</li>
-                    <li><strong>Uncertain eye tracking success rate:</strong> Detection depends on each user's facial geometry (IPD, nose bridge height, nose pad size) — calibration couldn't be guaranteed for every visitor.</li>
-                    <li><strong>Demo time pressure:</strong> The original demo was ~5 minutes, mixing touchpad and eye tracking, making it hard for B2B clients to focus on the core advantage.</li>
-                  </ul>
-                  <h5>What I Did</h5>
-                  <ul>
-                    <li>Designed the complete HJ1 demo experience, compressing runtime from 5 minutes to 1.5 minutes</li>
-                    <li>Planned auto-advance mechanisms to keep the flow moving even when eye tracking failed to trigger</li>
-                    <li>Delivered UI assets and interaction specs; jointly tuned eye tracking parameters with firmware engineers</li>
-                    <li>Adapted content for each venue: CES, Amazon, Sports Technology Center</li>
-                    <li>Designed the Sports Technology Center version's "glasses → large screen" dual-display extension</li>
-                  </ul>
-                </div>
-              </div>
+            <div class="cs-meta-block">
+              <span class="cs-eyebrow">Team</span>
+              <p>Me — UX &amp; Interaction Design<br>+ firmware engineers (no-OS build)</p>
             </div>
-          </div>
 
-          <!-- ── DESIGN ── -->
-          <div class="research">
-            <div class="research-box">
-              <div class="research-overall">
-                <h3 id="design">Design Process</h3>
-                <p>Core design question: How do we ensure every B2B visitor completes a full eye-tracking interaction experience, given limited time and unstable detection success rates?</p>
-              </div>
-
-              <div class="research-content">
-                <span class="section-label">DEMO FLOW</span>
-                <p class="section-statement">4 stages, 1.5 minutes — ensuring every visitor completes the full eye-tracking experience</p>
-                <p>Redesigned the original fragmented 5-minute flow (mixing touchpad and eye tracking) into a sequential experience with eye tracking as the sole interaction modality.</p>
-                <ul>
-                  <li><strong>① Display confirmation</strong> — Verify the user can see the glasses display clearly; establish basic trust</li>
-                  <li><strong>② Eye tracking calibration</strong> — Complete calibration and establish the detection baseline</li>
-                  <li><strong>③ Trigger trial</strong> — Let the user feel what eye-dwell selection feels like; build interaction confidence</li>
-                  <li><strong>④ Use-case demo</strong> — Receive a meeting notification → eye-trigger → read the full message; demonstrate eye tracking value in a real scenario</li>
-                </ul>
-                <p><strong>Key design decision:</strong> Each stage auto-advances on completion. If eye tracking fails to trigger, the system plays through automatically — making "failure" invisible to the visitor, guaranteeing every user completes the full flow.</p>
-              </div>
-
-              <div class="research-content">
-                <span class="section-label">EYE TRACKING UX</span>
-                <p class="section-statement">Jointly tuning 4 parameters with firmware engineers to find the most stable trigger experience</p>
-                <p>Without a ready-made OS to rely on, we jointly tested and tuned these parameters to find the most stable trigger experience across varying facial geometries:</p>
-                <ul>
-                  <li><strong>Trigger timing:</strong> How long a dwell counts as a "selection" — balancing accidental triggers against sluggish response</li>
-                  <li><strong>Trigger zone:</strong> The size of the active detection area, affecting precision and error tolerance</li>
-                  <li><strong>Data smoothing:</strong> Smoothing the gaze trajectory to filter out micro-jitter</li>
-                  <li><strong>Outlier rejection:</strong> Discarding sudden deviation data to prevent false positives</li>
-                </ul>
-              </div>
-
-              <div class="research-content">
-                <span class="section-label">THREE SCENARIOS</span>
-                <p class="section-statement">Same interaction core, adapted to each venue — demonstrating the system's extensibility</p>
-                <div style="display:flex; gap:1rem; margin-top:1rem; flex-wrap:wrap;">
-                  <div style="flex:1; min-width:200px; background:#f8f9fa; border-radius:10px; padding:1.2rem;">
-                    <div style="font-size:2rem; font-weight:700; color:#e0e4ff; line-height:1;">①</div>
-                    <strong style="display:block; margin:0.5rem 0 0.4rem; color:#1a1a2e;">CES 2026</strong>
-                    <span style="font-size:0.75rem; color:#888; display:block; margin-bottom:0.5rem;">2026/1/6–1/9 · Las Vegas</span>
-                    <p style="font-size:0.82rem; color:#444; margin:0;">International Consumer Electronics Show — standard demo flow showcasing eye-tracking interaction to global B2B clients</p>
-                  </div>
-                  <div style="flex:1; min-width:200px; background:#f8f9fa; border-radius:10px; padding:1.2rem;">
-                    <div style="font-size:2rem; font-weight:700; color:#e0e4ff; line-height:1;">②</div>
-                    <strong style="display:block; margin:0.5rem 0 0.4rem; color:#1a1a2e;">Amazon B2B Demo</strong>
-                    <span style="font-size:0.75rem; color:#888; display:block; margin-bottom:0.5rem;">Conference room scenario</span>
-                    <p style="font-size:0.82rem; color:#444; margin:0;">Receive a message notification → eye-trigger to read — letting enterprise clients feel the value of eye tracking in an office context</p>
-                  </div>
-                  <div style="flex:1; min-width:200px; background:#f8f9fa; border-radius:10px; padding:1.2rem;">
-                    <div style="font-size:2rem; font-weight:700; color:#e0e4ff; line-height:1;">③</div>
-                    <strong style="display:block; margin:0.5rem 0 0.4rem; color:#1a1a2e;">
-                      <span>Sports Technology Center</span>
-                    </strong>
-                    <span style="font-size:0.75rem; color:#888; display:block; margin-bottom:0.5rem;">Ball trajectory × dual-screen</span>
-                    <p style="font-size:0.82rem; color:#444; margin:0;">Eye-select a ball trajectory → result projected to the venue's large screen, extending the interaction to "glasses × physical space"</p>
-                  </div>
-                </div>
-              </div>
+            <div class="cs-meta-block">
+              <span class="cs-eyebrow">My Role</span>
+              <ul>
+                <li>Full HJ1 demo experience design</li>
+                <li>Eye-tracking interaction &amp; flow</li>
+                <li>UI assets &amp; firmware-ready specs</li>
+                <li>Eye-tracking parameter tuning (with firmware)</li>
+              </ul>
             </div>
-          </div>
 
-          <!-- ── RESULT ── -->
-          <div class="design" style="padding: 4% 0% 2% 0%;">
-            <div class="design-box">
-              <div class="design-overall">
-                <h3 id="result">Results</h3>
-                <p style="text-align:left;">Demo runtime reduced from 5 minutes to 1.5 minutes. Supported 6 international exhibitions and B2B demos within 6 months, accumulating 1,000+ customer experiences.</p>
+            <div class="cs-meta-block">
+              <span class="cs-eyebrow">Modalities</span>
+              <p>Eye Tracking · Voice · Touch Pad</p>
+            </div>
+          </aside>
+
+          <!-- ── Scrolling content column ── -->
+          <div class="cs-body">
+            <img class="cs-hero" src="./pictures/smartglasses.webp" alt="HJ1 AI smart glasses B2B demo">
+
+            <!-- OVERVIEW -->
+            <section class="cs-section" id="overview">
+              <span class="cs-eyebrow">Overview</span>
+              <h2 class="cs-headline">The demo was showing off the phone — not the glasses.</h2>
+              <p>HJ1 is Jorjin's in-house AI smart glasses with an eye-tracking module. Before I joined, the demo approach was "glasses connected to phone" — showcasing the phone software and display resolution, not the glasses' own interaction capabilities.</p>
+              <p>After joining, I led the complete B2B demo experience design for the HJ1 standalone device. With no full OS at the time, UI assets and detailed interaction specs had to be delivered directly to firmware engineers for implementation — and we jointly tuned the eye-tracking UX parameters (trigger timing, trigger zone, data smoothing, and outlier rejection).</p>
+            </section>
+
+            <!-- CHALLENGE -->
+            <section class="cs-section" id="challenge">
+              <span class="cs-eyebrow">Challenge</span>
+              <h2 class="cs-headline">No OS, unpredictable eye tracking, and five minutes to lose the room.</h2>
+              <ul class="cs-list">
+                <li><strong>No OS support.</strong> Designs had to rely entirely on firmware implementation with highly precise specs — no UI frameworks available.</li>
+                <li><strong>Uncertain eye-tracking success rate.</strong> Detection depends on each user's facial geometry (IPD, nose bridge height, nose pad size) — calibration couldn't be guaranteed for every visitor.</li>
+                <li><strong>Demo time pressure.</strong> The original demo ran ~5 minutes, mixing touchpad and eye tracking, making it hard for B2B clients to focus on the core advantage.</li>
+              </ul>
+            </section>
+
+            <!-- DISCOVERY -->
+            <section class="cs-section" id="discovery">
+              <span class="cs-eyebrow">Discovery</span>
+              <h2 class="cs-headline">The real question wasn't features — it was guaranteeing a clean first run.</h2>
+              <p>The core design question became: how do we ensure <em>every</em> B2B visitor completes a full eye-tracking interaction, given limited time and an unstable detection success rate? With no ready-made OS to lean on, the stability of the trigger itself was the thing to solve. So we jointly tested and tuned four parameters with firmware engineers to find the most reliable trigger across varying facial geometries:</p>
+              <ul class="cs-list">
+                <li><strong>Trigger timing.</strong> How long a dwell counts as a "selection" — balancing accidental triggers against sluggish response.</li>
+                <li><strong>Trigger zone.</strong> The size of the active detection area, affecting precision and error tolerance.</li>
+                <li><strong>Data smoothing.</strong> Smoothing the gaze trajectory to filter out micro-jitter.</li>
+                <li><strong>Outlier rejection.</strong> Discarding sudden deviation data to prevent false positives.</li>
+              </ul>
+            </section>
+
+            <!-- SOLUTION -->
+            <section class="cs-section" id="solution">
+              <span class="cs-eyebrow">Solution</span>
+              <h2 class="cs-headline">A 1.5-minute flow where failure is invisible.</h2>
+              <p>I rebuilt the fragmented 5-minute flow (mixing touchpad and eye tracking) into a sequential experience with eye tracking as the sole interaction modality — four stages, 1.5 minutes.</p>
+              <ol class="cs-steps">
+                <li><strong>Display confirmation.</strong> Verify the user can see the glasses display clearly; establish basic trust.</li>
+                <li><strong>Eye-tracking calibration.</strong> Complete calibration and establish the detection baseline.</li>
+                <li><strong>Trigger trial.</strong> Let the user feel what eye-dwell selection is like; build interaction confidence.</li>
+                <li><strong>Use-case demo.</strong> Receive a meeting notification → eye-trigger → read the full message; eye tracking shown in a real scenario.</li>
+              </ol>
+              <p><strong>Key decision:</strong> each stage auto-advances on completion. If eye tracking fails to trigger, the system plays through automatically — making "failure" invisible to the visitor and guaranteeing every user completes the full flow.</p>
+              <p>The same interaction core was then adapted to each venue, demonstrating the system's extensibility:</p>
+              <ul class="cs-list">
+                <li><strong>CES 2026 (Las Vegas).</strong> Standard demo flow, showcasing eye-tracking interaction to global B2B clients.</li>
+                <li><strong>Amazon B2B demo (conference room).</strong> Receive a message notification → eye-trigger to read — the value of eye tracking in an office context.</li>
+                <li><strong>Sports Technology Center (dual-screen).</strong> Eye-select a ball trajectory → result projected to the venue's large screen, extending the interaction to "glasses × physical space."</li>
+              </ul>
+            </section>
+
+            <!-- RESULT -->
+            <section class="cs-section" id="result">
+              <span class="cs-eyebrow">Result</span>
+              <h2 class="cs-headline">Six months, six events, 1,000+ hands-on demos.</h2>
+              <p>Demo runtime reduced from 5 minutes to 1.5 minutes. Supported 6 international exhibitions and B2B demos within six months, accumulating 1,000+ customer experiences.</p>
+
+              <div class="result-card">
+                <div class="result-metric"><span>Demo duration 5 min → 1.5 min (−70%)</span></div>
+                <p>Restructured the experience sequence, removed touchpad/eye-tracking mixing, and added auto-advance — ensuring every visitor completes the full eye-tracking interaction.</p>
               </div>
 
-              <div class="design-content result-card">
-                <div class="result-metric">
-                  <span>Demo Duration: 5 min → 1.5 min (−70%)</span>
-                </div>
-                <p>Restructured the experience sequence, removed touchpad/eye tracking mixing, and added auto-advance mechanisms — ensuring every visitor completes the full eye-tracking interaction.</p>
+              <div class="result-card">
+                <div class="result-metric"><span>6 major events, 1,000+ customer experiences</span></div>
+                <p>Strong visitor feedback led to follow-up partnership discussions between Foxconn and Amazon. The demo was iterated over six months, spanning international exhibitions and enterprise B2B demos.</p>
               </div>
 
-              <div class="design-content result-card">
-                <div class="result-metric">
-                  <span>6 Major Events, 1,000+ Customer Experiences</span>
-                </div>
-                <p>Strong visitor feedback, leading to follow-up partnership discussions between Foxconn and Amazon. The demo design was continuously iterated over six months, spanning international exhibitions and enterprise B2B demos.</p>
-              </div>
-
-              <div class="design-content" style="overflow-x:auto;">
-                <table style="width:100%; border-collapse:collapse; font-size:0.85rem; margin-top:0.5rem;">
+              <div style="overflow-x:auto; margin-top:1.5rem;">
+                <table style="width:100%; border-collapse:collapse; font-size:0.85rem;">
                   <thead>
                     <tr style="border-bottom:2px solid #e5e7eb;">
-                      <th style="text-align:left; padding:0.6rem 0.8rem; color:#888; font-weight:600; white-space:nowrap;">
-<span>Date</span>
-                      </th>
-                      <th style="text-align:left; padding:0.6rem 0.8rem; color:#888; font-weight:600;">
-<span>Event</span>
-                      </th>
+                      <th style="text-align:left; padding:0.6rem 0.8rem; color:#888; font-weight:600; white-space:nowrap;">Date</th>
+                      <th style="text-align:left; padding:0.6rem 0.8rem; color:#888; font-weight:600;">Event</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr style="border-bottom:1px solid #f0f0f0;">
                       <td style="padding:0.6rem 0.8rem; white-space:nowrap; color:#555;">2025/9/5</td>
-                      <td style="padding:0.6rem 0.8rem; color:#1a1a1a;">
-                        Amazon B2B Demo
-                        <span style="color:#888; font-size:0.78rem;">— Conference room scenario, eye-triggered message reading</span>
-                      </td>
+                      <td style="padding:0.6rem 0.8rem; color:#1a1a1a;">Amazon B2B Demo <span style="color:#888; font-size:0.78rem;">— Conference room scenario, eye-triggered message reading</span></td>
                     </tr>
                     <tr style="border-bottom:1px solid #f0f0f0;">
                       <td style="padding:0.6rem 0.8rem; white-space:nowrap; color:#555;">2025/10/16</td>
-                      <td style="padding:0.6rem 0.8rem; color:#1a1a1a;">
-                        <span>FUTEX Future Tech Expo</span>
-                        <span style="color:#888; font-size:0.78rem;">— Sports tech pavilion, ball trajectory × large screen dual display</span>
-                      </td>
+                      <td style="padding:0.6rem 0.8rem; color:#1a1a1a;">FUTEX Future Tech Expo <span style="color:#888; font-size:0.78rem;">— Sports tech pavilion, ball trajectory × large-screen dual display</span></td>
                     </tr>
                     <tr style="border-bottom:1px solid #f0f0f0;">
                       <td style="padding:0.6rem 0.8rem; white-space:nowrap; color:#555;">2026/1/6–9</td>
-                      <td style="padding:0.6rem 0.8rem; color:#1a1a1a;">
-                        CES 2026 <span style="color:#888; font-size:0.78rem;">— Las Vegas</span>
-                      </td>
+                      <td style="padding:0.6rem 0.8rem; color:#1a1a1a;">CES 2026 <span style="color:#888; font-size:0.78rem;">— Las Vegas</span></td>
                     </tr>
                     <tr style="border-bottom:1px solid #f0f0f0;">
                       <td style="padding:0.6rem 0.8rem; white-space:nowrap; color:#555;">2026/1/31–2/2</td>
@@ -244,38 +181,16 @@
                 </table>
               </div>
 
-              <div class="design-content" style="background:#f8f8f8; border-radius:8px; padding:1.2rem 1.6rem; margin-top:0.5rem;">
-                <div style="font-size:0.68rem; font-weight:700; text-transform:uppercase; letter-spacing:0.12em; color:#888; margin-bottom:0.5rem;">
-                  <span>Project Status</span>
-                </div>
-                <p style="font-size:0.85rem; color:#444; margin:0; line-height:1.6;">HJ1 is a lightweight monocular color smart glasses co-developed by Jorjin × Foxconn, positioned as a demo prototype for eye tracking and new hardware integration technologies, aimed at engaging commercial clients and driving mass production. After six months of continuous demo iteration (trigger zone refinement, calibration tutorial methods, etc.), the project has been succeeded by a next-generation integrated product — the HJ1 demo phase has officially concluded.</p>
+              <div style="background:#f6f5f2; border-radius:10px; padding:1.2rem 1.6rem; margin-top:1.5rem;">
+                <div style="font-size:0.68rem; font-weight:700; text-transform:uppercase; letter-spacing:0.12em; color:#888; margin-bottom:0.5rem;">Project Status</div>
+                <p style="font-size:0.85rem; color:#444; margin:0; line-height:1.6;">HJ1 is a lightweight monocular color smart glasses co-developed by Jorjin × Foxconn, positioned as a demo prototype for eye tracking and new hardware integration, aimed at engaging commercial clients and driving mass production. After six months of continuous demo iteration (trigger-zone refinement, calibration tutorial methods, and more), the project has been succeeded by a next-generation integrated product — the HJ1 demo phase has officially concluded.</p>
               </div>
-            </div>
+
+              <p style="margin-top:1.5rem;">Designing a demo taught me something a product can't: every demo might be the visitor's only encounter with the technology, so there's no buffer for errors — first impression is the final impression. The core of demo design isn't "show everything the product can do"; it's "leave the one most important thing in the visitor's mind." When hardware has limits and some features can't be shown live, a controlled, fault-tolerant flow is itself a design tool.</p>
+            </section>
+
           </div>
-
-          <!-- ── REFLECTION ── -->
-          <div class="reflection">
-            <div class="reflection-box">
-              <div class="reflection-overall">
-                <h3>Reflection</h3>
-                <p style="text-align:left;">The biggest difference between designing a demo experience and designing a regular product: every demo might be the visitor's only encounter with this technology — there's no buffer for errors. First impression is the final impression.</p>
-                <p style="text-align:left; margin-top:1rem;">This was my first time designing a B2B hardware demo experience. The product design logic I was used to — "let users explore, iterate continuously" — was completely inapplicable in a demo context. I started asking a fundamentally different question: within limited time, how do you make the visitor clearly feel the core advantage of eye tracking, rather than spending their energy just figuring out how it works?</p>
-                <p style="text-align:left; margin-top:1rem;">This taught me that the core of demo design isn't "show everything the product can do" — it's "leave one most important thing in the visitor's mind." When hardware has limitations and certain features can't be shown live, a controlled demo flow is itself a design tool — it can fill the gaps and ensure the demo lands successfully.</p>
-              </div>
-
-              <div class="reflection-content">
-                <h5>Key Takeaways</h5>
-                <ul>
-                  <li>The core question in demo design: "How do you make the visitor remember the one most important thing?" — a fundamentally different logic from regular product design.</li>
-                  <li>For B2B demos, "no failures" takes priority over "full feature coverage" — fault-tolerance design is the most critical decision.</li>
-                  <li>When hardware has limits or features aren't ready, a controlled demo flow can be a design tool in itself — bridging the hardware gap and delivering core product value.</li>
-                  <li>Six months of iteration taught me: small interaction adjustments (trigger timing, feedback cues) have far larger impact on demo success than expected.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-        </section>
+        </div>
       </section>
 
       <footer>

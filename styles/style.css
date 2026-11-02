@@ -2446,4 +2446,60 @@ body main section.casestudy-area {
   }
 }
 
+/* ── Case-study media: single media + responsive figure grids ── */
+.cs-media {
+  margin: 1.5rem 0;
+}
+.cs-media img,
+.cs-media video {
+  width: 100%;
+  border-radius: 12px;
+  display: block;
+}
+.cs-figrow {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.2rem;
+  margin: 1.5rem 0;
+}
+.cs-figrow.cs-2up {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.cs-fig {
+  text-align: center;
+  margin: 0;
+}
+.cs-fig img,
+.cs-fig video {
+  width: 100%;
+  border-radius: 12px;
+  display: block;
+  background: #f4f4f2;
+}
+.cs-fig h6 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin: 0.6rem 0 0.15rem;
+  color: #111;
+}
+.cs-fig p {
+  font-size: 0.8rem;
+  color: #666;
+  margin: 0;
+  line-height: 1.5;
+  text-align: center;
+}
+.cs-sublabel {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #111;
+  margin: 1.2rem 0 0.2rem;
+}
+@media (max-width: 560px) {
+  .cs-figrow,
+  .cs-figrow.cs-2up {
+    grid-template-columns: 1fr;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
