@@ -1910,8 +1910,9 @@ body footer .footer-container .footer-links .copyright {
 .before-after {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-  margin-top: 1rem;
+  gap: 2.25rem;
+  margin: 1rem auto 0;
+  max-width: 480px;
 }
 .ba-label {
   display: block;
@@ -2425,6 +2426,24 @@ body main section.casestudy-area {
   color: #888;
   font-style: italic;
   margin-top: 0.5rem;
+}
+.cs-video-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.75rem;
+  margin: 1.5rem 0;
+}
+.cs-video-grid figure {
+  margin: 0;
+}
+.cs-video-grid video {
+  width: 100%;
+  border-radius: 12px;
+  display: block;
+  background: #111;
+}
+@media (max-width: 640px) {
+  .cs-video-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 820px) {
   .cs-wrap {
