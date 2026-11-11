@@ -1,7 +1,6 @@
 {
   "_readme": "履歷與網站共用的事實帳本。這是唯一來源——數字要改只改這裡。每個項目除了值，記著它成立的條件(qualifier)與使用時的限制(rule)。rule 存在的項目，引用時必須遵守。",
   "_updated": "2026-10-29",
-
   "profile": {
     "name_zh": "黃敬媛",
     "name_en": "Jing-Yuan Huang",
@@ -16,7 +15,6 @@
     "github": "github.com/jing-yuan-huang",
     "scholar": "scholar.google.com/citations?user=NT0NI04AAAAJ"
   },
-
   "education": [
     {
       "school_zh": "國立臺灣大學",
@@ -36,7 +34,6 @@
       "years": "2015 – 2019"
     }
   ],
-
   "employment": [
     {
       "company_zh": "佐臻科技 Jorjin Technologies",
@@ -57,7 +54,6 @@
       "years_en": "2020 – 2024"
     }
   ],
-
   "facts": {
     "search_ctr": {
       "value_zh": "6% → 11.5%",
@@ -146,16 +142,53 @@
       "qualifier_zh": "研討會發表",
       "qualifier_en": "Conference publications",
       "verified": true
+    },
+    "anthropometric_base": {
+      "value_zh": "NIOSH 頭面部人體計測資料庫（n=3,997）",
+      "value_en": "NIOSH head-and-face anthropometric survey (n=3,997)",
+      "qualifier_zh": "2003 年調查，受試者為美國呼吸防護具使用者；族裔分類為白人、非裔、西語裔、亞裔與其他（含美洲原住民、太平洋島民）。公司取得後作為眼鏡配戴尺寸的基準資料。瞳距不在 NIOSH 的量測項目內，該維度改參照 ANSUR II（美國陸軍人體計測調查，2012，n=6,068）",
+      "qualifier_en": "2003 survey of U.S. respirator users; five ethnic categories (White, Black, Hispanic, Asian, Other incl. Native American and Pacific Islander). Used as the baseline for eyewear fit dimensions. Interpupillary distance is not in the NIOSH set; that dimension is referenced from ANSUR II (U.S. Army anthropometric survey, 2012, n=6,068)",
+      "source": "Zhuang Z. & Bradtmiller B. (2005), Head-and-Face Anthropometric Survey of U.S. Respirator Users, JOEH 2(11):567–576",
+      "rule": "拼法是 NIOSH 不是 NOISH。這是既有資料庫，不是我自己量的——絕對不可以寫成「量測 4,000 人」。樣本偏美國／歐美，這個落差正是我自行量測的理由，要一起講。",
+      "verified": true
+    },
+    "anthropometric_own": {
+      "value_zh": "我參與其中約 20 人的量測執行",
+      "value_en": "Ran measurements for ~20 subjects as part of an ongoing programme",
+      "qualifier_zh": "公司持續付費徵集受試者補充量測，3D 掃描機與手工量測兩邊同步進行，用以補 NIOSH 樣本偏歐美、而客戶在亞洲的落差。既有 protocol 只有量測項目清單，執行面不完整；我補上量測順序、量測步驟定義，以及 3D 掃描與手工量測並行時的對照規則",
+      "qualifier_en": "The company runs ongoing paid recruitment; 3D scanning and manual measurement are performed in parallel, closing the gap between NIOSH's US-skewed sample and the Asian market. The existing protocol listed the dimensions but not the procedure; I added the measurement sequence, the step definitions, and the reconciliation rule for running 3D scanning and manual measurement in parallel",
+      "rule": "三個數字永遠分開：NIOSH 3,997（既有資料庫）、公司累計（持續增加、我沒有最新數）、我參與 20。不可相加。protocol 是「補執行面」不是「從零寫」——既有的是量測項目清單，我加的是順序、步驟與掃描／手量對照規則。這個說法比「補充部分項目」實，也仍然保守。",
+      "verified": true
+    },
+    "display_rules": {
+      "value_zh": "輕量型眼鏡的畫面設計規定，六項",
+      "value_en": "Six display design rules for lightweight smart glasses",
+      "qualifier_zh": "字級上限與下限、單一字級下的字數限制、字元間距、顯示位置、留白範圍、顯示時長；依該款眼鏡的虛像成像距離與畫布角視場，把標準裡的視角值換算成該畫布上的實際數值，再以實驗驗證",
+      "qualifier_en": "Type size floor and ceiling, character-count limit per size, letter spacing, display position, margin, and duration; derived by converting the visual-angle values in the standards into on-canvas values using the headset's virtual image distance and angular field of view, then validated experimentally",
+      "source": "參照 ISO 9241-303（電子顯示器人因要求）、ISO 9241-392（立體影像視覺疲勞降低）、ANSI/HFES 100-2007（字高、觀看距離、亮度對比）",
+      "rule": "重點是「推導＋實驗驗證」，不是查表。三份標準都為背景亮度可控的顯示器而寫，穿透式近眼顯示沒有這個前提，所以值要換算不能照抄——這句是這段的價值所在。",
+      "verified": true
+    },
+    "hf_analysis_layer": {
+      "value_zh": "設計值對覆蓋範圍的分析與視覺化（我的實際貢獻）",
+      "value_en": "Design-value-versus-coverage analysis and visualization (my actual contribution)",
+      "qualifier_zh": "我到職前公司已有資料：NIOSH ＋ 自行量測，整理成西方／亞洲 × 男／女四類的 5／50／95 百分位簡報，但只是參考資料，沒有設計值比對、也沒有覆蓋範圍資訊。我建立的是上面那一層：針對客戶設計值產出設計分析簡報與資料視覺化，並自行實作一個內部網站整合量測方法說明與「設計值 vs 覆蓋範圍」對照圖表",
+      "qualifier_en": "The anthropometric data already existed before I joined — NIOSH plus in-house measurement, organised into four groups (Western/Asian x male/female) at the 5th/50th/95th percentiles — but only as reference slides, with no comparison against design values and no coverage information. I built that layer: per-customer design analysis decks and data visualization, plus an internal web tool I implemented myself covering the measurement method and design-value-to-coverage charts",
+      "rule": "★ 資料庫不是我建的，分析與視覺化那一層才是。絕對不要寫成「建立人因資料庫」——那會在面試被拆穿，而且真實版本更有價值。內部網站不對外公開，可以描述但不要放客戶設計值的截圖。 內部網站不能公開：解法是用 CDC 免費公開的 NIOSH 原始資料另做一個對外版本，只用公開資料與假設性設計值，不碰任何客戶內容。",
+      "verified": true
+    },
+    "headform_workflow": {
+      "value_zh": "依客群給出設計值建議，再以對應百分位的 3D 頭模驗證配戴貼合",
+      "value_en": "Percentile-based fit workflow: derive design values for the target population, then verify the finished eyewear against 3D headforms at the matching percentile",
+      "qualifier_zh": "公司購入的是 3D headform 模型（NIOSH 原始資料本身在 CDC 網站免費公開）；鼻部這類幾何複雜、難以用單一尺寸描述的區域，改以實體比對驗證",
+      "qualifier_en": "The company purchased the 3D headform models; the NIOSH raw dataset itself is a free CDC download. Geometrically complex regions such as the nose bridge are verified by physical comparison rather than single-dimension specs",
+      "rule": "這是可重複的方法，不是一次性的產出——面試談人因時主打這條。要講清楚買的是頭模不是資料。",
+      "verified": true
     }
   },
-
   "pending": {
     "_note": "尚未查證或尚未取得的數字。寫進履歷或網站前必須先補齊。",
-    "anthropometric_sample_size": "人因量測資料庫的受試者人數（n=?）",
-    "anthropometric_instrument": "量測工具（游標卡尺／3D 掃描／其他）",
-    "visual_comfort_design": "視覺舒適度實驗的受試者數、變因與水準、使用的量表",
-    "visual_comfort_finding": "具體結論（目前只有「建立了資料庫」這個產出，沒有發現）",
-    "hf_standards": "是否參照過 ISO 人體計測標準、ANSI/HFES 100 或 IEC 62366",
-    "hf_role_boundary": "人因專案中我主導的範圍：是我設計 protocol，還是照既有 protocol 執行？"
+    "hf_site_stack": "內部網站的技術細節：圖表自己寫還是用套件（D3／Chart.js／其他）、有沒有串資料庫——決定能不能算進前端實績",
+    "nda_scope": "★ 投遞前確認：僱傭合約／保密條款對「量測方法」與「內部工具」的描述界線在哪。講『我做了一個把設計值對到覆蓋範圍的內部工具』幾乎必然安全；公開量測 protocol 的細節可能不行"
   }
 }

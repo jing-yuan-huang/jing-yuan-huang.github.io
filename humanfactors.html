@@ -3,17 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Human Factors for Smart Wearables — Jing-Yuan Huang</title>
+    <title>Human Factors for Smart Glasses — Jing-Yuan Huang</title>
 
     <!-- Social share preview (Open Graph / Twitter) -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://jingyuanhuang.com/humanfactors.html" />
-    <meta property="og:title" content="Smart Glasses Ergonomic Database — Jing-Yuan Huang" />
-    <meta property="og:description" content="A quantitative method linking smart glasses design values to anthropometric data — across 5 ethnicities, answering how many people a design actually fits." />
+    <meta property="og:title" content="Human Factors for Smart Glasses — Jing-Yuan Huang" />
+    <meta property="og:description" content="Turning existing anthropometric data (NIOSH, ANSUR II) into a design-value-to-coverage method — answering how many of the target users a glasses size actually fits." />
     <meta property="og:image" content="https://jingyuanhuang.com/pictures/humanfactors.webp" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Smart Glasses Ergonomic Database — Jing-Yuan Huang" />
-    <meta name="twitter:description" content="A quantitative method linking smart glasses design values to anthropometric data — across 5 ethnicities, answering how many people a design actually fits." />
+    <meta name="twitter:title" content="Human Factors for Smart Glasses — Jing-Yuan Huang" />
+    <meta name="twitter:description" content="Turning existing anthropometric data (NIOSH, ANSUR II) into a design-value-to-coverage method — answering how many of the target users a glasses size actually fits." />
     <meta name="twitter:image" content="https://jingyuanhuang.com/pictures/humanfactors.webp" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
@@ -43,8 +43,8 @@
 
           <!-- ── Sticky meta column ── -->
           <aside class="cs-meta">
-            <h1 class="cs-title">Smart Glasses Ergonomic Database</h1>
-            <p class="cs-subtitle">A quantitative method linking glasses design values to anthropometric measurement points — so "how many people does this design fit?" can be answered with data.</p>
+            <h1 class="cs-title">Human Factors for Smart Glasses</h1>
+            <p class="cs-subtitle">Turning the anthropometric data a company already had into something it could design with — a way to answer the question sales couldn't: how many of the target users does this size actually fit?</p>
 
             <div class="cs-meta-block">
               <span class="cs-eyebrow">Timeline</span>
@@ -53,17 +53,16 @@
 
             <div class="cs-meta-block">
               <span class="cs-eyebrow">Team</span>
-              <p>Me — Human Factors Research &amp; UX Strategy<br>+ industrial design, mechanical &amp; optical engineers</p>
+              <p>Me — Human factors analysis &amp; UX<br>+ industrial design, mechanical &amp; optical engineers</p>
             </div>
 
             <div class="cs-meta-block">
               <span class="cs-eyebrow">My Role</span>
               <ul>
-                <li>Anthropometric database (ISO 15535, ANSUR II, NIOSH, MOL)</li>
-                <li>Design-value ↔ measurement-point mapping</li>
-                <li>Coverage validation method</li>
-                <li>AR UI visual comfort guidelines</li>
-                <li>Applied to product design validation</li>
+                <li>Design-value-to-coverage analysis &amp; visualization</li>
+                <li>Measurement protocol — procedural layer</li>
+                <li>Near-eye display design rules</li>
+                <li>Internal analysis tool, self-built</li>
               </ul>
             </div>
 
@@ -75,112 +74,147 @@
 
           <!-- ── Scrolling content column ── -->
           <div class="cs-body">
-            <img class="cs-hero" src="./pictures/humanfactors.webp" alt="Smart glasses human factors research">
+            <img class="cs-hero" src="./pictures/humanfactors.webp" alt="Human factors research for smart glasses">
 
             <!-- OVERVIEW -->
             <section class="cs-section" id="overview">
               <span class="cs-eyebrow">Overview</span>
-              <h2 class="cs-headline">A "standard head" that accounted for almost no one.</h2>
-              <p>The ID team had been using the median Western male head dimensions as the "standard head" for glasses design — a value that accounts for no ethnic variation and cannot answer "what percentage of target users will this design actually fit?"</p>
-              <p>To address this, I systematically gathered and organized anthropometric research data, built a cross-ethnic database, and developed a quantifiable coverage validation method for design values — alongside an AR UI visual comfort guideline to serve as a cross-disciplinary design reference.</p>
+              <h2 class="cs-headline">The data stopped at population distributions — one step short of a design decision.</h2>
+              <p>The company already held head-and-face anthropometric data — NIOSH plus in-house measurement, organized into Western / Asian × male / female groups at the 5th, 50th, and 95th percentiles. But it lived as reference slides. When a customer asked how comfortably a frame would fit, sales could show a distribution table — not "what share of the target users this size actually covers."</p>
+              <p>This project built the missing layer between the two: a way to turn anthropometric data into something that answers a design question.</p>
             </section>
 
-            <!-- RESEARCH -->
-            <section class="cs-section" id="research">
-              <span class="cs-eyebrow">Research — Human Factors Database</span>
-              <h2 class="cs-headline">Map each design value to a measurement point, and coverage becomes calculable.</h2>
-              <p>AR glasses have many industrial design values — frame width, temple length, nose pad dimensions, optical position, and more. Each has to be mapped to a specific anthropometric measurement point before meaningful database comparisons can be made.</p>
-              <p><strong>Frame width, as an example:</strong> the effective wearing width corresponds to the lateral distance across the flat area above the cheekbones on both sides of the head — which maps to the front end of the undercut curve in the glasses structure. Once the correspondence is established, the dimensional distribution from the database can calculate what percentage of people the design value covers.</p>
-              <p><strong>Database grouping:</strong> divided into four sub-groups by East Asian / Western (predominantly Caucasian) × Male / Female. Each sub-group's 5th, 50th, and 95th percentile values are calculated, then compared against a glasses design value to quantify its coverage across populations.</p>
-              <p><strong>Data sources:</strong> ISO 15535, ANSUR II, NIOSH, and the Taiwan Ministry of Labor anthropometric database — covering five ethnic groups: White, Black, Hispanic, Asian, and Native American.</p>
-            </section>
-
-            <!-- VALIDATION ZONES -->
-            <section class="cs-section" id="zones">
-              <span class="cs-eyebrow">Validation Zones</span>
-              <h2 class="cs-headline">Three zones, each addressing a different source of wearing comfort.</h2>
+            <!-- WHAT I DID -->
+            <section class="cs-section" id="contribution">
+              <span class="cs-eyebrow">What I did</span>
+              <h2 class="cs-headline">Two fit problems — the frame to the head, the UI to the eye.</h2>
+              <p>The work splits into two tracks. One is <strong>physical fit</strong>: whether the glasses as an object fit the range of heads in a target market. The other is <strong>display UI</strong>: what the on-screen content can be on a see-through near-eye display without tiring the eye. A single internal tool sits under the first.</p>
               <ul class="cs-list">
-                <li><strong>Optical design values.</strong> The spatial relationship between the optical module and the eye, affecting image clarity and visual comfort.</li>
-                <li><strong>Frame design values.</strong> Temple length and frame width, affecting overall fit.</li>
-                <li><strong>Nose pad design values.</strong> Nose bridge width, height, and angle, affecting weight distribution and long-wear comfort.</li>
+                <li>Built the design-value-to-coverage analysis and visualization on top of NIOSH (n=3,997, five ethnic groups) and ANSUR II (2012, n=6,068), connecting percentile data that had stopped at population distribution to actual product decisions.</li>
+                <li>Verified finished eyewear against 3D headforms at matching percentiles, resolving nose-bridge geometry that no single dimension can specify.</li>
+                <li>Added the procedural layer the existing measurement protocol lacked — measurement sequence, step definitions, and the reconciliation rule for running 3D scanning and manual measurement in parallel.</li>
+                <li>Converted the visual-angle specs in display-ergonomics standards into usable near-eye values from each headset's virtual-image distance and angular field of view, setting six display design rules and validating them experimentally.</li>
+                <li>Implemented an internal web tool myself, pairing the measurement method with design-value-versus-coverage charts — so a process that meant rebuilding a deck per enquiry became something queryable.</li>
               </ul>
-              <p>Coverage results for each zone depend on the tolerance range of the design value and the target-market ethnic group the product is primarily aimed at.</p>
             </section>
 
-            <!-- AR UI GUIDELINES -->
-            <section class="cs-section" id="design">
-              <span class="cs-eyebrow">AR UI Visual Comfort Guidelines</span>
-              <h2 class="cs-headline">An AR UI spec grounded in how the eye actually focuses.</h2>
-              <p>Lightweight AR glasses UI faces a fixed focal plane, a small display, and long-wear visual fatigue — so every design decision needs a clear parameter spec.</p>
-
-              <p><strong>Depth &amp; VAC — angular scaling, not binocular disparity.</strong> Most AR glasses have a fixed image focal plane at ~1.5–2 m. Adding binocular disparity to make UI elements appear closer creates a vergence-accommodation conflict (VAC), causing fatigue. Informational UI should avoid near-field disparity; when depth is needed, prioritize 2D cues (size, opacity, occlusion), and keep interactive buttons and tooltips on the same UI focal plane to avoid frequent depth switching.</p>
-
-              <p><strong>Text size — defined by visual angle, not pt values.</strong> AR display distance differs from standard screens, so applying pt values directly makes text too small or inconsistent. The guideline defines four text levels by visual angle (°):</p>
+            <!-- RESEARCH — DATA -->
+            <section class="cs-section" id="research">
+              <span class="cs-eyebrow">Physical fit — Data</span>
+              <h2 class="cs-headline">Three sources, each covering what the others couldn't.</h2>
+              <p>The first track is the frame as an object: does it fit the range of heads in the target market? That starts with the measurement data.</p>
               <div style="overflow-x:auto; margin:0.8rem 0 1.2rem;">
                 <table style="width:100%; border-collapse:collapse; font-size:0.85rem;">
                   <thead>
                     <tr style="background:#f5f5f5;">
-                      <th style="padding:0.5rem 0.8rem; text-align:left; font-weight:700;">Text Level</th>
-                      <th style="padding:0.5rem 0.8rem; text-align:left; font-weight:700;">Target Angle</th>
-                      <th style="padding:0.5rem 0.8rem; text-align:left; font-weight:700;">Height at 1.2 m (pt)</th>
-                      <th style="padding:0.5rem 0.8rem; text-align:left; font-weight:700;">Usage</th>
+                      <th style="padding:0.5rem 0.8rem; text-align:left; font-weight:700;">Source</th>
+                      <th style="padding:0.5rem 0.8rem; text-align:left; font-weight:700;">Sample</th>
+                      <th style="padding:0.5rem 0.8rem; text-align:left; font-weight:700;">Role</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr style="border-bottom:1px solid #eee;">
-                      <td style="padding:0.5rem 0.8rem;">Minimum legible</td>
-                      <td style="padding:0.5rem 0.8rem;">0.25°</td>
-                      <td style="padding:0.5rem 0.8rem;">≈ 15 pt</td>
-                      <td style="padding:0.5rem 0.8rem;">Minimum legibility threshold — not recommended for primary reading</td>
+                      <td style="padding:0.5rem 0.8rem;">NIOSH head-and-face survey (2003)</td>
+                      <td style="padding:0.5rem 0.8rem;">n=3,997; five ethnic groups — White, Black, Hispanic, Asian, Other (incl. Native American, Pacific Islander)</td>
+                      <td style="padding:0.5rem 0.8rem;">Baseline for head-and-face dimensions. The raw data is a free CDC download; the company separately purchased the 3D headform models.</td>
                     </tr>
                     <tr style="border-bottom:1px solid #eee;">
-                      <td style="padding:0.5rem 0.8rem;">Body</td>
-                      <td style="padding:0.5rem 0.8rem;">0.35°</td>
-                      <td style="padding:0.5rem 0.8rem;">≈ 21 pt</td>
-                      <td style="padding:0.5rem 0.8rem;">Descriptive text, short prompts</td>
-                    </tr>
-                    <tr style="border-bottom:1px solid #eee;">
-                      <td style="padding:0.5rem 0.8rem;">Subheading</td>
-                      <td style="padding:0.5rem 0.8rem;">0.45°</td>
-                      <td style="padding:0.5rem 0.8rem;">≈ 27 pt</td>
-                      <td style="padding:0.5rem 0.8rem;">Option labels, section tags</td>
+                      <td style="padding:0.5rem 0.8rem;">ANSUR II (U.S. Army anthropometric survey, 2012)</td>
+                      <td style="padding:0.5rem 0.8rem;">n=6,068</td>
+                      <td style="padding:0.5rem 0.8rem;">Interpupillary distance — a dimension NIOSH does not measure.</td>
                     </tr>
                     <tr>
-                      <td style="padding:0.5rem 0.8rem;">Heading</td>
-                      <td style="padding:0.5rem 0.8rem;">0.60°</td>
-                      <td style="padding:0.5rem 0.8rem;">≈ 36 pt</td>
-                      <td style="padding:0.5rem 0.8rem;">Primary heading, status labels</td>
+                      <td style="padding:0.5rem 0.8rem;">In-house measurement</td>
+                      <td style="padding:0.5rem 0.8rem;">Ongoing paid recruitment; I ran measurements for ~20 subjects</td>
+                      <td style="padding:0.5rem 0.8rem;">Closes the gap between NIOSH's US-skewed sample and an Asian target market.</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
+              <p class="cs-caption">Source: Zhuang, Z. &amp; Bradtmiller, B. (2005). <em>Head-and-Face Anthropometric Survey of U.S. Respirator Users.</em> Journal of Occupational and Environmental Hygiene, 2(11), 567–576.</p>
 
-              <p><strong>Display zone — keep primary content within ±10° of center gaze.</strong> The optimal safe zone is ±10° from the vertical screen center, corresponding to the canvas (440 × 240 px) center with 120 px margin top/bottom and 100 px left/right — placing primary reading content within the most natural gaze range to reduce fatigue from sustained eye deviation.</p>
+              <p><strong>In-house method.</strong> Recruited paid subjects and ran 3D scanning and manual measurement in parallel — scanning captures full geometry but blurs boundary calls, manual measurement is slower but unambiguous, so the two cross-check each other.</p>
+              <p>Added the procedural layer the existing protocol was missing: measurement sequence, a definition for each step, and the reconciliation rule for scanning and manual measurement side by side — so results from different measurers can be compared.</p>
+            </section>
+
+            <!-- DESIGN — COVERAGE -->
+            <section class="cs-section" id="coverage">
+              <span class="cs-eyebrow">Physical fit — Coverage</span>
+              <h2 class="cs-headline">Given a design size, what share of the target population does it fit?</h2>
+              <p>That question drove the method:</p>
+              <ol class="cs-steps">
+                <li><strong>Take the percentile distribution</strong> for the target group — Western / Asian × male / female.</li>
+                <li><strong>Overlay the customer's design value</strong>, and compute the covered interval plus the groups that fall outside it.</li>
+                <li><strong>Return a design-analysis deck and charts</strong> to the customer and the ID team.</li>
+              </ol>
+              <p><strong>Why a tool, not a deck.</strong> Rebuilding a deck per enquiry meant recomputing every time, with answers that couldn't be traced back. Made queryable, a changed design value shows its new coverage immediately. I implemented this internal web tool myself.</p>
+              <p class="cs-caption">The internal tool isn't public, so this page describes it rather than showing screens.</p>
+
+              <figure>
+                <img src="./pictures/humanfactors_coverage.webp" alt="Coverage schematic — a design value overlaid on the percentile distribution">
+                <figcaption>A design value overlaid on the percentile distribution to read its coverage of the target group — redrawn from public CDC / NIOSH data with hypothetical values.</figcaption>
+              </figure>
+            </section>
+
+            <!-- DESIGN — FIT -->
+            <section class="cs-section" id="fit">
+              <span class="cs-eyebrow">Physical fit — Verification</span>
+              <h2 class="cs-headline">Some geometry a number can't describe — so verify it in the physical world.</h2>
+              <p>Head width and interpupillary distance take numeric specs cleanly; the shape of the nose bridge doesn't reduce to a single dimension.</p>
+              <p>For those regions, verification moves to physical comparison: place the finished glasses on a 3D headform at the matching percentile and read the fit directly. Numeric specs and physical verification each do what they're good at.</p>
+
+              <figure>
+                <img src="./pictures/humanfactors_headform.webp" alt="Finished eyewear checked against a 3D headform">
+                <figcaption>Finished eyewear checked against a 3D headform at the matching percentile.</figcaption>
+              </figure>
+            </section>
+
+            <!-- DISPLAY UI — STANDARDS -->
+            <section class="cs-section" id="standards">
+              <span class="cs-eyebrow">Display UI — Standards</span>
+              <h2 class="cs-headline">The display-ergonomics standards all assume something see-through glasses can't.</h2>
+              <p>The second track leaves the frame behind and moves to the screen: what the on-screen UI can be on a see-through near-eye display. Three standards set the reference: <strong>ISO 9241-303</strong> (ergonomic requirements for electronic visual displays), <strong>ISO 9241-392</strong> (guidance on reducing visual fatigue from stereoscopic images), and <strong>ANSI/HFES 100-2007</strong> (character height, viewing distance, luminance contrast).</p>
+              <p>All three share one premise: a controllable background luminance. See-through near-eye displays don't have it — the background is whatever the wearer happens to be looking at, an indoor ceiling or midday sun. And the standards specify visual angle (arc-minutes), not pixels.</p>
+              <p>So the values can't be copied across; they have to be converted — from each headset's virtual-image distance and angular field of view into actual values on that canvas, then validated by experiment.</p>
+            </section>
+
+            <!-- DISPLAY UI — RULES -->
+            <section class="cs-section" id="display">
+              <span class="cs-eyebrow">Display UI — Rules</span>
+              <h2 class="cs-headline">Six display rules for lightweight glasses — derived, not looked up.</h2>
+              <p>Six items are specified for lightweight-glasses UI:</p>
               <ul class="cs-list">
-                <li>Image above, text below: last text line ≥ 100 px from the bottom edge.</li>
-                <li>Interactive options: ≥ 100–120 px from the top edge to prevent prolonged upward-gaze triggering.</li>
-                <li>Single-screen text: no more than 30–40 characters; line spacing at 120–140% of character height.</li>
-                <li>Panel size limits: vertical ≤ 12°, horizontal ≤ 25°.</li>
+                <li>Type-size ceiling and floor</li>
+                <li>Character-count limit at a given size</li>
+                <li>Letter spacing</li>
+                <li>Display position</li>
+                <li>Margins</li>
+                <li>Display duration</li>
               </ul>
+              <p>Each went through the same three steps — standard visual angle → conversion by imaging distance and angular field of view → experimental validation — rather than being read off a table. The specific values belong to the company.</p>
+
+              <figure>
+                <img src="./pictures/humanfactors_display.webp" alt="Canvas layout showing where the six display-rule types apply">
+                <figcaption>Where the six display-rule types apply on the canvas — schematic, no real values.</figcaption>
+              </figure>
             </section>
 
             <!-- RESULT -->
             <section class="cs-section" id="result">
               <span class="cs-eyebrow">Result</span>
-              <h2 class="cs-headline">Applied to real products — and into patents.</h2>
-              <p>The ergonomic database and validation method were applied to product design; the AR UI guideline serves as a cross-disciplinary design reference.</p>
+              <h2 class="cs-headline">Into real product validation — and a shared design vocabulary.</h2>
 
               <div class="result-card">
-                <div class="result-metric"><span>Design validation for 3 lightweight smart glasses products</span></div>
-                <p>Products A, B, and C each validated across the three zones — optical, frame, and nose pad — covering 6 design values in total. Each value was benchmarked against database percentiles to assess coverage in East Asian and Western populations, with targeted adjustment recommendations based on each product's intended market.</p>
+                <div class="result-metric"><span>Design validation for 3 customer products</span></div>
+                <p>Applied to design validation for three lightweight-glasses products (Product A / B / C). Each design value was benchmarked against the percentile distributions to assess coverage in Western and Asian populations, with adjustment recommendations keyed to each product's intended market.</p>
               </div>
 
               <div class="result-card">
-                <div class="result-metric"><span>2 glasses design patents filed, 2 more in planning</span></div>
-                <p>Combining the ergonomic-database validation method with glasses structural design, 4 patents total have been advanced — 2 have entered the formal filing process.</p>
+                <div class="result-metric"><span>Reference slides → a queryable internal tool</span></div>
+                <p>Human-factors data moved from per-enquiry reference decks to a tool the team can query, and the six display rules entered the design spec for lightweight glasses.</p>
               </div>
 
-              <p style="margin-top:1.5rem;">What I took from this project wasn't the data — it was the language of cross-disciplinary design. Mechanical engineers cared about manufacturing tolerances, ID about visual proportions, optical engineers about optical-path deviation; learning to translate between them and find a shared evaluation framework was the hard part. Quantifying coverage changed how design discussions happened, too — from "this seems like it could work" to "this value covers XX% of Asian women, should we adjust?" For emerging hardware with no ready-made standards, building the methodology itself is part of the design work.</p>
+              <p style="margin-top:1.5rem;">What stayed with me wasn't the data — it was the cross-disciplinary vocabulary around it. Mechanical engineers cared about manufacturing tolerance, ID about visual proportion, optical engineers about optical-path deviation; the hard part was translating between them into a shared evaluation frame. Quantified coverage changed the discussion too — from "this seems like it could work" to "this value covers this share of the target group; should we adjust?" For emerging hardware with no ready-made standard, building the method is itself part of the design work.</p>
             </section>
 
           </div>
