@@ -69,6 +69,13 @@
       "qualifier_en": "Average Google position, same period",
       "verified": true
     },
+    "search_position_nonbrand": {
+      "value_zh": "26 → 14",
+      "value_en": "26 to 14",
+      "qualifier_zh": "非品牌字查詢（如 AR glasses、智慧眼鏡）平均排名，Google Search Console，2025/02 → 2026/02",
+      "qualifier_en": "Average position for non-brand queries (e.g. AR glasses, smart glasses), Google Search Console, Feb 2025 – Feb 2026",
+      "verified": true
+    },
     "components_web": {
       "value_zh": "20 種核心元件類型（48 個版面變體）",
       "value_en": "20 core component types (48 layout variants)",
