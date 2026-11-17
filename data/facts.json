@@ -122,10 +122,11 @@
       "verified": true
     },
     "product_validations": {
-      "value_zh": "3 件產品設計驗證",
-      "value_en": "3 customer product validations",
-      "qualifier_zh": "客戶：ENOVIS、AWEAR、KONA",
-      "qualifier_en": "Customers: ENOVIS, AWEAR, KONA",
+      "value_zh": "3 件外部客戶產品設計驗證",
+      "value_en": "3 external customer product design validations",
+      "qualifier_zh": "合作對象：ENOVIS（工業用）、Foxconn（輕量型）。外部產品型號為 G2（ENOVIS）、AWEAR／KONA（Foxconn）。自家 J9 仍在進行中，不列入；對外只呈現這三件外部驗證。",
+      "qualifier_en": "Partners: ENOVIS (industrial), Foxconn (lightweight). External product models are G2 (ENOVIS) and AWEAR/KONA (Foxconn). The in-house J9 is still in progress and is not counted; only these three external validations are shown publicly.",
+      "rule": "對外只能寫合作對象（ENOVIS、Foxconn），絕對不可揭露任何產品型號（G2、AWEAR、KONA、J9）。頁面可講『工業用 vs 輕量型』的類別，但型號不行。AWEAR／KONA 是 Foxconn 的型號，不是客戶名——先前誤標過。J9P 不存在，已移除。",
       "verified": true
     },
     "citations": {
