@@ -411,6 +411,28 @@ body main section.work-area div.cards-container2 a.wide {
 body main section.work-area div.cards-container2 a.xl {
   grid-column: span 3;
 }
+body main section.work-area div.cards-container2 .work-divider {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin: 0;
+}
+body main section.work-area div.cards-container2 .work-divider::before,
+body main section.work-area div.cards-container2 .work-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #e2e2e2;
+}
+body main section.work-area div.cards-container2 .work-divider span {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: #999;
+  white-space: nowrap;
+}
 body main section.work-area div.cards-container2 a div.card {
   flex: none;
   height: 320px;
